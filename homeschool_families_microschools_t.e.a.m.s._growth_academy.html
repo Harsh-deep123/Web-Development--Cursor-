@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Homeschool Families &amp; Microschools | T.E.A.M.S. Growth Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&amp;family=Overpass:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-background": "#191c1d",
+                    "primary": "#39B2B9",
+                    "inverse-primary": "#5fd7e2",
+                    "on-primary-container": "#003033",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-container": "#636262",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "charcoal": "#13151A",
+                    "on-error-container": "#93000a",
+                    "deep-teal": "#1B878D",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed": "#c8e6ff",
+                    "surface": "#F9FAFB",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#256487",
+                    "surface-tint": "#39B2B9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#e2dfde",
+                    "outline-variant": "#bcc9ca",
+                    "primary-fixed-dim": "#5fd7e2",
+                    "teal-wash": "#E6F6F7",
+                    "tertiary-fixed-dim": "#94cdf5",
+                    "surface-dim": "#d9dadb",
+                    "surface-bright": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-container": "#39B2B9",
+                    "outline": "#6d797b",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed": "#7ef4fe",
+                    "on-primary-fixed-variant": "#004f54",
+                    "background": "#f8f9fa",
+                    "tertiary-container": "#5e98be",
+                    "surface-variant": "#e1e3e4",
+                    "slate-gray": "#4A4A4A",
+                    "on-primary-fixed": "#002022",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "on-surface-variant": "#3d494a",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#001e2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#002e44"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2.5rem",
+                    "stack-md": "1rem",
+                    "gutter": "1.5rem",
+                    "container-max": "1200px",
+                    "margin-page": "2rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Archivo"],
+                    "display-lg": ["Archivo"],
+                    "body-md": ["Archivo"],
+                    "body-lg": ["Archivo"],
+                    "label-lg": ["Archivo"],
+                    "headline-lg": ["Archivo"],
+                    "headline-lg-mobile": ["Archivo"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        button:not(.nav-login), a.btn {
+            font-family: 'Overpass', sans-serif !important;
+        }
+        header nav.hidden {
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            column-gap: 1.15rem !important;
+        }
+        .nav-link {
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size:  15px !important;
+            letter-spacing: 0.02em !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            text-decoration: none !important;
+            border-bottom: 2px solid transparent;
+            padding: 6px 0 4px !important;
+            margin: 0 !important;
+            white-space: nowrap !important;
+            transition: color .2s ease, border-color .2s ease;
+        }
+        .nav-link:hover { color: #39B2B9 !important; }
+        .nav-link--active {
+            color: #39B2B9 !important;
+            border-bottom-color: #39B2B9 !important;
+            font-weight: 700 !important;
+        }
+
+        a.nav-login { text-decoration: none !important; display: inline-block; }
+        .nav-login, button.nav-login, a.nav-login {
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size: 13px !important;
+            letter-spacing: normal !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 10px 0 0;
+            transition: color .2s ease;
+        }
+        .nav-login:hover { color: #39B2B9 !important; }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .teal-gradient {
+            background: linear-gradient(135deg, #1B878D 0%, #39B2B9 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .bg-charcoal {
+            background-color: #13151A;
+            background-image:
+                radial-gradient(60% 55% at 100% 0%, rgba(0, 161, 171, 0.16), transparent 60%),
+                linear-gradient(to right, rgba(0, 161, 171, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 161, 171, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            background-repeat: no-repeat, repeat, repeat;
+        }
+        .btn, button, input[type="submit"] { border-radius: 9999px !important; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+        .btn:hover, button:hover, input[type="submit"]:hover { transform: translateY(-3px) !important; }
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container,
+        input[type="submit"] { background-color: #39B2B9 !important; border-color: #39B2B9 !important; }
+        .btn.bg-primary:hover, .btn.bg-primary-container:hover,
+        button.bg-primary:hover, button.bg-primary-container:hover,
+        input[type="submit"]:hover { background-color: #1B878D !important; border-color: #1B878D !important; }
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container { color: #ffffff !important; }
+        .text-primary { color: #39B2B9 !important; }
+        .border-primary { border-color: #39B2B9 !important; }
+        .pricing-table th, .pricing-table td { vertical-align: middle; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 glass-card-light border-b border-white/20 transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-6 h-20">
+<a class="flex items-center gap-3 group" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-[72px] w-[72px] object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<nav class="hidden md:flex flex-1 items-center justify-center gap-0 flex-nowrap whitespace-nowrap">
+<a class="nav-link" href="Home.html">Home</a>
+<a class="nav-link" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="nav-link" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="nav-link" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="nav-link" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="nav-login hidden md:block" href="https://growthacademy.teamscoachingaz.com/login">Login</a>
+<a href="Series and Labs.html#pricing" class="btn inline-block bg-primary-container text-white hover:bg-deep-teal text-[12px] font-bold tracking-[0.04em] uppercase px-5 py-2.5 rounded-full transition-all shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:shadow-[0_6px_20px_rgba(0,161,171,0.23)] hover:-translate-y-0.5">Enroll Now</a>
+</div>
+</div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-br from-teal-wash via-background to-background">
+<div class="absolute -top-24 -right-24 w-[28rem] h-[28rem] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-24 w-[28rem] h-[28rem] bg-tertiary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-page relative z-10 py-20 md:py-28 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+<div>
+<span class="inline-flex items-center gap-2 py-1.5 px-4 bg-white/70 backdrop-blur text-primary font-label-lg rounded-full mb-6 border border-primary/20">
+<span class="material-symbols-outlined text-base">home</span>
+HOMESCHOOL FAMILIES &amp; MICROSCHOOLS
+</span>
+<h1 class="font-display-lg text-[36px] md:text-display-lg text-on-background mb-4 leading-tight">
+Building Character, Confidence, Leadership &amp; <span class="text-primary">Life Skills</span>
+</h1>
+<p class="font-label-lg text-primary tracking-wider uppercase mb-6">Flexible · Self-Paced · Parent-Supported</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 max-w-xl">
+The T.E.A.M.S. Coaching Growth Academy helps students develop the life skills that prepare them for success in school, relationships, careers, and life.
+</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-xl">
+Created by Coach Walker, an educator, administrator, mentor, and coach with more than 20 years of experience, the Growth Academy teaches students how to communicate effectively, become confident leaders, build healthy relationships, navigate life’s transitions, and discover purpose—all at their own pace.
+</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+Whether you’re a homeschool family, homeschool co-op, microschool, or hybrid learning program, the Growth Academy is designed to complement your existing effective curriculum.
+</p>
+</div>
+<div class="relative hidden md:block">
+<div class="rounded-2xl border border-primary/15 bg-teal-wash/50 p-8 md:p-9">
+<p class="font-label-lg text-primary tracking-wider uppercase mb-6">Flexible · Self-Paced · Parent-Supported</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+Student video lessons
+</li>
+<li class="flex items-center gap-3 text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+Parent companion videos
+</li>
+<li class="flex items-center gap-3 text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+Interactive digital workbook
+</li>
+<li class="flex items-center gap-3 text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+Certificate of completion
+</li>
+</ul>
+<p class="mt-8 pt-6 border-t border-primary/15 text-body-md text-on-surface-variant">
+<span class="font-semibold text-on-surface">One purchase</span> for multiple learners
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Current Series & Labs -->
+<section class="py-20 md:py-24" id="series">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-14">
+<h2 class="font-headline-lg text-headline-lg mb-4">Current Series &amp; Labs</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Five T.E.A.M.S. Series · 29 Labs sold individually with sibling discounts</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white border border-outline-variant/50 rounded-2xl p-8">
+<div class="w-12 h-12 rounded-xl text-white flex items-center justify-center mb-5 font-extrabold text-xl" style="background:#39B2B9">T</div>
+<h3 class="font-headline-md text-headline-md mb-4" style="color:#39B2B9">Transition Series · 6</h3>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Navigating New Environments</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Middle School Preparation &amp; Survival</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>High School Preparation &amp; Survival</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Pathways After High School</li>
+<li class="flex gap-2 text-on-surface-variant/80"><span class="material-symbols-outlined text-outline text-sm mt-0.5">schedule</span>Discipline &amp; Independent Living <span class="text-xs font-bold text-primary">Soon</span></li>
+</ul>
+</div>
+<div class="bg-white border border-outline-variant/50 rounded-2xl p-8">
+<div class="w-12 h-12 rounded-xl text-white flex items-center justify-center mb-5 font-extrabold text-xl" style="background:#1B878D">E</div>
+<h3 class="font-headline-md text-headline-md mb-4" style="color:#1B878D">Empowerment Series · 6</h3>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Peer Pressure &amp; Social Value</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Self-Esteem &amp; Knowing Your Worth</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Finding Your Voice</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Your Value and Values</li>
+<li class="flex gap-2 text-on-surface-variant/80"><span class="material-symbols-outlined text-outline text-sm mt-0.5">schedule</span>Identity · Purpose <span class="text-xs font-bold text-primary">Soon</span></li>
+</ul>
+</div>
+<div class="bg-white border border-outline-variant/50 rounded-2xl p-8">
+<div class="w-12 h-12 rounded-xl text-white flex items-center justify-center mb-5 font-extrabold text-xl" style="background:#5e98be">S</div>
+<h3 class="font-headline-md text-headline-md mb-2" style="color:#5e98be">Social · Athletic · Management</h3>
+<p class="text-xs font-bold tracking-wider uppercase text-on-surface-variant mb-4">Available + coming soon</p>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">chevron_right</span>Healthy Relationships · Effective Communication</li>
+<li class="flex gap-2 text-on-surface-variant/80"><span class="material-symbols-outlined text-outline text-sm mt-0.5">schedule</span>Athletic Mindset Series (5) <span class="text-xs font-bold text-primary">Soon</span></li>
+<li class="flex gap-2 text-on-surface-variant/80"><span class="material-symbols-outlined text-outline text-sm mt-0.5">schedule</span>Management Series (7) <span class="text-xs font-bold text-primary">Soon</span></li>
+</ul>
+</div>
+</div>
+<p class="text-center mt-10 font-body-md text-on-surface-variant italic">See full catalog &amp; pricing on <a class="text-primary font-bold underline" href="Series and Labs.html#pricing">Series &amp; Labs</a>.</p>
+</div>
+</section>
+
+<!-- Every Growth Lab Includes -->
+<section class="py-20 bg-teal-wash/60">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg mb-4">Every Growth Lab Includes</h2>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Student Video Lessons</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Parent Companion Video</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Interactive Digital Workbook</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Pre &amp; Post Assessments</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5 sm:col-span-2 lg:col-span-1">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Certificate of Completion</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Homeschool Family Advantage -->
+<section class="py-20 md:py-24" id="advantage">
+<div class="max-w-3xl mx-auto px-margin-page">
+<span class="inline-flex items-center gap-2 text-primary font-label-lg tracking-widest uppercase mb-4">
+<span class="material-symbols-outlined text-base">home</span>
+The Homeschool Family Advantage
+</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">One Purchase for Multiple Learners.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+Unlike many online programs that require a separate purchase for each child, our family pricing allows siblings living in the same household to complete the same Lab under one family plan.
+</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Each student learns at their own pace and receives access to:</p>
+<ul class="space-y-3">
+<li class="flex gap-2 text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Student Video Lessons</li>
+<li class="flex gap-2 text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Parent Companion Video</li>
+<li class="flex gap-2 text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Interactive Workbook</li>
+<li class="flex gap-2 text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Assessments</li>
+<li class="flex gap-2 text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Certificate of Completion</li>
+</ul>
+</div>
+</section>
+
+<!-- Family Pricing -->
+<section class="py-20 md:py-24 bg-surface-container-low" id="family-pricing">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-14">
+<h2 class="font-headline-lg text-headline-lg mb-4">Family Pricing</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Every Lab is sold individually. Sibling discounts apply for households—plus Parent Alone / Student Alone options. Full table on <a class="text-primary font-bold underline" href="Series and Labs.html#pricing">Series &amp; Labs</a>.</p>
+</div>
+
+<div class="bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-sm mb-10">
+<div class="bg-charcoal text-white px-8 py-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Parent Alone / Student Alone</h3>
+<p class="text-slate-300 text-sm">Single lab purchase — one person</p>
+</div>
+<div class="grid md:grid-cols-2">
+<div class="p-8 border-b md:border-b-0 md:border-r border-outline-variant/40">
+<p class="text-label-lg uppercase tracking-wide text-on-surface-variant mb-2">Parent Alone</p>
+<p class="text-primary font-bold text-4xl">$39</p>
+<p class="text-body-md text-on-surface-variant mt-2">One parent · single lab</p>
+</div>
+<div class="p-8">
+<p class="text-label-lg uppercase tracking-wide text-on-surface-variant mb-2">Student Alone</p>
+<p class="text-primary font-bold text-4xl">$59</p>
+<p class="text-body-md text-on-surface-variant mt-2">One student · single lab</p>
+</div>
+</div>
+</div>
+
+<div class="grid lg:grid-cols-1 gap-10 mb-6 max-w-2xl mx-auto">
+<!-- Individual Lab -->
+<div class="bg-white rounded-2xl border border-outline-variant/50 overflow-hidden shadow-sm">
+<div class="bg-charcoal text-white px-8 py-6">
+<h3 class="font-headline-md text-headline-md text-white mb-1">Individual Lab (Student + Parent)</h3>
+<p class="text-slate-300 text-sm">Choose any single Lab from the T.E.A.M.S. Series</p>
+</div>
+<div class="overflow-x-auto">
+<table class="pricing-table w-full text-left">
+<thead>
+<tr class="bg-teal-wash/80 text-on-surface text-sm">
+<th class="p-4 font-bold">Immediate Family</th>
+<th class="p-4 font-bold text-right">Family Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-t border-outline-variant/40">
+<td class="p-4 font-medium">1 Student</td>
+<td class="p-4 text-right text-primary font-bold text-xl">$79</td>
+</tr>
+<tr class="border-t border-outline-variant/40">
+<td class="p-4 font-medium">2 Siblings</td>
+<td class="p-4 text-right text-primary font-bold text-xl">$148</td>
+</tr>
+<tr class="border-t border-outline-variant/40">
+<td class="p-4 font-medium">3+ Family</td>
+<td class="p-4 text-right text-primary font-bold text-xl">$199</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Continue to Series & Labs -->
+<section class="py-20 md:py-24" id="membership">
+<div class="max-w-container-max mx-auto px-margin-page text-center">
+<h2 class="font-headline-lg text-headline-lg mb-4">Ready to start a Lab?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">Browse all five T.E.A.M.S. Series, compare sibling pricing, and enroll lab-by-lab—no system bundles required.</p>
+<a href="Series and Labs.html#pricing" class="btn inline-flex bg-primary-container text-white px-10 py-4 rounded-xl font-bold hover:bg-deep-teal transition-all items-center gap-2">View Series &amp; Labs Pricing <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</section>
+
+<!-- Co-ops & Microschools -->
+<section class="py-20 md:py-24 bg-charcoal text-white" id="partnership">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-14">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Homeschool Co-ops &amp; Microschools</h2>
+<p class="font-body-lg text-slate-300 max-w-3xl mx-auto">Bring the Growth Academy to your students as a complete character development and life skills curriculum. Systems are released in installments and delivered to you upon completion at a pace that matches your program.</p>
+</div>
+
+<div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden mb-12 max-w-4xl mx-auto">
+<div class="px-6 py-5 border-b border-white/10">
+<h3 class="font-headline-md text-headline-md text-white">Partnership Pricing</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="pricing-table w-full text-left">
+<thead>
+<tr class="bg-white/5 text-slate-300 text-sm">
+<th class="p-4 font-bold">Organization</th>
+<th class="p-4 font-bold">Students</th>
+<th class="p-4 font-bold text-right">Annual Price</th>
+</tr>
+</thead>
+<tbody class="text-white">
+<tr class="border-t border-white/10">
+<td class="p-4 font-medium">Small Co-op</td>
+<td class="p-4 text-slate-300">Up to 20</td>
+<td class="p-4 text-right text-primary-fixed font-bold text-xl">$799</td>
+</tr>
+<tr class="border-t border-white/10">
+<td class="p-4 font-medium">Growing Co-op</td>
+<td class="p-4 text-slate-300">21–50</td>
+<td class="p-4 text-right text-primary-fixed font-bold text-xl">$1,599</td>
+</tr>
+<tr class="border-t border-white/10">
+<td class="p-4 font-medium">Microschool</td>
+<td class="p-4 text-slate-300">51–150</td>
+<td class="p-4 text-right text-primary-fixed font-bold text-xl">Starting at $2,999</td>
+</tr>
+<tr class="border-t border-white/10">
+<td class="p-4 font-medium">Larger Organizations</td>
+<td class="p-4 text-slate-300">150+</td>
+<td class="p-4 text-right text-primary-fixed font-bold text-xl">Custom Quote</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div>
+<h3 class="font-headline-md text-headline-md text-center text-white mb-8">Every Partnership Includes</h3>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Unlimited Student Access</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Parent Companion Videos</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Interactive Workbooks</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Pre &amp; Post Assessments</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Certificates of Completion</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Teacher &amp; Parent Resources</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Priority Support</span>
+</div>
+<div class="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary-fixed">check_circle</span>
+<span class="font-body-md text-slate-200 font-medium">Access to New Growth Labs as They’re Released</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why Homeschool Families Choose -->
+<section class="py-20 md:py-24">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg mb-4">Why Homeschool Families Choose the Growth Academy</h2>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">Flexible Around Your Schedule</span>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">Practical Life Skills That Complement Academics</span>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">Parent &amp; Student Learn Together</span>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">Household Pricing for Siblings</span>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">Self-Paced Learning</span>
+</div>
+<div class="flex items-start gap-3 p-2">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">New Growth Labs Added Regularly</span>
+</div>
+<div class="flex items-start gap-3 p-2 sm:col-span-2 lg:col-span-3 lg:justify-center">
+<span class="material-symbols-outlined text-primary">done</span>
+<span class="font-body-md text-on-surface font-medium">Created by an Experienced Educator, Administrator, Mentor &amp; Coach</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+<div class="max-w-3xl mx-auto px-margin-page relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-6">Ready to Help Your Students Grow?</h2>
+<p class="text-body-lg text-white/90">Whether you’re preparing your child for middle school, high school, young adulthood, or simply helping them become more confident, responsible, and prepared for life, the T.E.A.M.S. Coaching Growth Academy is here to support your family’s journey.</p>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-[#0a0b0d] border-t border-white/5 pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<div class="md:col-span-5">
+<a class="flex items-center gap-3 group mb-6 inline-block" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-12 w-auto object-contain invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<p class="font-body-md text-slate-400 max-w-sm leading-relaxed mb-6">Equipping the next generation with Series &amp; Labs for growth through reflection, intentional conversation, and accountability.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="contact_t.e.a.m.s._growth_academy.html">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Programs</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Home.html">Home</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</div>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Legal &amp; Support</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-sm text-slate-500">© 2024 T.E.A.M.S. Coaching Growth Academy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

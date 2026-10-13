@@ -1,0 +1,327 @@
+<!-- =====================================================================
+   KAJABI CUSTOM CODE — Series & Labs: Free Readiness Guides lead magnet
+   Paste into ONE Custom Code block ABOVE the pricing table block.
+
+   Kajabi setup:
+   1. Marketing → Forms → create form (Name + Email)
+   2. On submit: add to list + send email with both freebie files
+   3. Either: replace the <form> below with your Kajabi form embed,
+      OR leave this form and wire it via Kajabi Form settings / Zapier
+   ===================================================================== -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Overpass:wght@600;700&display=swap');
+
+.tga-freebie {
+  --ink: #13151A;
+  --slate: #4A4A4A;
+  --teal: #39B2B9;
+  --deep: #1B878D;
+  --wash: #E6F6F7;
+  --line: rgba(0, 161, 171, 0.18);
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 64px 24px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #E6F6F7 0%, #f7fbfc 55%, #ffffff 100%);
+  font-family: Archivo, "Open Sans", Arial, sans-serif;
+  color: var(--ink);
+  overflow: hidden;
+  text-align: center;
+}
+.tga-freebie *,
+.tga-freebie *::before,
+.tga-freebie *::after { box-sizing: border-box; }
+.tga-freebie::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at top right, rgba(57,178,185,.16), transparent 55%),
+    linear-gradient(rgba(0,161,171,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,161,171,.04) 1px, transparent 1px);
+  background-size: auto, 40px 40px, 40px 40px;
+}
+.tga-freebie__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.tga-freebie__badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 20px !important;
+  padding: 7px 16px !important;
+  background: #fff !important;
+  color: var(--teal) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 9999px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  line-height: 1.3 !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.04) !important;
+}
+.tga-freebie__badge::before {
+  content: "" !important;
+  display: block !important;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2339B2B9'%3E%3Cpath d='M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z'/%3E%3C/svg%3E") center/contain no-repeat !important;
+}
+.tga-freebie h2.tga-freebie__title,
+.block .tga-freebie h2.tga-freebie__title,
+.tga-freebie__title {
+  margin: 0 0 14px !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  text-align: center !important;
+  letter-spacing: -0.01em !important;
+}
+.tga-freebie p.tga-freebie__text,
+.block .tga-freebie p.tga-freebie__text,
+.tga-freebie__text {
+  margin: 0 auto 28px !important;
+  max-width: 580px !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: var(--slate) !important;
+  text-align: center !important;
+}
+.tga-freebie__list {
+  list-style: none !important;
+  margin: 0 auto 28px !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  max-width: 420px !important;
+  text-align: left !important;
+}
+.tga-freebie__list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--ink) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  list-style: none !important;
+}
+.tga-freebie__list li::before {
+  content: "" !important;
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  margin-top: 1px !important;
+  flex-shrink: 0 !important;
+  border-radius: 50% !important;
+  background: var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/12px no-repeat !important;
+}
+.tga-freebie__form {
+  max-width: 560px;
+  margin: 0 auto;
+}
+.tga-freebie__fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+.tga-freebie__form input[type="text"],
+.tga-freebie__form input[type="email"],
+.tga-freebie form input[type="text"],
+.tga-freebie form input[type="email"],
+.tga-freebie .form-group input {
+  flex: 1 1 200px !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  margin: 0 !important;
+  padding: 14px 20px !important;
+  border: 1px solid rgba(188,201,202,.7) !important;
+  border-radius: 9999px !important;
+  background: #fff !important;
+  color: var(--ink) !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+}
+.tga-freebie__form input:focus,
+.tga-freebie form input:focus {
+  border-color: var(--teal) !important;
+  box-shadow: 0 0 0 3px rgba(57,178,185,.18) !important;
+}
+.tga-freebie__form button[type="submit"],
+.tga-freebie form button[type="submit"],
+.tga-freebie form input[type="submit"],
+.tga-freebie .btn,
+.tga-freebie a.tga-freebie__btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  margin: 0 !important;
+  padding: 14px 28px !important;
+  border: 0 !important;
+  border-radius: 9999px !important;
+  background: var(--teal) !important;
+  color: #fff !important;
+  font-family: Overpass, Archivo, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .02em !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 18px rgba(57,178,185,.3) !important;
+  transition: background .2s ease, transform .2s ease !important;
+}
+.tga-freebie__form button[type="submit"]:hover,
+.tga-freebie form button[type="submit"]:hover,
+.tga-freebie form input[type="submit"]:hover,
+.tga-freebie a.tga-freebie__btn:hover {
+  background: var(--deep) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+.tga-freebie__note {
+  margin: 14px 0 0 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--slate) !important;
+  text-align: center !important;
+}
+.tga-freebie__success {
+  display: none;
+  max-width: 560px;
+  margin: 8px auto 0;
+  padding: 20px 22px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-align: left;
+}
+.tga-freebie__success.is-visible { display: block; }
+.tga-freebie__success-title {
+  margin: 0 0 6px !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+}
+.tga-freebie__success-text {
+  margin: 0 0 12px !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  color: var(--slate) !important;
+}
+.tga-freebie__success-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  color: var(--teal) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+.tga-freebie__success-link:hover { color: var(--deep) !important; }
+
+@media (min-width: 640px) {
+  .tga-freebie__form button[type="submit"],
+  .tga-freebie form button[type="submit"],
+  .tga-freebie form input[type="submit"] {
+    width: auto !important;
+    min-width: 240px !important;
+  }
+}
+@media (max-width: 640px) {
+  .tga-freebie { padding: 48px 16px; }
+  .tga-freebie h2.tga-freebie__title,
+  .tga-freebie__title {
+    font-size: 28px !important;
+  }
+  .tga-freebie p.tga-freebie__text,
+  .tga-freebie__text {
+    font-size: 16px !important;
+  }
+  .tga-freebie__list {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+}
+</style>
+
+<section class="tga-freebie" id="free-guides" aria-labelledby="tga-freebie-title">
+  <div class="tga-freebie__inner">
+    <span class="tga-freebie__badge">Free Parent Resource Pack</span>
+    <h2 class="tga-freebie__title" id="tga-freebie-title">Not sure which Lab to start with?</h2>
+    <p class="tga-freebie__text">Get the full free Check-In pack—Middle School &amp; High School (student + parent versions) plus the Score-to-Lab Guide. Score readiness, compare answers, and see which Digital Labs match—before you buy.</p>
+    <ul class="tga-freebie__list">
+      <li>Middle School Check-In (Student)</li>
+      <li>Middle School Check-In (Parent)</li>
+      <li>High School Check-In (Student)</li>
+      <li>High School Check-In (Parent)</li>
+      <li>Check-In Score-to-Lab Guide</li>
+    </ul>
+
+    <!-- Replace this form with your Kajabi Form embed if preferred -->
+    <div class="tga-freebie__form-slot">
+      <form class="tga-freebie__form" id="tga-freebie-form" action="#" method="post" novalidate>
+        <div class="tga-freebie__fields">
+          <label class="sr-only" for="tga-freebie-name" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Name</label>
+          <input id="tga-freebie-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+          <label class="sr-only" for="tga-freebie-email" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Email</label>
+          <input id="tga-freebie-email" name="email" type="email" autocomplete="email" required placeholder="Email address" />
+        </div>
+        <button type="submit">Send Me the Free Check-In Pack</button>
+        <p class="tga-freebie__note">We’ll email all 5 PDFs. No spam.</p>
+      </form>
+    </div>
+
+    <div class="tga-freebie__success" id="tga-freebie-success" role="status" aria-live="polite">
+      <p class="tga-freebie__success-title">You’re on the list.</p>
+      <p class="tga-freebie__success-text">Check your inbox for all 5 free PDFs. When you’re ready to start a Lab, browse pricing below.</p>
+      <a class="tga-freebie__success-link" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">View Series &amp; Labs Pricing →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var form = document.getElementById('tga-freebie-form');
+  var success = document.getElementById('tga-freebie-success');
+  if (!form || !success) return;
+  /* Local / preview success state. On Kajabi, replace form with native Form
+     so leads save automatically — then remove or keep this as fallback UI. */
+  form.addEventListener('submit', function (e) {
+    if (form.getAttribute('action') === '#' || !form.getAttribute('action')) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      form.style.display = 'none';
+      success.classList.add('is-visible');
+    }
+  });
+})();
+</script>

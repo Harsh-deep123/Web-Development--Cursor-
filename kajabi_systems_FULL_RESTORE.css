@@ -1,0 +1,3621 @@
+/* =====================================================================
+   T.E.A.M.S. GROWTH ACADEMY — Global CSS (colors · buttons · header · footer)
+   Fonts:  Archivo (headings + body) · Overpass (buttons)
+   Palette: teal #00a1ab · deep-teal #007A82 · charcoal #13151A
+            slate #4A4A4A · teal-wash #E6F6F7 · light-teal #7ef4fe · dim #5fd7e2
+   ===================================================================== */
+
+/* 1) Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=Overpass:wght@400;500;600;700&display=swap');
+
+/* 2) Headings — Archivo, charcoal, bold */
+section h1, section h2, section h3, section h4, section h5, section h6,
+.block h1, .block h2, .block h3, .block h4, .block h5, .block h6 {
+  font-family: 'Archivo', sans-serif !important;
+  color: #13151A !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em;
+}
+section h1, .block h1 { font-size: 48px !important; }
+section h2, .block h2 { font-size: 36px !important; }
+section h3, .block h3 { font-size: 30px !important; }
+section h4, .block h4 { font-size: 24px !important; }
+section h5, .block h5 { font-size: 20px !important; }
+section h6, .block h6 { font-size: 16px !important; }
+
+/* 3) Body text — Archivo, slate */
+body,
+section p, section li, section span, section a, section label,
+section input, section textarea, section select,
+.block p, .block li, .block span, .block a, .block label {
+  font-family: 'Archivo', sans-serif !important;
+}
+section p, section li, .block p, .block li {
+  color: #4A4A4A !important;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* 4) Links */
+section a, .block a { color: #00a1ab; transition: color .2s ease; }
+section a:hover, .block a:hover { color: #007A82; }
+
+/* 5) Buttons — Overpass, teal pill, darken + lift on hover (matches header CTA) */
+.btn, button, input[type="submit"] {
+  font-family: 'Overpass', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em;
+  border-radius: 9999px !important;
+  transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.btn:hover, button:hover, input[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+/* Solid (primary) buttons */
+.btn--solid,
+.btn.bg-primary, .btn.bg-primary-container,
+button.bg-primary, button.bg-primary-container,
+input[type="submit"] {
+  background-color: #39B2B9 !important;
+  border-color: #39B2B9 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(0,161,171,.30);
+}
+.btn--solid:hover,
+.btn.bg-primary:hover, .btn.bg-primary-container:hover,
+button.bg-primary:hover, button.bg-primary-container:hover,
+input[type="submit"]:hover {
+  background-color: #1B878D !important;
+  border-color: #1B878D !important;
+  box-shadow: 0 6px 20px rgba(0,161,171,.35);
+}
+
+/* Outline (secondary) buttons */
+.btn--outline {
+  background-color: transparent !important;
+  border-color: #00a1ab !important;
+  color: #00a1ab !important;
+}
+.btn--outline:hover {
+  background-color: #E6F6F7 !important;
+}
+
+/* 6) Frosted-glass (blurred) header — Kajabi has no native blur setting */
+header,
+.header,
+.site-header {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* 7) Footer — dark background, light text, teal link hovers */
+footer,
+.footer,
+.site-footer {
+  background-color: #0a0b0d !important;
+  color: #cbd5e1 !important;
+}
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
+  color: #ffffff !important;
+}
+footer p, footer li, footer span,
+.footer p, .footer li, .footer span {
+  color: #94a3b8 !important;
+}
+footer a, .footer a { color: #94a3b8 !important; transition: color .2s ease; }
+footer a:hover, .footer a:hover { color: #7ef4fe !important; }
+
+/* 8) Mobile type scale */
+@media (max-width: 767px) {
+  section h1, .block h1 { font-size: 36px !important; }
+  section h2, .block h2 { font-size: 30px !important; }
+  section h3, .block h3 { font-size: 24px !important; }
+  section h4, .block h4 { font-size: 20px !important; }
+  section h5, .block h5 { font-size: 18px !important; }
+  section p, section li, .block p, .block li { font-size: 16px; }
+}
+/* Individual Growth Lab Pricing Card */
+.growth-lab-card {
+  width: 100%;
+  max-width: 548px;
+  margin: 20px auto;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d9dfe3;
+  border-radius: 17px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Dark Top Section */
+.growth-lab-header {
+  position: relative;
+  padding: 25px 31px 27px;
+  color: #ffffff;
+  background-color: #0d1218;
+
+  background-image:
+    linear-gradient(rgba(31, 196, 211, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 196, 211, 0.06) 1px, transparent 1px);
+
+  background-size: 80px 80px;
+}
+
+.growth-lab-header h2 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.growth-lab-header p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Table Container */
+.growth-lab-table {
+  width: 100%;
+}
+
+/* Light Blue Heading Row */
+.growth-lab-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 16px;
+  background: #e9f8fa;
+  border-bottom: 1px solid #d7e0e3;
+  box-sizing: border-box;
+}
+
+.growth-lab-title-row span {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Price Rows */
+.growth-lab-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 61px;
+  padding: 0 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #d9dfe3;
+  box-sizing: border-box;
+}
+
+.growth-lab-row:last-child {
+  border-bottom: none;
+}
+
+.growth-lab-row > span:first-child {
+  color: #080808;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.growth-lab-price {
+  color: #26afbe;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.growth-lab-price-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.growth-lab-buy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  background: #39B2B9;
+  color: #ffffff !important;
+  font-family: 'Overpass', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border-radius: 9999px;
+  box-shadow: 0 3px 10px rgba(0, 161, 171, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.growth-lab-buy-btn:hover {
+  background: #1B878D;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+  .growth-lab-card {
+    max-width: 100%;
+    margin: 15px auto;
+    border-radius: 15px;
+  }
+
+  .growth-lab-header {
+    padding: 22px 20px 24px;
+  }
+
+  .growth-lab-header h2 {
+    font-size: 21px;
+  }
+
+  .growth-lab-header p {
+    font-size: 14px;
+  }
+
+  .growth-lab-title-row,
+  .growth-lab-row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .growth-lab-row > span:first-child {
+    font-size: 15px;
+  }
+
+  .growth-lab-price {
+    font-size: 18px;
+  }
+
+  .growth-lab-buy-btn {
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+}
+
+/* FAMILY PRICING TABLE */
+.family-pricing-table {
+  width: 100%;
+  max-width: 768px;
+  margin: 30px auto;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d8dfe2;
+  border-radius: 17px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ALL ROWS */
+.family-pricing-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  min-height: 61px;
+  border-bottom: 1px solid #d9e1e4;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* REMOVE LAST BORDER */
+.family-pricing-row:last-child {
+  border-bottom: none;
+}
+
+/* ALL CELLS */
+.family-pricing-row > div {
+  padding: 15px 16px;
+  color: #080808;
+  font-size: 16px;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+
+/* DARK HEADER */
+.family-pricing-header {
+  min-height: 52px;
+  background-color: #0d1218;
+
+  background-image:
+    linear-gradient(
+      rgba(34, 191, 202, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(34, 191, 202, 0.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 90px 90px;
+}
+
+.family-pricing-header > div {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* LIGHT BLUE MIDDLE ROW */
+.family-pricing-highlight {
+  background: #eff9fa;
+}
+
+/* BLUE PRICE TEXT */
+.family-pricing-row .family-price {
+  color: #27afbe;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width: 600px) {
+
+  .family-pricing-table {
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 14px;
+  }
+
+  .family-pricing-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    min-height: 58px;
+  }
+
+  .family-pricing-row > div {
+    padding: 13px 10px;
+    font-size: 14px;
+  }
+
+  .family-pricing-header > div {
+    font-size: 12px;
+  }
+
+  .family-pricing-row .family-price {
+    font-size: 14px;
+  }
+}
+/* GROWTH BENEFITS GRID */
+.growth-benefits-grid {
+  width: 100%;
+  max-width: 1136px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* EACH BENEFIT CARD */
+.growth-benefit-card {
+  width: 100%;
+  min-height: 66px;
+  padding: 20px 21px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #ffffff;
+  border: 1px solid #dce1e4;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* LAST CARD IN CENTER */
+.growth-benefit-last {
+  grid-column: 2;
+  width: 86%;
+  justify-self: center;
+}
+
+/* CHECK ICON */
+.growth-check-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #29afbf;
+  background: #ffffff;
+  border: 2px solid #29afbf;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* CARD TEXT */
+.growth-benefit-text {
+  color: #080808;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* TABLET */
+@media only screen and (max-width: 900px) {
+  .growth-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .growth-benefit-last {
+    grid-column: 1 / -1;
+    width: calc(50% - 8px);
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .growth-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px auto;
+  }
+
+  .growth-benefit-card {
+    min-height: 62px;
+    padding: 17px 16px;
+    gap: 13px;
+  }
+
+  .growth-benefit-last {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .growth-benefit-text {
+    font-size: 15px;
+  }
+
+  .growth-check-icon {
+    width: 19px;
+    height: 19px;
+    min-width: 19px;
+    font-size: 12px;
+  }
+}
+/* SAME DARK BACKGROUND */
+.partnership-dark-section {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  overflow: hidden;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(23, 102, 111, 0.20) 0%,
+      rgba(16, 45, 51, 0.12) 25%,
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      #111318 0%,
+      #111419 52%,
+      #10181c 100%
+    );
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .partnership-dark-section {
+    padding: 40px 15px;
+  }
+}/* SAME DARK BACKGROUND */
+.partnership-dark-section {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  overflow: hidden;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(23, 102, 111, 0.20) 0%,
+      rgba(16, 45, 51, 0.12) 25%,
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      #111318 0%,
+      #111419 52%,
+      #10181c 100%
+    );
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .partnership-dark-section {
+    padding: 40px 15px;
+  }
+}
+/* SAME DARK BACKGROUND */
+.partnership-dark-section {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  overflow: hidden;
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(23, 102, 111, 0.20) 0%,
+      rgba(16, 45, 51, 0.12) 25%,
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      #111318 0%,
+      #111419 52%,
+      #10181c 100%
+    );
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .partnership-dark-section {
+    padding: 40px 15px;
+  }
+}
+/* PARTNERSHIP PRICING CARD */
+.partnership-pricing-card {
+  width: 100%;
+  max-width: 718px;
+  margin: 30px auto;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: rgba(28, 32, 37, 0.96);
+  border: 1px solid #394148;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+
+  background-image:
+    linear-gradient(rgba(43, 180, 194, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 180, 194, 0.055) 1px, transparent 1px);
+
+  background-size: 56px 56px;
+}
+
+/* TOP TITLE */
+.partnership-card-title {
+  min-height: 58px;
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: rgba(30, 34, 39, 0.88);
+  border-bottom: 1px solid #394148;
+  box-sizing: border-box;
+}
+
+/* ALL TABLE ROWS */
+.partnership-pricing-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.25fr;
+  align-items: center;
+  min-height: 49px;
+  border-bottom: 1px solid #343c42;
+  background: rgba(27, 31, 36, 0.76);
+  box-sizing: border-box;
+}
+
+.partnership-pricing-row:last-child {
+  border-bottom: none;
+}
+
+/* ALL CELLS */
+.partnership-pricing-row > div {
+  padding: 13px 13px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+/* TABLE HEADER */
+.partnership-pricing-header {
+  min-height: 41px;
+  background: rgba(42, 46, 51, 0.92);
+}
+
+.partnership-pricing-header > div {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ANNUAL PRICE COLUMN */
+.partnership-pricing-header > div:last-child,
+.partnership-pricing-row > div:last-child {
+  text-align: right;
+}
+
+/* CYAN PRICES */
+.partnership-pricing-row .partnership-price {
+  color: #3be3f3;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width: 600px) {
+  .partnership-pricing-card {
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 13px;
+  }
+
+  .partnership-card-title {
+    min-height: 54px;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .partnership-pricing-row {
+    grid-template-columns: 1.25fr 0.8fr 1.25fr;
+    min-height: 52px;
+  }
+
+  .partnership-pricing-row > div {
+    padding: 12px 8px;
+    font-size: 11px;
+  }
+
+  .partnership-pricing-header > div {
+    font-size: 10px;
+  }
+
+  .partnership-pricing-row .partnership-price {
+    font-size: 12px;
+  }
+}
+/* PARTNERSHIP BENEFITS DARK SECTION */
+.partnership-benefits-section {
+  width: 100%;
+  padding: 28px 38px 34px;
+  background-color: #101419;
+
+  background-image:
+    linear-gradient(
+      rgba(44, 203, 219, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(44, 203, 219, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+  box-sizing: border-box;
+}
+
+/* FOUR-COLUMN GRID */
+.partnership-benefits-grid {
+  width: 100%;
+  max-width: 910px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+  box-sizing: border-box;
+}
+
+/* EACH BENEFIT CARD */
+.partnership-benefit-card {
+  min-height: 53px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  color: #ffffff;
+  background: rgba(29, 33, 38, 0.94);
+  border: 1px solid #3a4147;
+  border-radius: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+
+  box-sizing: border-box;
+}
+
+/* CYAN CIRCLE CHECK ICON */
+.partnership-check {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 1px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #3be6f4;
+  background: transparent;
+  border: 2px solid #3be6f4;
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* TABLET */
+@media only screen and (max-width: 900px) {
+  .partnership-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .partnership-benefits-section {
+    padding: 20px 15px;
+  }
+
+  .partnership-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .partnership-benefit-card {
+    min-height: 56px;
+    padding: 14px;
+    font-size: 13px;
+  }
+}
+/* REMOVE SOLID BACKGROUND — KEEP CARDS SAME */
+.partnership-benefits-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* REMOVE INNER TEXT BOX / BLOCK BACKGROUND */
+.partnership-benefits-section,
+.partnership-benefits-grid,
+.partnership-benefits-section .container,
+.partnership-benefits-section .row,
+.partnership-benefits-section .block,
+.partnership-benefits-section .sizer {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* KEEP BENEFIT CARDS DARK */
+.partnership-benefit-card {
+  background: rgba(29, 33, 38, 0.94) !important;
+  border: 1px solid #3a4147 !important;
+}
+/* FLEXIBLE PLAN CARD */
+.flexible-plan-card {
+  width: 100%;
+  max-width: 430px;
+  margin: 20px auto;
+  padding: 28px 30px 30px;
+
+  /* Background removed */
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  border: 1px solid #bfe7ec;
+  border-radius: 14px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* TOP LABEL */
+.flexible-plan-label {
+  margin-bottom: 20px;
+  color: #20a9bb;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* LIST */
+.flexible-plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* EACH ROW */
+.flexible-plan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* CHECK ICON */
+.flexible-check {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  margin-top: 2px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #20aec0;
+  border: 1.7px solid #20aec0;
+  border-radius: 50%;
+
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* DIVIDER */
+.flexible-plan-divider {
+  width: 100%;
+  height: 1px;
+  margin: 28px 0 19px;
+  background: #bfe0e5;
+}
+
+/* BOTTOM TEXT */
+.flexible-plan-footer {
+  color: #111111;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.flexible-plan-footer strong {
+  font-weight: 700;
+}
+
+/* REMOVE KAJABI INNER BACKGROUNDS */
+.flexible-plan-card,
+.flexible-plan-card .container,
+.flexible-plan-card .row,
+.flexible-plan-card .block,
+.flexible-plan-card .sizer,
+.flexible-plan-card .text-block {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .flexible-plan-card {
+    max-width: 100%;
+    padding: 23px 20px 25px;
+    border-radius: 12px;
+  }
+
+  .flexible-plan-label {
+    font-size: 12px;
+  }
+
+  .flexible-plan-item,
+  .flexible-plan-footer {
+    font-size: 13px;
+  }
+}
+/* FLEXIBLE PLAN CARD — BIGGER SIZE */
+.flexible-plan-card {
+  width: 100%;
+  max-width: 520px;          /* pehla 430 si — hun vadda */
+  min-height: 345px;         /* height vi vaddi */
+  margin: 20px auto;
+  padding: 34px 34px 32px;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  border: 1px solid #bfe7ec;
+  border-radius: 16px;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TOP LABEL */
+.flexible-plan-label {
+  margin-bottom: 24px;
+  color: #20a9bb;
+  font-size: 18px;           /* vadda */
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* LIST */
+.flexible-plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* EACH ITEM */
+.flexible-plan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #111111;
+  font-size: 17px;           /* text vadda */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* CHECK ICON */
+.flexible-check {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin-top: 3px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #20aec0;
+  border: 1.8px solid #20aec0;
+  border-radius: 50%;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* DIVIDER */
+.flexible-plan-divider {
+  width: 100%;
+  height: 1px;
+  margin: 30px 0 20px;
+  background: #bfe0e5;
+}
+
+/* FOOTER */
+.flexible-plan-footer {
+  color: #111111;
+  font-size: 17px;           /* bottom text vadda */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.flexible-plan-footer strong {
+  font-weight: 700;
+}
+
+/* INNER BACKGROUND REMOVE */
+.flexible-plan-card,
+.flexible-plan-card .container,
+.flexible-plan-card .row,
+.flexible-plan-card .block,
+.flexible-plan-card .sizer,
+.flexible-plan-card .text-block {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .flexible-plan-card {
+    max-width: 100%;
+    min-height: auto;
+    padding: 24px 22px 26px;
+    border-radius: 14px;
+  }
+
+  .flexible-plan-label {
+    font-size: 14px;
+  }
+
+  .flexible-plan-item,
+  .flexible-plan-footer {
+    font-size: 15px;
+  }
+
+  .flexible-check {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    font-size: 10px;
+  }
+}
+/* REMOVE PILL BACKGROUND */
+.homeschool-label {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  color: #00a1ab;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* SMALL HOME ICON */
+.homeschool-label .home-icon {
+  color: #00a1ab;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* REMOVE KAJABI INNER BACKGROUND */
+.homeschool-label,
+.homeschool-label span {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* STUDENT VIDEO LESSONS CARD */
+.student-video-card {
+  width: 100%;
+  max-width: 155px;
+  min-height: 90px;
+  padding: 17px 16px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  background: #ffffff;
+  border: 1px solid #d8dfe2;
+  border-radius: 7px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* CYAN CHECK ICON */
+.student-video-check {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 1px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #20afbf;
+  background: transparent;
+  border: 1.7px solid #20afbf;
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* TEXT */
+.student-video-text {
+  color: #111111;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .student-video-card {
+    max-width: 100%;
+  }
+}
+/* FULL-WIDTH INCLUDE CARD */
+.growth-include-card {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 82px;
+
+  padding: 15px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  background: #ffffff !important;
+  border: 1px solid #d7dfe2;
+  border-radius: 7px;
+  box-shadow: 0 8px 22px rgba(26, 52, 58, 0.08);
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* CHECK ICON */
+.growth-include-check {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 1px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #20afbf;
+  border: 1.7px solid #20afbf;
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* CARD TEXT */
+.growth-include-text {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* REMOVE EXTRA TEXT-BOX SPACE */
+.growth-include-card p,
+.growth-include-card h1,
+.growth-include-card h2,
+.growth-include-card h3,
+.growth-include-card h4 {
+  margin: 0 !important;
+}
+
+/* KAJABI BLOCK FULL WIDTH */
+.block:has(.growth-include-card) .block-type--text,
+.block:has(.growth-include-card) .sizer,
+.block:has(.growth-include-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+/* PARTNER SCHOOL CARD — INCREASED SIZE */
+.partner-school-card {
+  width: 100%;
+  max-width: 470px;
+  min-height: 330px;
+  margin: 0 auto;
+  padding: 34px 32px 30px;
+
+  background: #ffffff;
+  border: 1px solid #d4dcdf;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* TOP LABEL */
+.partner-school-label {
+  margin: 0 0 9px;
+  color: #22a9b8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.45px;
+}
+
+/* SUBTITLE */
+.partner-school-subtitle {
+  margin: 0 0 24px;
+  color: #161616;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* LIST */
+.partner-school-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* EACH ROW */
+.partner-school-item {
+  width: 100%;
+  min-height: 42px;
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+
+  color: #111111;
+  background: #f2f2f3;
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+/* LIGHT BLUE ROWS */
+.partner-school-item-blue {
+  background: #e9f8fa;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .partner-school-card {
+    max-width: 100%;
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .partner-school-label {
+    font-size: 13px;
+  }
+
+  .partner-school-subtitle,
+  .partner-school-item {
+    font-size: 12px;
+  }
+}
+/* GROWTH ACADEMY CARD — SAME SIZE AS REFERENCE */
+.growth-academy-card {
+  width: 100%;
+  max-width: 760px;
+  min-height: 305px;
+  margin: 24px auto;
+  padding: 28px 27px 26px;
+
+  background: #ffffff;
+  border: 1px solid #d5dde0;
+  border-radius: 12px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.growth-academy-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+/* NUMBER */
+.growth-academy-number {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #31b1be;
+  border-radius: 50%;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* TITLE */
+.growth-academy-title {
+  margin: 1px 0 8px;
+  color: #28a9b6;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* DESCRIPTION */
+.growth-academy-description {
+  width: 100%;
+  max-width: 660px;
+  margin: 0;
+
+  color: #273137;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* SECTIONS */
+.growth-academy-section {
+  margin-top: 31px;
+}
+
+/* LABEL */
+.growth-academy-label {
+  margin-bottom: 10px;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.7px;
+}
+
+/* TAGS */
+.growth-academy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.growth-academy-tags span {
+  padding: 5px 10px;
+  color: #263238;
+  background: #eaf7f8;
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* CHECKLIST */
+.growth-academy-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 36px;
+  row-gap: 13px;
+}
+
+.growth-academy-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  color: #171717;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.growth-academy-check {
+  color: #28afbd;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* KAJABI BLOCK FULL WIDTH */
+.block:has(.growth-academy-card) .sizer,
+.block:has(.growth-academy-card) .block-type--text,
+.block:has(.growth-academy-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .growth-academy-card {
+    max-width: 100%;
+    min-height: auto;
+    padding: 22px 18px 24px;
+  }
+
+  .growth-academy-check-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* FACILITATOR GUIDE CARD */
+.facilitator-guide-card {
+  width: 100%;
+  max-width: 1024px;
+  min-height: 425px;
+  margin: 24px auto;
+  padding: 34px 36px 34px;
+
+  background: #ffffff;
+  border: 1px solid #d5dde0;
+  border-radius: 14px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.facilitator-guide-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* NUMBER CIRCLE */
+.facilitator-guide-number {
+  width: 37px;
+  height: 37px;
+  min-width: 37px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #31b1be;
+  border-radius: 50%;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HEADING AREA */
+.facilitator-guide-heading {
+  flex: 1;
+}
+
+.facilitator-guide-heading h3 {
+  margin: 3px 0 13px;
+  color: #27a9b6;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.facilitator-guide-heading p {
+  max-width: 880px;
+  margin: 0;
+  color: #20272b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* CONTENT */
+.facilitator-guide-content {
+  margin-top: 45px;
+}
+
+/* LABEL */
+.facilitator-guide-label {
+  margin-bottom: 18px;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+}
+
+/* TWO-COLUMN LIST */
+.facilitator-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 110px;
+}
+
+/* LIST */
+.facilitator-guide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+/* EACH ITEM */
+.facilitator-guide-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.facilitator-guide-item span {
+  color: #28afbd;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.facilitator-guide-item p {
+  margin: 0;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* FOOTER */
+.facilitator-guide-footer {
+  margin: 25px 0 0;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* KAJABI BLOCK FULL WIDTH */
+.block:has(.facilitator-guide-card) .sizer,
+.block:has(.facilitator-guide-card) .block-type--text,
+.block:has(.facilitator-guide-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 800px) {
+  .facilitator-guide-card {
+    max-width: 100%;
+  }
+
+  .facilitator-guide-grid {
+    column-gap: 40px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .facilitator-guide-card {
+    min-height: auto;
+    margin: 18px auto;
+    padding: 24px 20px;
+    border-radius: 11px;
+  }
+
+  .facilitator-guide-number {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .facilitator-guide-heading h3 {
+    font-size: 20px;
+  }
+
+  .facilitator-guide-heading p {
+    font-size: 13px;
+  }
+
+  .facilitator-guide-content {
+    margin-top: 30px;
+  }
+
+  .facilitator-guide-grid {
+    grid-template-columns: 1fr;
+    row-gap: 13px;
+  }
+
+  .facilitator-guide-item p,
+  .facilitator-guide-footer {
+    font-size: 13px;
+  }
+}
+/* GROWTH ACADEMY CARD */
+.growth-academy-card {
+  width: 100% !important;
+  max-width: 1024px !important;
+  min-height: 425px;
+  margin: 24px auto;
+  padding: 34px 36px;
+
+  background: #ffffff;
+  border: 1px solid #d5dde0;
+  border-radius: 14px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.growth-academy-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* NUMBER CIRCLE */
+.growth-academy-number {
+  width: 37px;
+  height: 37px;
+  min-width: 37px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #31b1be;
+  border-radius: 50%;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HEADING AREA */
+.growth-academy-heading-wrap {
+  flex: 1;
+}
+
+/* TITLE */
+.growth-academy-title {
+  margin: 3px 0 13px;
+  color: #27a9b6;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* DESCRIPTION */
+.growth-academy-description {
+  width: 100%;
+  max-width: 880px;
+  margin: 0;
+
+  color: #20272b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* CONTENT SECTIONS */
+.growth-academy-section {
+  margin-top: 38px;
+}
+
+/* SECTION LABEL */
+.growth-academy-label {
+  margin-bottom: 14px;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.4px;
+}
+
+/* TAGS */
+.growth-academy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.growth-academy-tags span {
+  padding: 6px 11px;
+
+  color: #263238;
+  background: #eaf7f8;
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* CHECKLIST GRID */
+.growth-academy-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 55px;
+  row-gap: 14px;
+}
+
+/* CHECKLIST ITEM */
+.growth-academy-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  color: #171717;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* CHECK ICON */
+.growth-academy-check {
+  color: #28afbd;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* REMOVE EXTRA KAJABI TEXT BOX SPACE */
+.block:has(.growth-academy-card) .sizer,
+.block:has(.growth-academy-card) .block-type--text,
+.block:has(.growth-academy-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 800px) {
+  .growth-academy-card {
+    max-width: 100% !important;
+  }
+
+  .growth-academy-check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .growth-academy-card {
+    min-height: auto;
+    margin: 18px auto;
+    padding: 24px 20px;
+    border-radius: 11px;
+  }
+
+  .growth-academy-number {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .growth-academy-title {
+    font-size: 20px;
+  }
+
+  .growth-academy-description {
+    font-size: 13px;
+  }
+
+  .growth-academy-section {
+    margin-top: 28px;
+  }
+
+  .growth-academy-check-grid {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .growth-academy-check-item {
+    font-size: 13px;
+  }
+}
+
+/* CAMPUS COACH DEVELOPMENT CARD */
+.campus-coach-card {
+  width: 100%;
+  max-width: 1024px;
+  min-height: 520px;
+  margin: 24px auto;
+  padding: 28px 28px 26px;
+
+  background: #ffffff;
+  border: 1px solid #d5dde0;
+  border-radius: 14px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.campus-coach-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* NUMBER CIRCLE */
+.campus-coach-number {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #31b1be;
+  border-radius: 50%;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HEADER CONTENT */
+.campus-coach-heading-wrap {
+  flex: 1;
+}
+
+/* TITLE */
+.campus-coach-title {
+  margin: 1px 0 5px;
+  color: #27a9b6;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* SUBTITLE */
+.campus-coach-subtitle {
+  margin: 0 0 13px;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* DESCRIPTION */
+.campus-coach-description {
+  max-width: 880px;
+  margin: 0 0 11px;
+  color: #20272b;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* SECTIONS */
+.campus-coach-section {
+  margin-top: 29px;
+}
+
+.campus-coach-program-section {
+  margin-top: 22px;
+}
+
+/* SECTION LABEL */
+.campus-coach-label {
+  margin-bottom: 13px;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.6px;
+}
+
+/* TWO-COLUMN GRID */
+.campus-coach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 95px;
+}
+
+/* LIST */
+.campus-coach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* EACH CHECK ITEM */
+.campus-coach-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  color: #151515;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* TEAL CHECK */
+.campus-coach-check {
+  color: #28afbd;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* FOOTER */
+.campus-coach-footer {
+  margin: 19px 0 0;
+  color: #333333;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.campus-coach-card) .sizer,
+.block:has(.campus-coach-card) .block-type--text,
+.block:has(.campus-coach-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 800px) {
+  .campus-coach-card {
+    max-width: 100%;
+  }
+
+  .campus-coach-grid {
+    column-gap: 40px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .campus-coach-card {
+    min-height: auto;
+    margin: 18px auto;
+    padding: 23px 18px;
+    border-radius: 11px;
+  }
+
+  .campus-coach-header {
+    gap: 11px;
+  }
+
+  .campus-coach-number {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+  }
+
+  .campus-coach-title {
+    font-size: 18px;
+  }
+
+  .campus-coach-subtitle,
+  .campus-coach-description,
+  .campus-coach-label,
+  .campus-coach-item,
+  .campus-coach-footer {
+    font-size: 12px;
+  }
+
+  .campus-coach-grid {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .campus-coach-section {
+    margin-top: 27px;
+  }
+}
+/* ONGOING PARTNERSHIP CARD */
+.ongoing-partnership-card {
+  width: 100%;
+  max-width: 1024px;
+  min-height: 300px;
+  margin: 24px auto;
+  padding: 28px 28px 27px;
+
+  background: #ffffff;
+  border: 1px solid #d5dde0;
+  border-radius: 14px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.ongoing-partnership-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* NUMBER CIRCLE */
+.ongoing-partnership-number {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #31b1be;
+  border-radius: 50%;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HEADER AREA */
+.ongoing-partnership-heading {
+  flex: 1;
+}
+
+/* TITLE */
+.ongoing-partnership-title {
+  margin: 1px 0 10px;
+  color: #27a9b6;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* DESCRIPTION */
+.ongoing-partnership-description {
+  max-width: 900px;
+  margin: 0 0 10px;
+
+  color: #20272b;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* CONTENT SECTION */
+.ongoing-partnership-section {
+  margin-top: 26px;
+}
+
+/* SECTION LABEL */
+.ongoing-partnership-label {
+  margin-bottom: 13px;
+
+  color: #111111;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.55px;
+}
+
+/* TWO-COLUMN GRID */
+.ongoing-partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 95px;
+}
+
+/* LIST */
+.ongoing-partnership-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* EACH ITEM */
+.ongoing-partnership-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  color: #151515;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* TEAL CHECK */
+.ongoing-partnership-check {
+  color: #28afbd;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* FOOTER */
+.ongoing-partnership-footer {
+  margin: 18px 0 0;
+
+  color: #111111;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.ongoing-partnership-card) .sizer,
+.block:has(.ongoing-partnership-card) .block-type--text,
+.block:has(.ongoing-partnership-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 800px) {
+  .ongoing-partnership-card {
+    max-width: 100%;
+  }
+
+  .ongoing-partnership-grid {
+    column-gap: 40px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .ongoing-partnership-card {
+    min-height: auto;
+    margin: 18px auto;
+    padding: 23px 18px;
+    border-radius: 11px;
+  }
+
+  .ongoing-partnership-number {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+  }
+
+  .ongoing-partnership-title {
+    font-size: 18px;
+  }
+
+  .ongoing-partnership-description,
+  .ongoing-partnership-label,
+  .ongoing-partnership-item,
+  .ongoing-partnership-footer {
+    font-size: 12px;
+  }
+
+  .ongoing-partnership-grid {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .ongoing-partnership-section {
+    margin-top: 24px;
+  }
+}
+/* SCHOOL SERVICES GRID */
+.school-services-grid {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* EACH CARD */
+.school-service-card {
+  width: 100%;
+  min-height: 68px;
+  padding: 16px 16px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  background: #ffffff;
+  border: 1px solid #d7dfe2;
+  border-radius: 6px;
+  box-shadow: none;
+
+  box-sizing: border-box;
+}
+
+/* CHECK ICON */
+.school-service-check {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 1px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #26afbe;
+  background: transparent;
+  border: 1.7px solid #26afbe;
+  border-radius: 50%;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+
+  box-sizing: border-box;
+}
+
+/* CARD TEXT */
+.school-service-text {
+  color: #111111;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.school-services-grid) .sizer,
+.block:has(.school-services-grid) .block-type--text,
+.block:has(.school-services-grid) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 850px) {
+  .school-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .school-services-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .school-service-card {
+    min-height: 58px;
+    padding: 14px;
+  }
+
+  .school-service-text {
+    font-size: 13px;
+  }
+}
+/* PARTNER SCHOOL PRICE CARD */
+.partner-school-price-card {
+  width: 100%;
+  max-width: 414px;
+  margin: 20px auto;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #d6dee1;
+  border-radius: 13px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* DARK HEADER */
+.partner-school-price-header {
+  padding: 19px 23px 18px;
+  color: #ffffff;
+  background-color: #0f141a;
+
+  background-image:
+    linear-gradient(
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+  box-sizing: border-box;
+}
+
+.partner-school-price-header h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.partner-school-price-header p {
+  margin: 0;
+  color: #30d1e1;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* WHITE CONTENT AREA */
+.partner-school-price-content {
+  padding: 24px 23px 25px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* DESCRIPTION */
+.partner-school-price-description {
+  margin: 0 0 22px;
+  color: #343b40;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* INCLUDES LABEL */
+.partner-school-price-label {
+  margin-bottom: 11px;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.35px;
+}
+
+/* LIST */
+.partner-school-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* LIST ITEM */
+.partner-school-price-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.partner-school-price-item span {
+  color: #27afbe;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.partner-school-price-item p {
+  margin: 0;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.partner-school-price-card) .sizer,
+.block:has(.partner-school-price-card) .block-type--text,
+.block:has(.partner-school-price-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .partner-school-price-card {
+    max-width: 100%;
+    border-radius: 11px;
+  }
+
+  .partner-school-price-header {
+    padding: 18px 19px;
+  }
+
+  .partner-school-price-content {
+    padding: 21px 19px 23px;
+  }
+
+  .partner-school-price-header h3 {
+    font-size: 17px;
+  }
+
+  .partner-school-price-description,
+  .partner-school-price-label,
+  .partner-school-price-item p {
+    font-size: 12px;
+  }
+}
+/* GROWTH PARTNER SCHOOL CARD */
+.growth-partner-card {
+  width: 100%;
+  max-width: 414px;
+  margin: 20px auto;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #d6dee1;
+  border-radius: 13px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* DARK HEADER */
+.growth-partner-header {
+  padding: 19px 23px 18px;
+  color: #ffffff;
+  background-color: #0f141a;
+
+  background-image:
+    linear-gradient(
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+  box-sizing: border-box;
+}
+
+.growth-partner-header h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.growth-partner-header p {
+  margin: 0;
+  color: #30d1e1;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* WHITE CONTENT */
+.growth-partner-content {
+  min-height: 237px;
+  padding: 24px 23px 25px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* DESCRIPTION */
+.growth-partner-description {
+  margin: 0 0 22px;
+  color: #343b40;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* INCLUDES LABEL */
+.growth-partner-label {
+  margin-bottom: 11px;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.35px;
+}
+
+/* LIST */
+.growth-partner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+/* LIST ITEM */
+.growth-partner-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.growth-partner-item span {
+  color: #27afbe;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.growth-partner-item p {
+  margin: 0;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.growth-partner-card) .sizer,
+.block:has(.growth-partner-card) .block-type--text,
+.block:has(.growth-partner-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .growth-partner-card {
+    max-width: 100%;
+    border-radius: 11px;
+  }
+
+  .growth-partner-header {
+    padding: 18px 19px;
+  }
+
+  .growth-partner-content {
+    min-height: auto;
+    padding: 21px 19px 23px;
+  }
+
+  .growth-partner-header h3 {
+    font-size: 17px;
+  }
+
+  .growth-partner-description,
+  .growth-partner-label,
+  .growth-partner-item p {
+    font-size: 12px;
+  }
+}
+/* GROWTH ACADEMY PARTNER SCHOOL CARD */
+.partner-school-price-card {
+  width: 100%;
+  max-width: 414px;
+  min-height: 325px;
+  margin: 20px auto;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #d6dee1;
+  border-radius: 13px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* DARK HEADER */
+.partner-school-price-header {
+  min-height: 87px;
+  padding: 19px 23px 18px;
+
+  color: #ffffff;
+  background-color: #0f141a;
+
+  background-image:
+    linear-gradient(
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+  box-sizing: border-box;
+}
+
+.partner-school-price-header h3 {
+  margin: 0 0 8px;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.25;
+}
+
+.partner-school-price-header p {
+  margin: 0;
+  color: #30d1e1 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.3;
+}
+
+/* WHITE CONTENT */
+.partner-school-price-content {
+  min-height: 238px;
+  padding: 24px 23px 25px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* DESCRIPTION */
+.partner-school-price-description {
+  margin: 0 0 22px;
+  color: #343b40;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* INCLUDES LABEL */
+.partner-school-price-label {
+  margin-bottom: 11px;
+  color: #111111;
+  font-size: 12px !important;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.35px;
+}
+
+/* LIST */
+.partner-school-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+/* LIST ITEM */
+.partner-school-price-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.partner-school-price-item > span {
+  color: #27afbe;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.partner-school-price-item p {
+  margin: 0;
+  color: #111111;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* REMOVE KAJABI EXTRA SPACE */
+.block:has(.partner-school-price-card) .sizer,
+.block:has(.partner-school-price-card) .block-type--text,
+.block:has(.partner-school-price-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .partner-school-price-card {
+    max-width: 100%;
+    min-height: auto;
+    border-radius: 11px;
+  }
+
+  .partner-school-price-header {
+    min-height: auto;
+    padding: 18px 19px;
+  }
+
+  .partner-school-price-content {
+    min-height: auto;
+    padding: 21px 19px 23px;
+  }
+
+  .partner-school-price-header h3 {
+    font-size: 17px !important;
+  }
+}
+/* FIRST CARD — SAME SIZE AS SECOND CARD */
+.partner-school-price-card {
+  width: 100% !important;
+  max-width: 414px !important;
+  min-height: 352px !important;
+  margin: 0 auto !important;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #d6dee1;
+  border-radius: 13px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* SAME DARK HEADER SIZE */
+.partner-school-price-header {
+  min-height: 92px !important;
+  padding: 20px 21px 18px !important;
+
+  background-color: #0f141a;
+  background-image:
+    linear-gradient(
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+  box-sizing: border-box;
+}
+
+/* SAME HEADING SIZE */
+.partner-school-price-header h3 {
+  margin: 0 0 8px !important;
+  color: #ffffff !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+/* SAME PRICE SIZE */
+.partner-school-price-header p {
+  margin: 0 !important;
+  color: #00a1ab !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+/* SAME WHITE CONTENT HEIGHT */
+.partner-school-price-content {
+  min-height: 260px !important;
+  padding: 23px 21px 25px !important;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* DESCRIPTION */
+.partner-school-price-description {
+  margin: 0 0 22px !important;
+  color: #555555;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.65 !important;
+}
+
+/* LABEL */
+.partner-school-price-label {
+  margin-bottom: 12px !important;
+  color: #111111;
+  font-size: 12px !important;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* LIST */
+.partner-school-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px !important;
+}
+
+/* LIST ITEM */
+.partner-school-price-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.partner-school-price-item > span {
+  color: #27afbe;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.partner-school-price-item p {
+  margin: 0 !important;
+  color: #555555;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.partner-school-price-card) .sizer,
+.block:has(.partner-school-price-card) .block-type--text,
+.block:has(.partner-school-price-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .partner-school-price-card {
+    max-width: 100% !important;
+    min-height: auto !important;
+  }
+
+  .partner-school-price-header h3 {
+    font-size: 22px !important;
+  }
+
+  .partner-school-price-content {
+    min-height: auto !important;
+  }
+}
+/* CAMPUS PARTNER PRICING CARD */
+.campus-partner-price-card {
+  position: relative;
+  width: 100%;
+  max-width: 852px;
+  margin: 24px auto;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #24b4c0;
+  border-radius: 12px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* RECOMMENDED BADGE */
+.campus-partner-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  padding: 6px 14px;
+  color: #ffffff;
+  background: #32b4bf;
+
+  border-bottom-left-radius: 5px;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2px;
+}
+
+/* DARK HEADER */
+.campus-partner-header {
+  min-height: 87px;
+  padding: 19px 24px 18px;
+  color: #ffffff;
+  background-color: #0f141a;
+
+  background-image:
+    linear-gradient(
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 178, 193, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+  box-sizing: border-box;
+}
+
+.campus-partner-header h3 {
+  margin: 0 0 8px;
+  padding-right: 100px;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.campus-partner-header p {
+  margin: 0;
+  color: #31d6e4;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* WHITE CONTENT */
+.campus-partner-content {
+  min-height: 210px;
+  padding: 25px 24px 26px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* DESCRIPTION */
+.campus-partner-description {
+  margin: 0 0 20px;
+  color: #343b40;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* LABEL */
+.campus-partner-label {
+  margin-bottom: 13px;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.35px;
+}
+
+/* TWO-COLUMN LIST */
+.campus-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 75px;
+}
+
+/* EACH COLUMN */
+.campus-partner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* EACH ITEM */
+.campus-partner-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+/* CHECK */
+.campus-partner-item > span {
+  color: #27afbe;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ITEM TEXT */
+.campus-partner-item p {
+  margin: 0;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.campus-partner-price-card) .sizer,
+.block:has(.campus-partner-price-card) .block-type--text,
+.block:has(.campus-partner-price-card) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 850px) {
+  .campus-partner-price-card {
+    max-width: 100%;
+  }
+
+  .campus-partner-grid {
+    column-gap: 35px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .campus-partner-price-card {
+    border-radius: 11px;
+  }
+
+  .campus-partner-header {
+    min-height: auto;
+    padding: 20px 18px 18px;
+  }
+
+  .campus-partner-header h3 {
+    padding-right: 0;
+    margin-top: 18px;
+    font-size: 17px;
+  }
+
+  .campus-partner-header p {
+    font-size: 13px;
+  }
+
+  .campus-partner-content {
+    min-height: auto;
+    padding: 22px 18px 24px;
+  }
+
+  .campus-partner-grid {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .campus-partner-description,
+  .campus-partner-label,
+  .campus-partner-item p {
+    font-size: 12px;
+  }
+
+  .campus-partner-badge {
+    padding: 6px 11px;
+    font-size: 10px;
+  }
+}
+/* DISTRICT PARTNER SCHOOLS BOX */
+.district-partner-box {
+  width: 100%;
+  max-width: 852px;
+  min-height: 125px;
+  margin: 20px auto;
+  padding: 25px 25px 23px;
+
+  background: #eaf9fb;
+  border: 1px solid #b9e8ed;
+  border-radius: 12px;
+  box-shadow: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* HEADING */
+.district-partner-title {
+  margin: 0 0 11px;
+  color: #28a9b6;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.25;
+}
+
+/* TEXT */
+.district-partner-text {
+  margin: 0 0 8px;
+  color: #20272b;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.district-partner-last {
+  margin-bottom: 0;
+  color: #111111;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.district-partner-box) .sizer,
+.block:has(.district-partner-box) .block-type--text,
+.block:has(.district-partner-box) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .district-partner-box {
+    max-width: 100%;
+    min-height: auto;
+    padding: 21px 18px;
+    border-radius: 10px;
+  }
+
+  .district-partner-title {
+    font-size: 17px !important;
+  }
+
+  .district-partner-text {
+    font-size: 12px !important;
+  }
+}
+/* GROWTH SYSTEMS GRID */
+.growth-systems-grid {
+  width: 100%;
+  max-width: 852px;
+  margin: 20px auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* EACH CARD */
+.growth-system-card {
+  width: 100%;
+  min-height: 102px;
+  padding: 20px 18px;
+
+  background: #ffffff;
+  border: 1px solid #d6dee1;
+  border-radius: 12px;
+  box-shadow: none;
+
+  box-sizing: border-box;
+}
+
+/* CARD HEADING */
+.growth-system-card h3 {
+  margin: 0 0 12px;
+
+  color: #20a9b5;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.35;
+}
+
+/* NORMAL DESCRIPTION */
+.growth-system-description {
+  margin: 0;
+
+  color: #20272b;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* TRANSITION LAB LIST */
+.growth-system-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.growth-system-list p {
+  margin: 0;
+
+  color: #20272b;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.growth-system-list p span {
+  margin-right: 8px;
+  color: #20a9b5;
+  font-weight: 700;
+}
+
+/* LAST CENTER CARD */
+.growth-system-last {
+  grid-column: 1 / -1;
+  width: 218px;
+  min-height: 82px;
+  justify-self: center;
+}
+
+/* REMOVE EXTRA KAJABI SPACE */
+.block:has(.growth-systems-grid) .sizer,
+.block:has(.growth-systems-grid) .block-type--text,
+.block:has(.growth-systems-grid) .text-block {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* TABLET */
+@media only screen and (max-width: 800px) {
+  .growth-systems-grid {
+    max-width: 100%;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .growth-systems-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .growth-system-card {
+    min-height: auto;
+    padding: 18px 16px;
+    border-radius: 10px;
+  }
+
+  .growth-system-card h3 {
+    font-size: 14px !important;
+  }
+
+  .growth-system-description,
+  .growth-system-list p {
+    font-size: 13px !important;
+  }
+
+  .growth-system-last {
+    grid-column: auto;
+    width: 100%;
+  }
+}
+/* LABEL LEFT SIDE ALIGN */
+.homeschool-label {
+  width: fit-content;
+  margin: 0 auto 0 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 7px;
+  padding: 7px 13px;
+
+  color: #00a1ab;
+  background: #ffffff;
+  border: 1px solid #bfe7ec;
+  border-radius: 50px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  text-align: left !important;
+  box-sizing: border-box;
+}
+
+.homeschool-label .home-icon {
+  color: #00a1ab;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* KAJABI TEXT BLOCK LEFT ALIGN */
+.block:has(.homeschool-label),
+.block:has(.homeschool-label) .sizer,
+.block:has(.homeschool-label) .text-block,
+.block:has(.homeschool-label) .block-type--text {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+
+/* =====================================================================
+   HEADER — frosted + dropdown + centered nav
+   ===================================================================== */
+
+/* Do NOT force position:fixed — Kajabi sticky already handles that */
+header.header,
+.header {
+  overflow: visible !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  z-index: 99999 !important;
+}
+
+/* Blur on a layer behind — avoids clipping the dropdown */
+header.header::before,
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+
+.header__wrap,
+.header__content,
+.header__content--desktop,
+.header__container,
+.header__block,
+.header__block--dropdown,
+.header__block--menu {
+  position: relative;
+  z-index: 1;
+  overflow: visible !important;
+}
+
+.header__content--desktop .link-list__link,
+.header__content--desktop .dropdown__trigger {
+  font-family: 'Open Sans', 'Archivo', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  color: #595959 !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent;
+  padding: 6px 0 4px !important;
+  margin: 0 !important;
+}
+.header__content--desktop .link-list__link:hover,
+.header__content--desktop .dropdown__trigger:hover {
+  color: #39B2B9 !important;
+}
+
+/* Dropdown */
+#block-1785290998891 {
+  z-index: 100000 !important;
+  overflow: visible !important;
+}
+#block-1785290998891 .dropdown {
+  position: relative !important;
+  overflow: visible !important;
+}
+#block-1785290998891 .dropdown__trigger {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer;
+}
+#block-1785290998891 .dropdown__menu {
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  margin-top: 0 !important;
+  padding: 8px 0 !important;
+  min-width: 220px !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.10) !important;
+  overflow: visible !important;
+  z-index: 100001 !important;
+}
+#block-1785290998891 .dropdown__menu::before {
+  display: none !important;
+}
+#block-1785290998891 .dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 10px;
+  background: transparent;
+}
+#block-1785290998891 .dropdown__item a {
+  display: block !important;
+  padding: 10px 16px !important;
+  color: #595959 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+#block-1785290998891 .dropdown__item a:hover {
+  color: #39B2B9 !important;
+  background: #E6F6F7 !important;
+}
+
+/* Kill old frosted rule + leftover body padding */
+header,
+.header,
+.site-header {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+body {
+  padding-top: 0 !important;
+}
+
+/* Logo left · nav centered · Login / Enroll right */
+@media (min-width: 768px) {
+  .header__container.media {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+  }
+
+  #block-1555988494486,
+  #block-1555988491313,
+  #block-1785290998891,
+  #block-1783680568182,
+  #block-1783682562190 {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Logo left + breathing room after it */
+  #block-1555988494486 {
+    flex: 0 0 auto !important;
+    margin-right: 1.5rem !important;
+  }
+
+  /* Left half of middle — links push toward center */
+  #block-1555988491313 {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding-right: 0.575rem !important;
+  }
+  #block-1555988491313 .link-list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 1.15rem !important;
+    column-gap: 1.15rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #block-1555988491313 .link-list__link {
+    margin: 0 !important;
+  }
+
+  /* Right half of middle — Meet Coach starts at center */
+  #block-1785290998891 {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    padding-left: 0.575rem !important;
+  }
+
+  /* Breathing room before Login + Enroll */
+  #block-1783680568182,
+  #block-1783682562190 {
+    flex: 0 0 auto !important;
+    margin-left: 1.5rem !important;
+  }
+
+  .header__spacer {
+    display: none !important;
+  }
+}
+
+/* =====================================================================
+   SINGLE-PERSON STANDALONE PRICING (.tga-price)
+   Matches .growth-lab-card / home-school look
+   ===================================================================== */
+.tga-price {
+  width: 100%;
+  max-width: 548px;
+  margin: 20px auto;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d9dfe3;
+  border-radius: 17px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.tga-price .price-header {
+  position: relative;
+  padding: 25px 31px 27px;
+  color: #ffffff;
+  background-color: #0d1218;
+  background-image:
+    linear-gradient(rgba(31, 196, 211, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 196, 211, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  box-sizing: border-box;
+}
+
+.tga-price .price-header h3 {
+  margin: 0 0 7px !important;
+  color: #ffffff !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.tga-price .price-header p {
+  margin: 0 !important;
+  color: #ecf0f1 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+}
+
+.tga-price .price-body {
+  display: flex;
+  flex-wrap: nowrap;
+  background: #ffffff;
+}
+
+.tga-price .price-col {
+  flex: 1 1 50%;
+  padding: 28px 24px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tga-price .price-col + .price-col {
+  border-left: 1px solid #d9dfe3;
+}
+
+.tga-price .price-col .label {
+  margin: 0 0 8px !important;
+  color: #595959 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3 !important;
+}
+
+.tga-price .price-col .amount {
+  margin: 0 !important;
+  color: #00a1ab !important;
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+
+.tga-price .price-col .amount span {
+  color: #00a1ab !important;
+}
+
+.tga-price .price-col .desc {
+  margin: 10px 0 0 !important;
+  color: #6a737a !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .tga-price {
+    max-width: 100%;
+    margin: 15px auto;
+    border-radius: 15px;
+  }
+
+  .tga-price .price-header {
+    padding: 22px 20px 24px;
+  }
+
+  .tga-price .price-header h3 {
+    font-size: 21px !important;
+  }
+
+  .tga-price .price-body {
+    flex-direction: column;
+  }
+
+  .tga-price .price-col + .price-col {
+    border-left: none;
+    border-top: 1px solid #d9dfe3;
+  }
+
+  .tga-price .price-col .amount {
+    font-size: 32px !important;
+  }
+}

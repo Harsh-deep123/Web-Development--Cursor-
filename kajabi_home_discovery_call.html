@@ -1,0 +1,173 @@
+<!-- =====================================================================
+   KAJABI CUSTOM CODE — Home: Schedule a Discovery Call
+   Paste into ONE Custom Code block on the Home landing page
+   (place as the last content section before the footer).
+   Primary CTA → https://teamscoachingaz.square.site/
+   Secondary → Series & Labs pricing
+   ===================================================================== -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Overpass:wght@600;700&display=swap');
+
+.tga-discover {
+  --teal: #39B2B9;
+  --deep: #1B878D;
+  --wash: #E6F6F7;
+  width: 100%;
+  margin: 0;
+  padding: 80px 24px;
+  box-sizing: border-box;
+  background: var(--teal);
+  text-align: center;
+  font-family: Archivo, "Open Sans", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.tga-discover *,
+.tga-discover *::before,
+.tga-discover *::after { box-sizing: border-box; }
+.tga-discover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at top right, rgba(255,255,255,.18), transparent 55%);
+}
+.tga-discover__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.tga-discover__badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 24px !important;
+  padding: 6px 16px !important;
+  background: rgba(255,255,255,.9) !important;
+  color: var(--teal) !important;
+  border: 1px solid rgba(255,255,255,.4) !important;
+  border-radius: 9999px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  line-height: 1.3 !important;
+}
+.tga-discover__badge::before {
+  content: "" !important;
+  display: block !important;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2339B2B9'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM7 12h5v5H7v-5z'/%3E%3C/svg%3E") center/contain no-repeat !important;
+}
+.tga-discover h2.tga-discover__title,
+.block .tga-discover h2.tga-discover__title,
+.tga-discover__title {
+  margin: 0 0 16px !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 32px !important;
+  line-height: 40px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  letter-spacing: -0.01em !important;
+}
+.tga-discover p.tga-discover__text,
+.block .tga-discover p.tga-discover__text,
+.tga-discover__text {
+  margin: 0 auto 32px !important;
+  max-width: 640px !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,.9) !important;
+  text-align: center !important;
+}
+.tga-discover__actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+.tga-discover a.tga-discover__btn,
+.block .tga-discover a.tga-discover__btn,
+.tga-discover__btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 56px !important;
+  padding: 16px 32px !important;
+  font-family: Overpass, Archivo, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  border-radius: 9999px !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  transition: background .2s ease, color .2s ease, transform .2s ease !important;
+}
+.tga-discover a.tga-discover__btn--primary,
+.block .tga-discover a.tga-discover__btn--primary {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--teal) !important;
+  box-shadow: 0 8px 24px rgba(19,21,26,.18) !important;
+}
+.tga-discover a.tga-discover__btn--primary:hover {
+  background: var(--wash) !important;
+  border-color: var(--wash) !important;
+  color: var(--teal) !important;
+  transform: translateY(-2px) !important;
+}
+.tga-discover a.tga-discover__btn--ghost,
+.block .tga-discover a.tga-discover__btn--ghost {
+  background: transparent !important;
+  border-color: rgba(255,255,255,.4) !important;
+  color: #ffffff !important;
+}
+.tga-discover a.tga-discover__btn--ghost:hover {
+  background: rgba(255,255,255,.1) !important;
+  color: #ffffff !important;
+}
+@media (max-width: 640px) {
+  .tga-discover { padding: 56px 20px; }
+  .tga-discover h2.tga-discover__title,
+  .tga-discover__title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+  .tga-discover p.tga-discover__text,
+  .tga-discover__text {
+    font-size: 16px !important;
+    line-height: 26px !important;
+    margin-bottom: 24px !important;
+  }
+  .tga-discover__actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .tga-discover a.tga-discover__btn {
+    width: 100% !important;
+    white-space: normal !important;
+  }
+}
+</style>
+
+<section class="tga-discover" id="discovery-call">
+  <div class="tga-discover__inner">
+    <span class="tga-discover__badge">Discovery Call</span>
+    <h2 class="tga-discover__title">Schedule a Discovery Call</h2>
+    <p class="tga-discover__text">Talk with Coach Walker about the right Labs for your household, co-op, or school—and find the best next step for your students.</p>
+    <div class="tga-discover__actions">
+      <a class="tga-discover__btn tga-discover__btn--primary" href="https://teamscoachingaz.square.site/" target="_blank" rel="noopener noreferrer">Schedule a Discovery Call</a>
+      <a class="tga-discover__btn tga-discover__btn--ghost" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">Explore Series &amp; Labs</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | T.E.A.M.S. Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&amp;family=Overpass:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-background": "#191c1d",
+                    "primary": "#39B2B9",
+                    "inverse-primary": "#5fd7e2",
+                    "on-primary-container": "#003033",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-container": "#636262",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "charcoal": "#13151A",
+                    "on-error-container": "#93000a",
+                    "deep-teal": "#1B878D",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed": "#c8e6ff",
+                    "surface": "#F9FAFB",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#256487",
+                    "surface-tint": "#39B2B9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#e2dfde",
+                    "outline-variant": "#bcc9ca",
+                    "primary-fixed-dim": "#5fd7e2",
+                    "teal-wash": "#E6F6F7",
+                    "tertiary-fixed-dim": "#94cdf5",
+                    "surface-dim": "#d9dadb",
+                    "surface-bright": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-container": "#39B2B9",
+                    "outline": "#6d797b",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed": "#7ef4fe",
+                    "on-primary-fixed-variant": "#004f54",
+                    "background": "#f8f9fa",
+                    "tertiary-container": "#5e98be",
+                    "surface-variant": "#e1e3e4",
+                    "slate-gray": "#4A4A4A",
+                    "on-primary-fixed": "#002022",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "on-surface-variant": "#3d494a",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#001e2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#002e44"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2.5rem",
+                    "stack-md": "1rem",
+                    "gutter": "1.5rem",
+                    "container-max": "1200px",
+                    "margin-page": "2rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Archivo"],
+                    "display-lg": ["Archivo"],
+                    "body-md": ["Archivo"],
+                    "body-lg": ["Archivo"],
+                    "label-lg": ["Archivo"],
+                    "headline-lg": ["Archivo"],
+                    "headline-lg-mobile": ["Archivo"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Second font: Overpass for buttons only (Archivo stays everywhere else) */
+        button:not(.nav-login), a.btn {
+            font-family: 'Overpass', sans-serif !important;
+        }
+        /* Header nav — match live Kajabi .link-list__link (Open Sans) */
+        header nav.hidden {
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            column-gap: 1.15rem !important;
+        }
+        .nav-link {
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size:  15px !important;
+            letter-spacing: 0.02em !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            text-decoration: none !important;
+            border-bottom: 2px solid transparent;
+            padding: 6px 0 4px !important;
+            margin: 0 !important;
+            white-space: nowrap !important;
+            transition: color .2s ease, border-color .2s ease;
+        }
+        .nav-link:hover { color: #39B2B9 !important; }
+        .nav-link--active {
+            color: #39B2B9 !important;
+            border-bottom-color: #39B2B9 !important;
+            font-weight: 700 !important;
+        }
+
+        a.nav-login { text-decoration: none !important; display: inline-block; }
+        .nav-login, button.nav-login, a.nav-login {
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size: 13px !important;
+            letter-spacing: normal !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 10px 0 0;
+            transition: color .2s ease;
+        }
+        .nav-login:hover { color: #39B2B9 !important; }
+
+        /* Home-style translucent header */
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .active-nav-link { border-bottom-width: 2px; }
+        .teal-gradient-bg { background: linear-gradient(135deg, #1B878D 0%, #39B2B9 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .system-card-glow:hover { box-shadow: 0 10px 30px -10px rgba(0, 161, 171, 0.4); }
+            .bg-charcoal {
+            background-color: #13151A;
+            background-image:
+                radial-gradient(60% 55% at 100% 0%, rgba(0, 161, 171, 0.16), transparent 60%),
+                linear-gradient(to right, rgba(0, 161, 171, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 161, 171, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            background-repeat: no-repeat, repeat, repeat;
+        }
+            /* Branded buttons — match teamscoachingaz.com (pill + teal, darken on hover) */
+        .btn, button, input[type="submit"] { border-radius: 9999px !important; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+        .btn:hover, button:hover, input[type="submit"]:hover { transform: translateY(-3px) !important; }
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container,
+        input[type="submit"] { background-color: #39B2B9 !important; border-color: #39B2B9 !important; }
+        .btn.bg-primary:hover, .btn.bg-primary-container:hover,
+        button.bg-primary:hover, button.bg-primary-container:hover,
+        input[type="submit"]:hover { background-color: #1B878D !important; border-color: #1B878D !important; }
+        /* Solid buttons: force white text */
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container { color: #ffffff !important; }
+        /* Outline buttons — same branded teal, fill on hover */
+        .btn.border-primary { border-color: #39B2B9 !important; color: #39B2B9 !important; }
+        .btn.border-primary:hover { background-color: #39B2B9 !important; color: #ffffff !important; }
+        /* Unify all teal text/icons to the brand teal */
+        .text-primary { color: #39B2B9 !important; }
+        .border-primary { border-color: #39B2B9 !important; }
+        /* Brand teal for filled areas (cards, bars) — buttons keep their own rule */
+        .bg-primary:not(.btn) { background-color: #39B2B9 !important; }
+
+        /* Mobile — quote sits below the image (not overlaid) */
+        @media (max-width: 767px) {
+            .about-coach__frame {
+                overflow: visible !important;
+                display: flex !important;
+                flex-direction: column !important;
+                transform: none !important;
+            }
+            .about-coach__frame > img {
+                border-radius: 14px !important;
+            }
+            .about-coach__quote {
+                position: relative !important;
+                inset: auto !important;
+                margin-top: 14px !important;
+                padding: 1.15rem 1.25rem 1.25rem !important;
+                background: #13151A !important;
+                background-image: none !important;
+                border-radius: 14px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 glass-card-light border-b border-white/20 transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-6 h-20">
+<!-- Logo -->
+<a class="flex items-center gap-3 group" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-[72px] w-[72px] object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex flex-1 items-center justify-center gap-0 flex-nowrap whitespace-nowrap">
+<a class="nav-link" href="Home.html">Home</a>
+<a class="nav-link" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="nav-link" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="nav-link" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="nav-link nav-link--active" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<a class="nav-login hidden md:block" href="https://growthacademy.teamscoachingaz.com/login">Login</a>
+<a href="Series and Labs.html#pricing" class="btn inline-block bg-primary-container text-white hover:bg-deep-teal text-[12px] font-bold tracking-[0.04em] uppercase px-5 py-2.5 rounded-full transition-all shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:shadow-[0_6px_20px_rgba(0,161,171,0.23)] hover:-translate-y-0.5">Enroll Now</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(80%_60%_at_100%_0%,rgba(57,178,185,0.14),transparent_55%),radial-gradient(50%_40%_at_0%_100%,rgba(126,244,254,0.18),transparent_50%),linear-gradient(180deg,#f8f9fa_0%,#ffffff_55%,#E6F6F7_100%)]"></div>
+<div class="relative max-w-[1440px] mx-auto px-6 lg:px-10 py-14 md:py-16 lg:py-20 min-h-[calc(100svh-5rem)] flex items-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center w-full">
+<div class="z-10 order-2 lg:order-1 lg:col-span-5">
+<span class="inline-block px-4 py-1.5 rounded-full bg-white/90 text-primary font-bold text-label-lg mb-5 tracking-wider border border-primary/20">EXPANDING OUR MISSION</span>
+<h1 class="font-display-lg text-[40px] leading-[1.08] sm:text-5xl sm:leading-[1.08] lg:text-[56px] lg:leading-[1.05] xl:text-[64px] xl:leading-[1.02] text-on-surface mb-5 tracking-[-0.02em]">
+                        About T.E.A.M.S. Coaching <span class="text-primary">Growth Academy</span>
+</h1>
+<p class="font-body-lg text-lg sm:text-xl leading-relaxed text-on-surface-variant mb-8 max-w-lg">
+                        Expanding a trusted mentoring legacy into a flexible digital learning experience — so every student can thrive.
+                    </p>
+<div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-5">
+<a class="btn bg-primary text-white px-9 py-4 font-bold text-base shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:shadow-[0_6px_20px_rgba(0,161,171,0.23)] transition-all w-fit" href="#our-story">Read Our Story</a>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-3">
+<div class="w-11 h-11 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzKo9Ovk023Xx2_GEp-2_4MhpbLbyxCZ3r66dFCw4ll5vCtHteh1VMxc7VqNC_P2-NNQFV6Clx6wJv6ryixsNGre6UugYrW6UyP2nBaELqo7SoLnH0_IVcfubRlWVxyLRixKltJ-q_ianZ6dhFXO0c5jITef0vE9QFSo1kQpX35vpORl4Ft2bDldv7HetG9GhLnIxAVYQTGQGFldhRlwfgU21Tq7rdRyTYesXi27-UwguyrU0yOaQSKuwEDJNf8a0XKwMNioUl4AUf"/>
+</div>
+<div class="w-11 h-11 rounded-full border-2 border-white bg-slate-300 overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGpMZWiYhW52L5Yc3fkJ5fF0hKoA1xkkuJyAW5iTPgVjVDIeV-ImD8oHLoUUKOOdHLN0eqG-8qnuLMEufm6iZ5nO1roG0tnCjnMjh6ELVvP_F60s4ZGAkLaT-NOdTKnGzqg-YLR1q9GpfmixUFZ1zJATHcDMAdxdyqIyS6T_hKBzBpkY8WkUFQAPoYpw-OILE51w61Ola0yEpKS2S-yKMCbIufv8X9Oi02tNc1KaBjKTQEk3FHRIsabFpoCGd2AQMvI3ewHAoFzTMP"/>
+</div>
+<div class="w-11 h-11 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Trusted by students &amp; families</span>
+</div>
+</div>
+</div>
+<div class="relative order-1 lg:order-2 lg:col-span-7">
+<div class="absolute -top-16 -right-10 w-72 h-72 bg-primary/15 blur-3xl rounded-full pointer-events-none"></div>
+<div class="absolute -bottom-10 left-0 w-64 h-64 bg-primary-fixed-dim/25 blur-3xl rounded-full pointer-events-none"></div>
+<div class="relative max-w-[560px] xl:max-w-[620px] ml-auto about-coach">
+<div class="relative overflow-hidden rounded-2xl border border-charcoal/80 bg-charcoal shadow-[0_24px_60px_rgba(19,21,26,0.18)] rotate-1 hover:rotate-0 transition-transform duration-500 about-coach__frame">
+<img class="block w-full h-[min(68vh,640px)] object-cover object-[center_18%] grayscale hover:grayscale-0 transition-all duration-700" alt="Coach Walker" src="images/coach-walker-about.jpg"/>
+<div class="about-coach__quote absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal via-charcoal/85 to-transparent pt-24 px-6 pb-6 sm:px-7 sm:pb-7">
+<p class="font-body-md italic text-white/90 leading-relaxed max-w-md">"Series &amp; Labs aren't just about rules, they're about building the internal compass every student needs to navigate life."</p>
+<p class="mt-3 font-bold text-primary-fixed">— Coach Walker</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/30" id="our-story">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Our Story</h2>
+<div class="w-20 h-1.5 bg-primary rounded-full"></div>
+</div>
+<div class="md:col-span-8 space-y-8">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                            For the past three years, T.E.A.M.S. Coaching has been helping students and families navigate adolescence through personalized mentoring, coaching, workshops, and character development programs. Built on more than 20 years of experience as a teacher, coach, principal, mentor, and parent, T.E.A.M.S. Coaching has become a trusted resource for developing confident, capable, and resilient young people.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                            The <span class="font-bold text-primary">T.E.A.M.S. Coaching Growth Academy</span> is the next evolution of that mission. Rather than replacing our mentoring program, the Growth Academy expands it — bringing the proven strategies, lessons, and coaching approaches from T.E.A.M.S. Coaching into a flexible digital learning experience that students and families can access anytime, anywhere.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                            The Academy allows more students to benefit from the same practical life skills and character-building strategies that have been the foundation of the T.E.A.M.S. Coaching program. Every lab is designed to create lasting growth through engaging video lessons, parent companion videos, interactive workbooks, self-reflection activities, goal setting, and assessments — and students earn a Certificate of Completion upon successfully completing each lab.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                            Learning continues beyond the labs through the T.E.A.M.S. Coaching Growth Academy Community, where students participate in ongoing challenges, apply skills in everyday life, earn points, unlock achievements, and receive recognition for their commitment to personal growth. Additional Labs across the T.E.A.M.S. Series are currently in development, giving students new opportunities to build essential life skills and keep progressing throughout their journey.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Differentiation Bento Grid -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">What Makes the Academy Different</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">A structured approach designed for deep engagement and real-world application.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature 1: Interactive Learning -->
+<div class="md:col-span-2 glass-card p-10 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-colors group">
+<div>
+<div class="w-14 h-14 bg-teal-wash rounded-xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Interactive Curriculum</h3>
+<p class="text-on-surface-variant text-body-md leading-relaxed max-w-lg">
+                                Every lab is designed to create lasting growth through engaging video lessons, parent companion videos, interactive workbooks, self-reflection activities, goal setting, and assessments.
+                            </p>
+</div>
+<div class="mt-8 flex items-center gap-4 text-primary font-bold">
+<span>Explore Lab Structure</span>
+<span class="material-symbols-outlined">trending_flat</span>
+</div>
+</div>
+<!-- Feature 2: Certification -->
+<div class="bg-primary text-white p-10 rounded-2xl flex flex-col justify-center items-center text-center shadow-xl shadow-primary/10">
+<div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-6 border border-white/20">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Earn Your Credentials</h3>
+<p class="text-primary-fixed opacity-90 text-sm">Students earn a Certificate of Completion upon successfully completing each lab.</p>
+</div>
+<!-- Feature 3: Community -->
+<div class="md:col-span-3 bg-charcoal text-white p-10 rounded-2xl overflow-hidden relative group">
+<div class="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl">groups</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="text-primary-fixed font-bold text-label-lg tracking-widest uppercase mb-4 block">The Growth Community</span>
+<h3 class="font-headline-lg text-headline-lg mb-6">Learning continues beyond the screen.</h3>
+<p class="text-secondary-fixed-dim text-body-lg leading-relaxed">
+                                    Participate in ongoing challenges, apply skills in everyday life, earn points, unlock achievements, and receive recognition for your commitment to personal growth within our exclusive member community.
+                                </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-6 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-primary-fixed mb-2">bolt</span>
+<p class="font-bold text-sm">Ongoing Challenges</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-primary-fixed mb-2">military_tech</span>
+<p class="font-bold text-sm">Unlock Achievements</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-primary-fixed mb-2">stars</span>
+<p class="font-bold text-sm">Earn Points</p>
+</div>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-primary-fixed mb-2">celebration</span>
+<p class="font-bold text-sm">Global Recognition</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Series & Labs Section -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">The T.E.A.M.S. Series &amp; Labs</h2>
+<p class="text-on-surface-variant">5 Series · 29 Labs — every Lab sold individually, with sibling discounts.</p>
+</div>
+<a href="Series and Labs.html#series" class="btn inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        View All Labs <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-2xl p-6 border border-outline-variant/30"><span class="text-xs font-bold tracking-widest uppercase" style="color:#39B2B9">6 Labs</span><h3 class="font-bold text-lg mt-2 mb-2">Transition Series</h3><p class="text-sm text-on-surface-variant">Navigating New Environments · Middle School · High School · Pathways After High School · Discipline &amp; Responsibility · Independent Living</p></div>
+<div class="bg-white rounded-2xl p-6 border border-outline-variant/30"><span class="text-xs font-bold tracking-widest uppercase" style="color:#1B878D">6 Labs</span><h3 class="font-bold text-lg mt-2 mb-2">Empowerment Series</h3><p class="text-sm text-on-surface-variant">Peer Pressure · Self Esteem · Finding Your Voice · Value &amp; Values · Identity · Purpose</p></div>
+<div class="bg-white rounded-2xl p-6 border border-outline-variant/30"><span class="text-xs font-bold tracking-widest uppercase" style="color:#13151A">5 Labs</span><h3 class="font-bold text-lg mt-2 mb-2">Athletic Mindset Series</h3><p class="text-sm text-on-surface-variant">Maximize Value · Sportsmanship · Leadership · Expectations · Identity Beyond Athletics</p></div>
+<div class="bg-white rounded-2xl p-6 border border-outline-variant/30"><span class="text-xs font-bold tracking-widest uppercase" style="color:#256487">7 Labs</span><h3 class="font-bold text-lg mt-2 mb-2">Management Series</h3><p class="text-sm text-on-surface-variant">Financial Literacy · Earning Keep · Jobs · Time · Budget · Hygiene · Stress &amp; Adversity</p></div>
+<div class="bg-white rounded-2xl p-6 border border-outline-variant/30"><span class="text-xs font-bold tracking-widest uppercase" style="color:#5e98be">5 Labs</span><h3 class="font-bold text-lg mt-2 mb-2">Social Series</h3><p class="text-sm text-on-surface-variant">Healthy Relationships · Effective Communication · Reading the Room · Filter · Etiquette</p></div>
+<div class="bg-teal-wash rounded-2xl p-6 border-2 border-primary/20"><span class="text-xs font-bold text-primary tracking-widest uppercase">Pricing</span><h3 class="font-bold text-lg mt-2 mb-2">Buy Labs Individually</h3><p class="text-sm text-on-surface-variant">1 Student $79 · 2 Siblings $148 · 3+ Family $199 · Parent Alone $39 · Student Alone $59</p></div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Mission -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 z-0 bg-charcoal">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-primary/20 -skew-x-12 translate-x-1/4"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-page relative z-10 flex flex-col items-center text-center">
+<h2 class="font-headline-lg text-headline-lg text-white mb-8 max-w-3xl">
+                    Helping students build the character, confidence, communication skills, leadership, and life readiness needed to thrive in school, at home, and beyond.
+                </h2>
+<div class="flex flex-col sm:flex-row gap-6">
+<a href="Series and Labs.html#pricing" class="btn inline-flex bg-primary-container text-on-primary-container px-12 py-5 rounded-xl font-extrabold text-body-lg hover:scale-105 transition-all items-center gap-3">
+                        Explore Series &amp; Labs <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#0a0b0d] border-t border-white/5 pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<div class="md:col-span-5">
+<a class="flex items-center gap-3 group mb-6 inline-block" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-12 w-auto object-contain invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<p class="font-body-md text-slate-400 max-w-sm leading-relaxed mb-6">Equipping the next generation with Series &amp; Labs for growth through reflection, intentional conversation, and accountability.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="contact_t.e.a.m.s._growth_academy.html">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Programs</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Home.html">Home</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</div>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Legal &amp; Support</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-sm text-slate-500">© 2024 T.E.A.M.S. Coaching Growth Academy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        // Apply to sections
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Interactive micro-interaction for cards
+        document.querySelectorAll('.system-card-glow').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

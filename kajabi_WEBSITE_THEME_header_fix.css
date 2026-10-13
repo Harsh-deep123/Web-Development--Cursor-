@@ -1,0 +1,383 @@
+/* =====================================================================
+   TEAMS Growth Academy — Website Theme Header CSS (FIXED)
+   Paste ALL of this into: Website → Themes → Customize → Custom CSS
+   (also OK in Login page Custom CSS — replace everything)
+
+   Meet Coach dark color fix:
+   Kajabi injects #block-… .dropdown__trigger { color: black !important }
+   AFTER custom CSS. Beat it with higher specificity + -webkit-text-fill-color.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=Overpass:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* ===== FONTS ===== */
+body, p, span, li, ul, ol, a, label, blockquote, figcaption,
+input, textarea, select,
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle, .paragraph, .heading, .text,
+.card__title, .card__subtitle, .card__description,
+.product__title, .category__title, .post__title, .section__title,
+[class*="__title"], [class*="__description"], [class*="__text"] {
+  font-family: 'Archivo', sans-serif !important;
+}
+
+.btn, a.btn, button, .header__block--cta .btn {
+  font-family: 'Overpass', sans-serif !important;
+}
+
+.material-symbols-outlined,
+.material-icons {
+  font-family: 'Material Symbols Outlined', 'Material Icons' !important;
+}
+
+.header .dropdown__icon,
+.header .fa,
+.header .fas,
+.header .far,
+.header .fab,
+.header i.fa,
+.header i.fas,
+#block-1785290998891 .dropdown__icon,
+#block-1785290998891 .fa-chevron-down {
+  font-family: "Font Awesome 5 Free", "Font Awesome 6 Free", FontAwesome !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  line-height: 1 !important;
+  speak: none;
+}
+
+/* ===== HEADER SHELL ===== */
+header.header,
+.header,
+.site-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
+  overflow: visible !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 99999 !important;
+}
+
+header.header::before,
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+
+.header__wrap,
+.header__content,
+.header__content--desktop,
+.header__container,
+.header__block {
+  position: relative;
+  z-index: 1;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+body {
+  padding-top: 0 !important;
+}
+
+.header__content .header__container.media {
+  justify-content: space-between !important;
+}
+
+/* ===== NAV TEXT (all links including dropdown) ===== */
+.header__content .link-list__link,
+.header__content--desktop .link-list__link,
+.header__content--desktop .dropdown__trigger,
+.header__content .dropdown__trigger,
+#block-1783680568182 .link-list__link {
+  font-family: 'Open Sans', 'Archivo', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  color: #595959 !important;
+  -webkit-text-fill-color: #595959 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  padding: 6px 0 4px !important;
+  border-bottom: 2px solid transparent;
+  transition: color .2s ease, -webkit-text-fill-color .2s ease !important;
+}
+
+.header__content .link-list__link:hover,
+.header__content--desktop .link-list__link:hover,
+.header__content--desktop .dropdown__trigger:hover,
+.header__content .dropdown__trigger:hover,
+#block-1783680568182 .link-list__link:hover {
+  color: #39B2B9 !important;
+  -webkit-text-fill-color: #39B2B9 !important;
+}
+
+/* ===== NAV GAP ===== */
+.header__content .link-list,
+.header__content--desktop .link-list,
+#block-1555988491313 .link-list {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 1.15rem !important;
+  column-gap: 1.15rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.header__content .link-list > li,
+#block-1555988491313 .link-list > li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.header__content .link-list > li + li,
+#block-1555988491313 .link-list > li + li {
+  margin-left: 1.15rem !important;
+}
+
+/* ===== ENROLL BUTTON ===== */
+.header__block--cta .btn,
+.header__block--cta .btn--solid,
+#block-1783682562190 .btn,
+#block-1783682562190 .button {
+  background-color: #39B2B9 !important;
+  border-color: #39B2B9 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-radius: 9999px !important;
+  text-transform: uppercase !important;
+  font-family: 'Overpass', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 4px 14px 0 rgba(0, 161, 171, 0.39) !important;
+  transition: all .2s ease !important;
+}
+
+.header__block--cta .btn:hover,
+.header__block--cta .btn--solid:hover,
+#block-1783682562190 .btn:hover {
+  background-color: #1B878D !important;
+  border-color: #1B878D !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 161, 171, 0.23) !important;
+}
+
+.header__block--cta .btn--outline {
+  background: transparent !important;
+  color: #39B2B9 !important;
+  -webkit-text-fill-color: #39B2B9 !important;
+}
+
+/* ===== MEET COACH DROPDOWN ===== */
+#block-1785290998891 {
+  z-index: 100000 !important;
+  overflow: visible !important;
+}
+
+#block-1785290998891 .dropdown {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+#block-1785290998891 .dropdown__menu {
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  margin-top: 0 !important;
+  padding: 8px 0 !important;
+  min-width: 220px !important;
+  background: #fff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10) !important;
+  overflow: visible !important;
+  z-index: 100001 !important;
+}
+
+#block-1785290998891 .dropdown__menu::before {
+  display: none !important;
+}
+
+#block-1785290998891 .dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+#block-1785290998891 .dropdown__item a {
+  display: block !important;
+  padding: 10px 16px !important;
+  color: #595959 !important;
+  -webkit-text-fill-color: #595959 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+#block-1785290998891 .dropdown__item a:hover {
+  color: #39B2B9 !important;
+  -webkit-text-fill-color: #39B2B9 !important;
+  background: #E6F6F7 !important;
+}
+
+/* ===== DESKTOP LAYOUT ===== */
+@media (min-width: 992px) {
+  .header__container.media {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    min-height: 82px !important;
+    gap: 0 !important;
+  }
+
+  #block-1555988494486,
+  #block-1555988491313,
+  #block-1785290998891,
+  #block-1783680568182,
+  #block-1783682562190 {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+  }
+
+  #block-1555988494486 {
+    flex: 0 0 auto !important;
+    margin-right: 28px !important;
+  }
+
+  #block-1555988491313 {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding-right: 12px !important;
+  }
+
+  #block-1555988491313 .link-list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 1.15rem !important;
+    column-gap: 1.15rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #block-1785290998891 {
+    flex: 0 0 auto !important;
+    margin-left: 12px !important;
+    margin-right: 16px !important;
+  }
+
+  #block-1783680568182 {
+    flex: 0 0 auto !important;
+    margin-right: 16px !important;
+  }
+
+  #block-1783682562190 {
+    flex: 0 0 auto !important;
+  }
+
+  #block-1783682562190 .btn,
+  #block-1783682562190 .button {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .header__spacer {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  #block-1555988491313 .link-list,
+  .header__content .link-list {
+    gap: 0.9rem !important;
+    column-gap: 0.9rem !important;
+  }
+
+  .header__content .link-list > li + li,
+  #block-1555988491313 .link-list > li + li {
+    margin-left: 0.9rem !important;
+  }
+
+  .header__content--desktop .link-list__link,
+  .header__content--desktop .dropdown__trigger,
+  .header__content .dropdown__trigger,
+  #block-1783680568182 .link-list__link {
+    font-size: 12px !important;
+  }
+}
+
+/* =====================================================================
+   MEET COACH — FORCE SAME GREY AS OTHER NAV LINKS
+   Must stay LAST. Beats Kajabi block color (black) with higher specificity.
+   Also set Text Color on the Meet Coach header block to #595959 in Kajabi.
+   ===================================================================== */
+html body #section-header #block-1785290998891 a.dropdown__trigger,
+html body #section-header #block-1785290998891 .dropdown__trigger,
+html body header #block-1785290998891 a.dropdown__trigger,
+html body header.header .header__block--dropdown a.dropdown__trigger,
+html body #section-header .header__block--dropdown a.dropdown__trigger,
+html body .header .dropdown a.dropdown__trigger {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  cursor: pointer;
+  color: #595959 !important;
+  -webkit-text-fill-color: #595959 !important;
+  font-family: 'Open Sans', 'Archivo', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+html body #section-header #block-1785290998891 a.dropdown__trigger:hover,
+html body #section-header #block-1785290998891 .dropdown__trigger:hover,
+html body header #block-1785290998891 a.dropdown__trigger:hover,
+html body header.header .header__block--dropdown a.dropdown__trigger:hover,
+html body #section-header .header__block--dropdown a.dropdown__trigger:hover,
+html body .header .dropdown a.dropdown__trigger:hover {
+  color: #39B2B9 !important;
+  -webkit-text-fill-color: #39B2B9 !important;
+}
+
+html body #section-header #block-1785290998891 .dropdown__icon,
+html body #section-header #block-1785290998891 .fa-chevron-down,
+html body header #block-1785290998891 .dropdown__icon,
+html body .header .dropdown__icon {
+  color: #595959 !important;
+  -webkit-text-fill-color: #595959 !important;
+}
+
+html body #section-header #block-1785290998891 a.dropdown__trigger:hover .dropdown__icon,
+html body header #block-1785290998891 a.dropdown__trigger:hover .dropdown__icon,
+html body .header .dropdown a.dropdown__trigger:hover .dropdown__icon {
+  color: #39B2B9 !important;
+  -webkit-text-fill-color: #39B2B9 !important;
+}

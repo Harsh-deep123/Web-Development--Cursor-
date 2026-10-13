@@ -1,0 +1,1496 @@
+<!-- PASTE ALL of this into Kajabi Custom Code / HTML (includes Learn More popup code at bottom) -->
+<p> </p>
+<div class="tga-series-embed">
+<style>
+/* T.E.A.M.S. rail — force styles so Kajabi theme cannot turn text black / break the box */
+.tga-series-embed .tga-pricing-layout{
+  display:grid !important;
+  grid-template-columns:108px minmax(0,1fr) !important;
+  gap:1rem !important;
+  align-items:stretch !important;
+  max-width:1400px !important;
+  margin:0 auto !important;
+}
+.tga-series-embed .tga-teams-rail{
+  display:flex !important;
+  flex-direction:column !important;
+  gap:0.55rem !important;
+  position:sticky !important;
+  top:6.5rem !important;
+  align-self:start !important;
+  box-sizing:border-box !important;
+  width:108px !important;
+  max-width:108px !important;
+  padding:1rem 0.55rem 0.9rem !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:1.25rem !important;
+  background:#13151A !important;
+  box-shadow:0 12px 32px rgba(19,21,26,.18) !important;
+  overflow:hidden !important;
+}
+.tga-series-embed .tga-teams-rail__title,
+.tga-series-embed p.tga-teams-rail__title{
+  display:block !important;
+  margin:0 0 0.45rem !important;
+  padding:0 2px !important;
+  text-align:center !important;
+  color:rgba(255,255,255,.7) !important;
+  -webkit-text-fill-color:rgba(255,255,255,.7) !important;
+  font-size:0.62rem !important;
+  font-weight:800 !important;
+  letter-spacing:0.14em !important;
+  line-height:1.2 !important;
+  background:transparent !important;
+  border:0 !important;
+}
+.tga-series-embed button.tga-teams-rail__btn,
+.tga-series-embed .tga-teams-rail__btn{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:0.2rem !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  padding:0.55rem 0.25rem !important;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:0.9rem !important;
+  background:transparent !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  cursor:pointer !important;
+  box-shadow:none !important;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  font:inherit !important;
+  transition:background .2s ease, transform .2s ease, box-shadow .2s ease !important;
+}
+.tga-series-embed button.tga-teams-rail__btn:hover,
+.tga-series-embed .tga-teams-rail__btn:hover{
+  background:rgba(255,255,255,.1) !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  transform:translateY(-1px) !important;
+}
+.tga-series-embed button.tga-teams-rail__btn.is-active,
+.tga-series-embed .tga-teams-rail__btn.is-active{
+  background:var(--rail,#39B2B9) !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  box-shadow:0 8px 18px rgba(0,0,0,.25) !important;
+}
+.tga-series-embed .tga-teams-rail__letter{
+  display:block !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  font-family:Archivo,Arial,Helvetica,sans-serif !important;
+  font-size:1.65rem !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+  letter-spacing:0.02em !important;
+  background:transparent !important;
+}
+.tga-series-embed .tga-teams-rail__name{
+  display:block !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  font-size:0.58rem !important;
+  font-weight:700 !important;
+  letter-spacing:0.04em !important;
+  text-transform:uppercase !important;
+  opacity:0.95 !important;
+  text-align:center !important;
+  line-height:1.15 !important;
+  background:transparent !important;
+}
+@media (max-width:900px){
+  .tga-series-embed .tga-pricing-layout{grid-template-columns:1fr !important;}
+  .tga-series-embed .tga-teams-rail{
+    position:relative !important;
+    top:0 !important;
+    width:100% !important;
+    max-width:none !important;
+    flex-direction:row !important;
+    justify-content:space-between !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    gap:0.4rem !important;
+    padding:0.65rem !important;
+  }
+  .tga-series-embed .tga-teams-rail__title{display:none !important;}
+  .tga-series-embed .tga-teams-rail__btn{min-width:64px !important;flex:1 !important;}
+  .tga-series-embed .tga-teams-rail__letter{font-size:1.35rem !important;}
+}
+.tga-ptable-column{min-width:0;display:flex;flex-direction:column;gap:10px}
+.tga-ptable-toolbar{display:flex;justify-content:flex-end;align-items:center;padding:0;margin:0;background:transparent;border:none;box-shadow:none}
+.tga-pdf-download{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 18px;border:none;border-radius:9999px;background:#13151A;color:#fff!important;font-family:inherit;font-size:13px;font-weight:800;letter-spacing:.02em;cursor:pointer;box-shadow:0 6px 16px rgba(19,21,26,.14);transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.tga-pdf-download:hover{background:#39B2B9;transform:translateY(-1px);box-shadow:0 8px 18px rgba(57,178,185,.28)}
+.tga-pdf-download:disabled{opacity:.7;cursor:wait;transform:none}
+.tga-pdf-download__icon{display:inline-flex;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.16);align-items:center;justify-content:center;font-size:12px;line-height:1}
+</style>
+<div class="tga-pricing-layout">
+  <nav class="tga-teams-rail" aria-label="T.E.A.M.S. Series navigation">
+    <p class="tga-teams-rail__title">T.E.A.M.S.</p>
+    <button type="button" class="tga-teams-rail__btn is-active" data-series="t" style="--rail:#39B2B9" aria-label="Transition Series">
+      <span class="tga-teams-rail__letter">T</span>
+      <span class="tga-teams-rail__name">Transition</span>
+    </button>
+    <button type="button" class="tga-teams-rail__btn" data-series="e" style="--rail:#1B878D" aria-label="Empowerment Series">
+      <span class="tga-teams-rail__letter">E</span>
+      <span class="tga-teams-rail__name">Empowerment</span>
+    </button>
+    <button type="button" class="tga-teams-rail__btn" data-series="a" style="--rail:#13151A" aria-label="Athletic Mindset Series">
+      <span class="tga-teams-rail__letter">A</span>
+      <span class="tga-teams-rail__name">Athletic</span>
+    </button>
+    <button type="button" class="tga-teams-rail__btn" data-series="m" style="--rail:#256487" aria-label="Management Series">
+      <span class="tga-teams-rail__letter">M</span>
+      <span class="tga-teams-rail__name">Management</span>
+    </button>
+    <button type="button" class="tga-teams-rail__btn" data-series="s" style="--rail:#5e98be" aria-label="Social Series">
+      <span class="tga-teams-rail__letter">S</span>
+      <span class="tga-teams-rail__name">Social</span>
+    </button>
+  </nav>
+  <div class="tga-ptable-column">
+  <div class="tga-ptable-toolbar" data-html2canvas-ignore="true">
+    <button type="button" class="tga-pdf-download" id="tga-pdf-download" aria-label="Download full pricing table as PDF">
+      <span class="tga-pdf-download__icon" aria-hidden="true">↓</span>
+      Download Now
+    </button>
+  </div>
+  <div class="tga-ptable-wrap">
+  <div class="tga-ptable-scroll" id="tga-ptable-scroll" data-tga-pdf-capture="1">
+  <table class="tga-ptable">
+    <colgroup>
+      <col class="tga-col-offer">
+      <col class="tga-col-price">
+      <col class="tga-col-price">
+      <col class="tga-col-price">
+      <col class="tga-col-price">
+      <col class="tga-col-price">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="tga-ptable__offering">Lab</th>
+        <th>1 Student</th>
+        <th>2 Siblings</th>
+        <th>3+ Family</th>
+        <th>Parent Alone</th>
+        <th>Student Alone</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr class="tga-ptable__section tga-ptable__section--t" id="price-series-t"><td colspan="6"><span class="tga-series-badge" aria-hidden="true">T</span><span class="tga-series-label">Transition Series</span></td></tr>
+<tr class="tga-series-rows--t">
+        <td class="tga-ptable__offering tga-ptable__lab">Middle School Preparation and Survival<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="middle-school" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/4irBnqcD/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/FjYHFokt/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/J93724Fz/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/T3b4afXS/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/NQ7Sp4fB/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-series-rows--t">
+        <td class="tga-ptable__offering tga-ptable__lab">High School Preparation and Survival<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="high-school" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/75WFT3A5/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/8UEmSiad/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/zKQMgQ2t/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/2xqumhjW/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/NCHuxqEs/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-series-rows--t">
+        <td class="tga-ptable__offering tga-ptable__lab">Pathways After High School<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="pathways-after-high-school" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/fQ2dQ42w/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/SkPn9DDP/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/CaBn4BTv/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/8pufAVzg/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/VNnQ7y2L/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--t">
+        <td class="tga-ptable__offering tga-ptable__lab">Navigating New Environments<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="navigating-new-environments" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--t">
+        <td class="tga-ptable__offering tga-ptable__lab">Discipline & Responsibility in Adulthood<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="discipline-responsibility-adulthood" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--t">
+        <td class="tga-ptable__offering tga-ptable__lab">Preparation for Independent Living<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="preparation-independent-living" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__section tga-ptable__section--e" id="price-series-e"><td colspan="6"><span class="tga-series-badge" aria-hidden="true">E</span><span class="tga-series-label">Empowerment Series</span></td></tr>
+<tr class="tga-series-rows--e">
+        <td class="tga-ptable__offering tga-ptable__lab">Peer Pressure and Social Value<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="peer-pressure" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/E9zLFvbT/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/8kXs2onM/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/L8ATEmdQ/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/EnB7oT5t/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/MGGLCdto/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-series-rows--e">
+        <td class="tga-ptable__offering tga-ptable__lab">Self Esteem and Knowing Your Worth<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="self-esteem" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/mcH2Wwju/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/Mynvgtza/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/tLM7Eckv/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/g6zeK8qf/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/7m6AzNHp/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-series-rows--e">
+        <td class="tga-ptable__offering tga-ptable__lab">Finding Your Voice<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="finding-your-voice" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/Y5fcyAdM/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/axMaYtDF/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/RisbLgSH/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/Y2CB3e7P/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/NQ7Sp4fB/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-series-rows--e">
+        <td class="tga-ptable__offering tga-ptable__lab">Value: What Do You Bring?<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="value" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/VLcxqhaz/checkout">Buy</a></td>
+        <td><span class="tga-price">$148</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/esWgsMJC/checkout">Buy</a></td>
+        <td><span class="tga-price">$199</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/TqnEVz6Z/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/QdD44jgC/checkout">Buy</a></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><a class="tga-buy tga-buy--sm" href="https://digitallabseries.teamscoachingaz.com/offers/9ytiTABD/checkout">Buy</a></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--e">
+        <td class="tga-ptable__offering tga-ptable__lab">Identity: Who Are You?<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="identity" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--e">
+        <td class="tga-ptable__offering tga-ptable__lab">What is Your Purpose<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="purpose" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__section tga-ptable__section--a" id="price-series-a"><td colspan="6"><span class="tga-series-badge" aria-hidden="true">A</span><span class="tga-series-label">Athletic Mindset Series</span></td></tr>
+<tr class="tga-ptable__soon tga-series-rows--a">
+        <td class="tga-ptable__offering tga-ptable__lab">How To Maximize Value as an Athlete<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="maximize-value-athlete" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--a">
+        <td class="tga-ptable__offering tga-ptable__lab">Sportsmanship and Respect<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="sportsmanship-respect" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--a">
+        <td class="tga-ptable__offering tga-ptable__lab">Athletic Leadership<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="athletic-leadership" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--a">
+        <td class="tga-ptable__offering tga-ptable__lab">Managing Expectations in Athletics<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="managing-expectations" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--a">
+        <td class="tga-ptable__offering tga-ptable__lab">Identity Beyond Athletics<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="identity-beyond-athletics" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__section tga-ptable__section--m" id="price-series-m"><td colspan="6"><span class="tga-series-badge" aria-hidden="true">M</span><span class="tga-series-label">Management Series</span></td></tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Financial Literacy<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="managing-money" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Earning Your Keep<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="earning-your-keep" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Finding and Keeping a Job<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="finding-keeping-job" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Time Management<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="time-management" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Building A Budget<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="building-a-budget" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Importance of Hygiene<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="importance-of-hygiene" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--m">
+        <td class="tga-ptable__offering tga-ptable__lab">Managing Stress and Dealing With Adversity<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="managing-stress-adversity" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__section tga-ptable__section--s" id="price-series-s"><td colspan="6"><span class="tga-series-badge" aria-hidden="true">S</span><span class="tga-series-label">Social Series</span></td></tr>
+<tr class="tga-ptable__soon tga-series-rows--s">
+        <td class="tga-ptable__offering tga-ptable__lab">Healthy Relationships<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="healthy-relationships" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--s">
+        <td class="tga-ptable__offering tga-ptable__lab">Effective Communication<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="effective-communication" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--s">
+        <td class="tga-ptable__offering tga-ptable__lab">Reading the Room<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="reading-the-room" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--s">
+        <td class="tga-ptable__offering tga-ptable__lab">Filter and Sensitivity<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="filter-sensitivity" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+<tr class="tga-ptable__soon tga-series-rows--s">
+        <td class="tga-ptable__offering tga-ptable__lab">Social Etiquette and old Fashioned Manners<br><span class="tga-ptable__note">Student + Parent</span>
+        <button type="button" class="tga-learn-more tga-modal-open" data-course="social-etiquette" aria-haspopup="dialog">Learn More</button></td>
+        <td><span class="tga-price">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$148</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$199</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$39</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td class="tga-ptable__alone-cell"><span class="tga-price tga-price--alone">$59</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+    </tbody>
+</table>
+  </div>
+</div>
+</div>
+</div>
+<p class="tga-pricing-note">Six options per Lab: 1 Student, 2 Siblings, 3+ Family, Parent Alone, and Student Alone. Sibling discounts apply for households. No bundles—every Lab is sold individually.</p>
+</div>
+<!-- ONE Learn More modal only (do not duplicate) -->
+<div class="tga-lm" id="tga-learn-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="tga-lm-title">
+<div class="tga-lm__overlay" data-tga-lm-close="" tabindex="-1"> </div>
+<div class="tga-lm__card" role="document"><button type="button" class="tga-lm__close" data-tga-lm-close="" aria-label="Close">×</button>
+<h2 class="tga-lm__title" id="tga-lm-title"> </h2>
+<p class="tga-lm__tagline" id="tga-lm-subtitle"> </p>
+<div class="tga-lm__section" id="tga-lm-about-wrap">
+<h3>About This Course</h3>
+<p class="tga-lm__lead" id="tga-lm-about"> </p>
+</div>
+<div class="tga-lm__section" id="tga-lm-who-wrap">
+<h3>Who Is This For?</h3>
+<ul id="tga-lm-who"> </ul>
+</div>
+<div class="tga-lm__grid">
+<div class="tga-lm__block" id="tga-lm-learn-wrap">
+<h3>What You'll Learn</h3>
+<ul id="tga-lm-learn"> </ul>
+</div>
+<div class="tga-lm__block" id="tga-lm-includes-wrap">
+<h3>Course Includes</h3>
+<ul id="tga-lm-includes"> </ul>
+</div>
+</div>
+<div class="tga-lm__block tga-lm__block--outcomes" id="tga-lm-benefits-wrap">
+<h3>Benefits</h3>
+<ul id="tga-lm-benefits"> </ul>
+</div>
+</div>
+</div>
+<script>// <![CDATA[
+(function () {
+  'use strict';
+
+var TGA_COURSES = {
+    'peer-pressure': {
+      title: 'Peer Pressure and Social Value',
+      subtitle: 'Make Your Own Decisions That You Will Be Proud Of.',
+      about: 'Every decision shapes your future. Learn how to recognize peer pressure, build confidence, protect your reputation, and make decisions based on your values instead of outside influences.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Understanding peer pressure',
+        'Social value vs. self-worth',
+        'Making confident decisions',
+        'Choosing healthy friendships',
+        'Protecting your reputation',
+        'Building long-term respect'
+      ],
+      includes: [
+        'Student Lab',
+        'Parent Companion Lab',
+        'Interactive Workbook',
+        'Pre & Post Assessments',
+        'Certificate of Completion'
+      ],
+      benefits: [
+        'Understanding peer pressure dynamics and social triggers',
+        'Building strong personal values and decision-making frameworks',
+        'Collaborative modules designed specifically for both Students and Parents',
+        'Interactive action plans and reflection workbooks included'
+      ],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/E9zLFvbT/checkout'
+    },
+    'self-esteem': {
+      title: 'Self-Esteem & Knowing Your Worth Lab',
+      subtitle: 'Build Confidence from the Inside Out.',
+      about: 'True confidence comes from understanding your value rather than temporary approval. This lab helps students develop healthy self-esteem, stop comparing themselves to others, and make decisions that reflect confidence, purpose, and self-respect.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Understanding self-esteem',
+        'Breaking free from comparison',
+        'Building healthy confidence',
+        'Overcoming self-doubt',
+        'Living according to your values',
+        'Developing lasting self-respect'
+      ],
+      includes: [
+        'Student Lab',
+        'Parent Companion Lab',
+        'Interactive Workbook',
+        'Pre & Post Assessments',
+        'Certificate of Completion'
+      ],
+      benefits: [
+        'Self-paced Learning',
+        'Easy-to-follow Lessons',
+        'Practical Strategies',
+        'Lifetime Access'
+      ],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/mcH2Wwju/checkout'
+    },
+    'finding-your-voice': {
+      title: 'Finding Your Voice & Becoming a Leader Lab',
+      subtitle: 'Discover Your Voice, Then Lead with Confidence.',
+      about: 'Leadership isn\'t about having a title-it\'s about positively influencing others through your actions, decisions, and character. This lab helps students develop confidence, speak up with purpose, and become leaders in school, sports, home, and eventually the workplace.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Why people stay silent',
+        'When to speak up-and when to listen',
+        'Building confidence',
+        'Leading by example',
+        'Positive influence and servant leadership',
+        'Effective leadership approaches'
+      ],
+      includes: [
+        'Student Lab',
+        'Parent Companion Lab',
+        'Interactive Workbook',
+        'Pre & Post Assessments',
+        'Certificate of Completion'
+      ],
+      benefits: [
+        'Self-paced Learning',
+        'Easy-to-follow Lessons',
+        'Practical Strategies',
+        'Lifetime Access'
+      ],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/Y5fcyAdM/checkout'
+    },
+    'middle-school': {
+      title: 'Middle School Preparation & Survival Lab',
+      subtitle: 'Start Middle School with Confidence.',
+      about: 'Transition into middle school prepared, confident, and ready to succeed. This lab equips incoming middle school students with the mindset, habits, and practical strategies needed to navigate new responsibilities, friendships, academics, and opportunities.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'What to expect in middle school',
+        'Organization and time management',
+        'Making positive friendships',
+        'Handling peer pressure',
+        'Building a strong reputation',
+        'Habits for long-term success'
+      ],
+      includes: [
+        'Student Lab',
+        'Parent Companion Lab',
+        'Interactive Workbook',
+        'Pre & Post Assessments',
+        'Certificate of Completion'
+      ],
+      benefits: [
+        'Self-paced Learning',
+        'Easy-to-follow Lessons',
+        'Practical Strategies',
+        'Lifetime Access'
+      ],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/4irBnqcD/checkout'
+    },
+    'high-school': {
+      title: 'High School Preparation & Survival Lab',
+      subtitle: 'Prepare for High School-and Your Future.',
+      about: 'High school is the training ground and sets the foundation for your future. This lab helps incoming high school students develop the confidence, responsibility, leadership, and decision-making skills needed to thrive academically, socially, and personally.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'What to expect in high school',
+        'Building a positive reputation',
+        'Time management and responsibility',
+        'Leadership and healthy friendships',
+        'Planning for college, careers, and life',
+        'Creating habits for long-term success'
+      ],
+      includes: [
+        'Student Lab',
+        'Parent Companion Lab',
+        'Interactive Workbook',
+        'Pre & Post Assessments',
+        'Certificate of Completion'
+      ],
+      benefits: [
+        'Self-paced Learning',
+        'Easy-to-follow Lessons',
+        'Practical Strategies',
+        'Lifetime Access'
+      ],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/75WFT3A5/checkout'
+    },
+    'young-adulthood': {
+      title: 'Young Adulthood Preparation and Survival',
+      subtitle: 'Step into independence with purpose.',
+      about: 'Guides emerging adults through independence, purpose, relationships, and real-world readiness.',
+      who: ['Students', 'Parents'],
+      learn: ['Independence and responsibility', 'Purpose and direction', 'Healthy relationships', 'Real-world readiness'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'effective-communication': {
+      title: 'Effective Communication',
+      subtitle: 'Speak clearly. Listen well. Connect with respect.',
+      about: 'Builds clear communication skills, healthy boundaries, and tools for harder conversations.',
+      who: ['Students', 'Parents'],
+      learn: ['Clear expression', 'Active listening', 'Healthy boundaries', 'Hard conversations'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'navigating-new-environments': {
+      title: 'Navigating New Environments',
+      subtitle: 'Adapt with confidence anywhere you go.',
+      about: 'Helps students adapt to new schools, teams, groups, and social settings with confidence.',
+      who: ['Students', 'Parents'],
+      learn: ['Adapting to change', 'Reading new social settings', 'Building belonging', 'Confidence in transition'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'healthy-relationships': {
+      title: 'Healthy Relationships',
+      subtitle: 'Build trust, respect, and real connection.',
+      about: 'Strengthens family and peer relationships through respect, trust, and intentional connection.',
+      who: ['Students', 'Parents'],
+      learn: ['Respect and trust', 'Healthy connection', 'Family relationships', 'Peer relationships'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'maximize-value-athlete': {
+      title: 'How To Maximize Value as an Athlete',
+      subtitle: 'Lead beyond the scoreboard.',
+      about: 'Shows athletes how to bring leadership, character, and value beyond performance alone.',
+      who: ['Students', 'Parents'],
+      learn: ['Character under pressure', 'Team value', 'Leadership habits', 'Identity beyond performance'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'sportsmanship-respect': {
+      title: 'Sportsmanship and Respect',
+      subtitle: 'Win the right way-on and off the field.',
+      about: 'Develops respect, humility, and sportsmanship on and off the field.',
+      who: ['Students', 'Parents'],
+      learn: ['Respect for opponents', 'Humility in winning and losing', 'Team culture', 'Character in competition'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'athletic-leadership': {
+      title: 'Athletic Leadership',
+      subtitle: 'Lead teammates by example.',
+      about: 'Trains athletes to lead teammates through example, accountability, and positive influence.',
+      who: ['Students', 'Parents'],
+      learn: ['Lead by example', 'Accountability', 'Positive influence', 'Team leadership'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'finding-keeping-job': {
+      title: 'Finding and Keeping a Job',
+      subtitle: 'Show up. Follow through. Build integrity at work.',
+      about: 'Practical skills for applying, interviewing, showing up, and keeping a job with integrity.',
+      who: ['Students', 'Parents'],
+      learn: ['Applying with confidence', 'Interview readiness', 'Showing up consistently', 'Workplace integrity'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'earning-your-keep': {
+      title: 'Earning Your Keep',
+      subtitle: 'Own your contribution at home and in life.',
+      about: 'Builds work ethic, ownership, and the mindset of contributing at home and in life.',
+      who: ['Students', 'Parents'],
+      learn: ['Work ethic', 'Ownership', 'Contribution at home', 'Responsibility mindset'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'time-management': {
+      title: 'Time Management',
+      subtitle: 'Prioritize what matters and stay on track.',
+      about: 'Teaches students how to prioritize, plan, and manage time across school, sports, and life.',
+      who: ['Students', 'Parents'],
+      learn: ['Prioritization', 'Planning systems', 'Balancing school and life', 'Follow-through habits'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'managing-money': {
+      title: 'Financial Literacy',
+      subtitle: 'Earn. Save. Spend wisely.',
+      about: 'Introduces money basics-earning, saving, spending wisely, and financial responsibility.',
+      who: ['Students', 'Parents'],
+      learn: ['Earning basics', 'Saving habits', 'Wise spending', 'Financial responsibility'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'reading-the-room': {
+      title: 'Reading the Room',
+      subtitle: 'Notice the room. Adjust with wisdom.',
+      about: 'Helps students notice social cues and adjust their presence in different group settings.',
+      who: ['Students', 'Parents'],
+      learn: ['Social awareness', 'Reading cues', 'Adjusting presence', 'Group dynamics'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'filter-sensitivity': {
+      title: 'Filter and Sensitivity',
+      subtitle: 'Choose words, tone, and timing with care.',
+      about: 'Builds awareness around words, tone, and timing so students communicate with care.',
+      who: ['Students', 'Parents'],
+      learn: ['Word choice', 'Tone awareness', 'Timing', 'Sensitive communication'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'social-etiquette': {
+      title: 'Social Etiquette and Old Fashioned Manners',
+      subtitle: 'Respect that shows up in everyday life.',
+      about: 'Practical manners and social etiquette for school, home, and public life.',
+      who: ['Students', 'Parents'],
+      learn: ['Everyday manners', 'School etiquette', 'Home respect', 'Public presence'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'value': {
+      title: 'Value: What Do You Bring?',
+      subtitle: 'Name what you uniquely bring — and show up with purpose.',
+      about: 'Name what you uniquely bring — to a team, a classroom, and a family. Learn to stop measuring yourself against everyone else and start showing up with purpose, contribution, and self-worth that is not based on comparison.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'See the value you already carry',
+        'Name what you bring, not just what you lack',
+        'Stop comparing and start contributing',
+        'Build self-worth beyond outside approval',
+        'Show up with purpose at home, school, and on a team',
+        'Recognize how your strengths serve others'
+      ],
+      includes: [
+        'Student Lab',
+        'Parent Companion Lab',
+        'Interactive Workbook',
+        'Pre & Post Assessments',
+        'Certificate of Completion'
+      ],
+      benefits: [
+        'Self-paced Learning',
+        'Easy-to-follow Lessons',
+        'Practical Strategies',
+        'Lifetime Access'
+      ],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/VLcxqhaz/checkout'
+    },
+    'identity': {
+      title: 'Identity: Who Are You?',
+      subtitle: 'Know who you are beyond the noise.',
+      about: 'Guides students to understand who they are beyond roles, pressure, and outside opinions.',
+      who: ['Students', 'Parents'],
+      learn: ['True identity', 'Beyond roles and labels', 'Handling outside opinions', 'Confident self-understanding'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'purpose': {
+      title: 'What is Your Purpose',
+      subtitle: 'Connect strengths to meaningful direction.',
+      about: 'Helps students connect strengths and values to purpose and meaningful direction.',
+      who: ['Students', 'Parents'],
+      learn: ['Strengths awareness', 'Values to purpose', 'Meaningful direction', 'Forward focus'],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    }
+    ,
+    'pathways-after-high-school': {
+      title: 'Pathways After High School',
+      subtitle: 'Step into independence with purpose.',
+      about: 'Guides emerging adults through independence, purpose, relationships, and real-world readiness after graduation.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Explore options beyond a single path',
+        'Plan next steps with clarity',
+        'Build independence and ownership',
+        'Prepare for life after graduation'
+      ],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: 'https://digitallabseries.teamscoachingaz.com/offers/fQ2dQ42w/checkout'
+    },
+    'managing-expectations': {
+      title: 'Managing Expectations in Athletics',
+      subtitle: 'Handle pressure without losing yourself.',
+      about: 'Helps student-athletes handle pressure, roles, and expectations with maturity-from coaches, parents, and themselves.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Handle pressure from coaches, parents, and self',
+        'Accept roles with maturity',
+        'Stay steady when expectations change',
+        'Protect identity beyond performance'
+      ],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'identity-beyond-athletics': {
+      title: 'Identity Beyond Athletics',
+      subtitle: 'Who you are lasts longer than the jersey.',
+      about: 'Builds a strong identity that lasts beyond the jersey-character, purpose, and life after sport.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Separate identity from athletic performance',
+        'Build character that outlasts the season',
+        'Prepare for life beyond the jersey',
+        'Grow as a person, not only as an athlete'
+      ],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'building-a-budget': {
+      title: 'Building A Budget',
+      subtitle: 'Make a plan money can follow.',
+      about: 'Shows students how to create and follow a simple, usable budget for real life.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Build a simple personal budget',
+        'Track spending with awareness',
+        'Plan for needs vs. wants',
+        'Practice money discipline over time'
+      ],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    },
+    'good-friend': {
+      title: 'How To Be A Good Friend (Elementary)',
+      subtitle: 'Kindness, loyalty, and friendship that lasts.',
+      about: 'Friendship foundations for younger learners-kindness, loyalty, and being a good friend.',
+      who: ['Students', 'Parents'],
+      learn: [
+        'Practice kindness and loyalty',
+        'Include others and share well',
+        'Handle disagreements as friends',
+        'Be the kind of friend others trust'
+      ],
+      includes: ['Student Lab', 'Parent Companion Lab', 'Interactive Workbook', 'Lifetime Access'],
+      benefits: ['Self-paced Learning', 'Easy-to-follow Lessons', 'Practical Strategies', 'Instant Access'],
+      enroll: ''
+    }
+
+  };
+
+  function fillList(ul, items) {
+    if (!ul) return;
+    ul.innerHTML = '';
+    (items || []).forEach(function (text) {
+      var li = document.createElement('li');
+      li.textContent = text;
+      ul.appendChild(li);
+    });
+  }
+
+  function showWrap(id, show) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = show ? '' : 'none';
+  }
+
+  function getModal() {
+    return document.getElementById('tga-learn-modal');
+  }
+
+  function openCourse(slug) {
+    var modal = getModal();
+    if (!modal) {
+      console.warn('[TGA] Modal #tga-learn-modal not found in HTML');
+      return;
+    }
+    var course = TGA_COURSES[slug];
+    if (!course) {
+      console.warn('[TGA] Missing course data for:', slug);
+      return;
+    }
+
+    var titleEl = document.getElementById('tga-lm-title');
+    var subtitleEl = document.getElementById('tga-lm-subtitle');
+    var aboutEl = document.getElementById('tga-lm-about');
+    var whoEl = document.getElementById('tga-lm-who');
+    var learnEl = document.getElementById('tga-lm-learn');
+    var includesEl = document.getElementById('tga-lm-includes');
+    var benefitsEl = document.getElementById('tga-lm-benefits');
+
+    if (titleEl) titleEl.textContent = course.title || '';
+    if (subtitleEl) {
+      subtitleEl.textContent = course.subtitle || '';
+      subtitleEl.style.display = course.subtitle ? '' : 'none';
+    }
+    if (aboutEl) aboutEl.textContent = course.about || '';
+    showWrap('tga-lm-about-wrap', !!course.about);
+
+    fillList(whoEl, course.who);
+    showWrap('tga-lm-who-wrap', !!(course.who && course.who.length));
+    fillList(learnEl, course.learn);
+    showWrap('tga-lm-learn-wrap', !!(course.learn && course.learn.length));
+    fillList(includesEl, course.includes);
+    showWrap('tga-lm-includes-wrap', !!(course.includes && course.includes.length));
+    fillList(benefitsEl, course.benefits);
+    showWrap('tga-lm-benefits-wrap', !!(course.benefits && course.benefits.length));
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('tga-lm-locked');
+    var closeBtn = modal.querySelector('.tga-lm__close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    var modal = getModal();
+    if (!modal || !modal.classList.contains('is-open')) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('tga-lm-locked');
+  }
+
+  function tgaScrollToSeries(letter, btn) {
+    var scrollEl = document.getElementById('tga-ptable-scroll');
+    var target = document.getElementById('price-series-' + letter);
+    if (!scrollEl || !target) return;
+    var head = scrollEl.querySelector('.tga-ptable thead');
+    var hh = head ? head.offsetHeight : 56;
+    var y = target.getBoundingClientRect().top - scrollEl.getBoundingClientRect().top + scrollEl.scrollTop;
+    scrollEl.scrollTo({ top: Math.max(0, y - hh - 2), behavior: 'smooth' });
+    document.querySelectorAll('.tga-teams-rail__btn').forEach(function (b) {
+      b.classList.remove('is-active');
+    });
+    if (btn) btn.classList.add('is-active');
+  }
+
+  document.addEventListener('click', function (e) {
+    var opener = e.target.closest && e.target.closest('.tga-modal-open[data-course]');
+    if (opener) {
+      e.preventDefault();
+      e.stopPropagation();
+      openCourse(opener.getAttribute('data-course'));
+      return;
+    }
+    if (e.target.closest && e.target.closest('[data-tga-lm-close]')) {
+      closeModal();
+      return;
+    }
+    var rail = e.target.closest && e.target.closest('.tga-teams-rail__btn[data-series]');
+    if (rail) {
+      e.preventDefault();
+      tgaScrollToSeries(rail.getAttribute('data-series'), rail);
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.keyCode === 27) closeModal();
+  });
+
+  document.querySelectorAll('.tga-ptable a.tga-buy').forEach(function (a) {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+
+(function(){
+  function tgaLoadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var existing = document.querySelector('script[data-tga-pdf="' + src + '"]');
+      if (existing) {
+        if (existing.getAttribute('data-loaded') === '1') resolve();
+        else existing.addEventListener('load', function () { resolve(); });
+        return;
+      }
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.setAttribute('data-tga-pdf', src);
+      s.onload = function () { s.setAttribute('data-loaded', '1'); resolve(); };
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  function tgaMakePdfPill(label, opts) {
+    // No site classes — page .tga-buy CSS was wiping/clipping label text in html2canvas
+    var el = document.createElement(opts.href ? 'a' : 'span');
+    if (opts.href) {
+      el.href = opts.href;
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener');
+      el.setAttribute('data-tga-pdf-buy', '1');
+    } else {
+      el.setAttribute('data-tga-pdf-soon', '1');
+    }
+    // Keep pill size only — label is painted centered on the canvas after capture
+    el.textContent = '\u00a0';
+    el.setAttribute('data-tga-pdf-label', label);
+    el.setAttribute('style', [
+      'display:inline-block !important',
+      'box-sizing:border-box !important',
+      'margin:10px auto 0 !important',
+      'padding:0 20px !important',
+      'width:' + (label === 'Buy' ? '58px' : '62px') + ' !important',
+      'height:32px !important',
+      'line-height:32px !important',
+      'background:' + opts.bg + ' !important',
+      'color:transparent !important',
+      '-webkit-text-fill-color:transparent !important',
+      'font-size:12px !important',
+      'text-decoration:none !important',
+      'border:0 !important',
+      'border-radius:16px !important',
+      'box-shadow:none !important',
+      'transform:none !important',
+      'overflow:hidden !important',
+      'vertical-align:middle !important'
+    ].join(';'));
+    return el;
+  }
+
+  function tgaPrepPdfButtons(root) {
+    root.querySelectorAll('a.tga-buy').forEach(function (el) {
+      var next = tgaMakePdfPill('Buy', {
+        href: el.getAttribute('href'),
+        bg: '#39B2B9',
+        color: '#ffffff'
+      });
+      el.parentNode.replaceChild(next, el);
+    });
+    root.querySelectorAll('span.tga-buy').forEach(function (el) {
+      var next = tgaMakePdfPill('Soon', {
+        href: null,
+        bg: '#e1e4e7',
+        color: '#6d797b'
+      });
+      el.parentNode.replaceChild(next, el);
+    });
+
+    root.querySelectorAll('button.tga-learn-more, .tga-learn-more, button.tga-modal-open').forEach(function (el) {
+      var span = document.createElement('div');
+      span.textContent = 'Learn More';
+      span.style.cssText = [
+        'display:block',
+        'margin-top:6px',
+        'font-family:Arial,Helvetica,sans-serif',
+        'font-size:12px',
+        'font-weight:600',
+        'line-height:1.35',
+        'color:#39B2B9',
+        '-webkit-text-fill-color:#39B2B9',
+        'text-decoration:none',
+        'border:0',
+        'background:transparent',
+        'padding:0'
+      ].join(';');
+      el.parentNode.replaceChild(span, el);
+    });
+
+    root.querySelectorAll('td, th').forEach(function (cell) {
+      cell.style.setProperty('overflow', 'visible', 'important');
+      cell.style.setProperty('vertical-align', 'middle', 'important');
+      cell.style.setProperty('font-family', 'Arial, Helvetica, sans-serif', 'important');
+      cell.style.setProperty('padding-top', '16px', 'important');
+      cell.style.setProperty('padding-bottom', '16px', 'important');
+    });
+    root.querySelectorAll('td').forEach(function (td) {
+      td.style.setProperty('text-align', 'center', 'important');
+    });
+    root.querySelectorAll('.tga-ptable__offering, .tga-ptable__lab, .tga-ptable__section td').forEach(function (td) {
+      td.style.setProperty('text-align', 'left', 'important');
+    });
+    root.querySelectorAll('.tga-price').forEach(function (p) {
+      p.style.setProperty('font-family', 'Arial, Helvetica, sans-serif', 'important');
+      p.style.setProperty('line-height', '1.3', 'important');
+      p.style.setProperty('display', 'block', 'important');
+      p.style.setProperty('margin', '0 0 2px', 'important');
+    });
+
+    // Series headings: hide DOM text (html2canvas pushes T/E/A/M/S + labels down)
+    var seriesMeta = {
+      t: { badge: [57, 178, 185], label: [27, 135, 141], bar: [230, 246, 247] },
+      e: { badge: [27, 135, 141], label: [27, 135, 141], bar: [230, 246, 247] },
+      a: { badge: [19, 21, 26], label: [19, 21, 26], bar: [243, 244, 245] },
+      m: { badge: [37, 100, 135], label: [37, 100, 135], bar: [234, 241, 246] },
+      s: { badge: [94, 152, 190], label: [37, 100, 135], bar: [234, 241, 246] }
+    };
+    root.querySelectorAll('tr.tga-ptable__section').forEach(function (tr) {
+      var key = 't';
+      ['t', 'e', 'a', 'm', 's'].forEach(function (k) {
+        if (tr.classList.contains('tga-ptable__section--' + k)) key = k;
+      });
+      var meta = seriesMeta[key];
+      var badge = tr.querySelector('.tga-series-badge');
+      var label = tr.querySelector('.tga-series-label');
+      var td = tr.querySelector('td');
+      if (!badge || !label || !td) return;
+      var letter = (badge.textContent || key.toUpperCase()).replace(/\s+/g, '').charAt(0);
+      var title = (label.textContent || '').replace(/\s+/g, ' ').trim();
+      tr.setAttribute('data-tga-pdf-series', key);
+      badge.setAttribute('data-tga-pdf-letter', letter);
+      label.setAttribute('data-tga-pdf-title', title);
+      badge.textContent = '\u00a0';
+      label.textContent = '\u00a0';
+      badge.style.cssText = [
+        'display:inline-block',
+        'width:32px',
+        'height:32px',
+        'margin-right:12px',
+        'border-radius:10px',
+        'background:rgb(' + meta.badge.join(',') + ')',
+        'vertical-align:middle',
+        'color:transparent',
+        'line-height:32px'
+      ].join(';');
+      label.style.cssText = [
+        'display:inline-block',
+        'vertical-align:middle',
+        'white-space:nowrap',
+        'color:transparent',
+        'font-size:13px',
+        'font-weight:800',
+        'letter-spacing:.06em',
+        'text-transform:uppercase',
+        'min-width:220px'
+      ].join(';');
+      td.style.setProperty('white-space', 'nowrap', 'important');
+      td.style.setProperty('vertical-align', 'middle', 'important');
+    });
+  }
+
+  function tgaCollectPills(root) {
+    var rootRect = root.getBoundingClientRect();
+    return Array.prototype.map.call(root.querySelectorAll('[data-tga-pdf-buy], [data-tga-pdf-soon]'), function (el) {
+      var r = el.getBoundingClientRect();
+      var isBuy = el.hasAttribute('data-tga-pdf-buy');
+      return {
+        url: isBuy ? el.href : '',
+        label: el.getAttribute('data-tga-pdf-label') || (isBuy ? 'Buy' : 'Soon'),
+        isBuy: isBuy,
+        x: r.left - rootRect.left,
+        y: r.top - rootRect.top,
+        w: r.width,
+        h: r.height
+      };
+    }).filter(function (P) { return P.w > 0 && P.h > 0; });
+  }
+
+  function tgaCollectSeriesHeaders(root) {
+    var rootRect = root.getBoundingClientRect();
+    var seriesMeta = {
+      t: { badge: [57, 178, 185], label: [27, 135, 141], bar: [230, 246, 247] },
+      e: { badge: [27, 135, 141], label: [27, 135, 141], bar: [230, 246, 247] },
+      a: { badge: [19, 21, 26], label: [19, 21, 26], bar: [243, 244, 245] },
+      m: { badge: [37, 100, 135], label: [37, 100, 135], bar: [234, 241, 246] },
+      s: { badge: [94, 152, 190], label: [37, 100, 135], bar: [234, 241, 246] }
+    };
+    return Array.prototype.map.call(root.querySelectorAll('tr.tga-ptable__section'), function (tr) {
+      var key = tr.getAttribute('data-tga-pdf-series') || 't';
+      var meta = seriesMeta[key] || seriesMeta.t;
+      var badge = tr.querySelector('.tga-series-badge');
+      var label = tr.querySelector('.tga-series-label');
+      var td = tr.querySelector('td');
+      if (!badge || !label || !td) return null;
+      var br = badge.getBoundingClientRect();
+      var lr = label.getBoundingClientRect();
+      var trr = td.getBoundingClientRect();
+      return {
+        key: key,
+        letter: badge.getAttribute('data-tga-pdf-letter') || key.toUpperCase(),
+        title: label.getAttribute('data-tga-pdf-title') || '',
+        meta: meta,
+        badge: {
+          x: br.left - rootRect.left,
+          y: br.top - rootRect.top,
+          w: br.width,
+          h: br.height
+        },
+        label: {
+          x: lr.left - rootRect.left,
+          y: br.top - rootRect.top,
+          w: Math.max(lr.width, 180),
+          h: br.height
+        },
+        bar: {
+          x: trr.left - rootRect.left,
+          y: trr.top - rootRect.top,
+          w: trr.width,
+          h: trr.height
+        }
+      };
+    }).filter(Boolean);
+  }
+
+  function tgaCollectRowEdges(root) {
+    var rootRect = root.getBoundingClientRect();
+    return Array.prototype.map.call(root.querySelectorAll('tr'), function (tr) {
+      var r = tr.getBoundingClientRect();
+      return {
+        top: r.top - rootRect.top,
+        bottom: r.bottom - rootRect.top,
+        isSection: tr.classList.contains('tga-ptable__section')
+      };
+    }).filter(function (R) { return R.bottom > R.top + 1; });
+  }
+
+  // Break pages between rows so buttons/headers are never sliced in half
+  function tgaBuildPageSlices(sourceH, pageCssH, rows) {
+    var slices = [];
+    var y = 0;
+    var guard = 0;
+    while (y < sourceH - 0.5 && guard++ < 80) {
+      var idealEnd = Math.min(y + pageCssH, sourceH);
+      if (idealEnd >= sourceH - 1) {
+        slices.push({ start: y, end: sourceH });
+        break;
+      }
+
+      var breakAt = null;
+      var lastFitted = null;
+      for (var i = 0; i < rows.length; i++) {
+        var R = rows[i];
+        if (R.bottom <= y + 0.5) continue;
+        if (R.top < y - 0.5) {
+          // row already started above this page — shouldn't happen with clean breaks
+          continue;
+        }
+        if (R.bottom <= idealEnd + 0.5) {
+          breakAt = R.bottom;
+          lastFitted = R;
+        } else {
+          break;
+        }
+      }
+
+      if (breakAt === null || breakAt <= y + 1) {
+        breakAt = idealEnd;
+      }
+
+      // Don't end a page on a lone series header — move header to next page
+      if (lastFitted && lastFitted.isSection) {
+        var beforeHeader = y;
+        for (var k = 0; k < rows.length; k++) {
+          if (rows[k].bottom <= lastFitted.top + 0.5 && rows[k].top >= y - 0.5) {
+            beforeHeader = rows[k].bottom;
+          }
+        }
+        if (beforeHeader > y + 1) breakAt = beforeHeader;
+      }
+
+      if (sourceH - breakAt < 40) {
+        slices.push({ start: y, end: sourceH });
+        break;
+      }
+
+      slices.push({ start: y, end: breakAt });
+      y = breakAt;
+    }
+    return slices;
+  }
+
+  function tgaAddCanvasPages(doc, canvas, sourceW, sourceH, pills, headers, rows, margin) {
+    var pageW = doc.internal.pageSize.getWidth();
+    var pageH = doc.internal.pageSize.getHeight();
+    var usableW = pageW - margin * 2;
+    var usableH = pageH - margin * 2;
+    var pxPerCssY = canvas.height / sourceH;
+    var cssPerPdf = sourceW / usableW;
+    var pageCssH = usableH * cssPerPdf;
+    var slices = tgaBuildPageSlices(sourceH, pageCssH, rows || []);
+
+    slices.forEach(function (sliceDef, pageIndex) {
+      if (pageIndex > 0) doc.addPage();
+      var yCss = sliceDef.start;
+      var sliceCssH = sliceDef.end - sliceDef.start;
+      var sliceEnd = sliceDef.end;
+      var sy = yCss * pxPerCssY;
+      var sh = sliceCssH * pxPerCssY;
+      var slice = document.createElement('canvas');
+      slice.width = canvas.width;
+      slice.height = Math.max(1, Math.ceil(sh));
+      slice.getContext('2d').drawImage(canvas, 0, sy, canvas.width, sh, 0, 0, canvas.width, sh);
+      var drawH = sliceCssH / cssPerPdf;
+      doc.addImage(slice.toDataURL('image/png'), 'PNG', margin, margin, usableW, drawH);
+
+      function fullyOnPage(top, bottom) {
+        return top >= yCss - 0.5 && bottom <= sliceEnd + 0.5;
+      }
+
+      function toPdfBox(box) {
+        return {
+          x: margin + (box.x / cssPerPdf),
+          y: margin + ((box.y - yCss) / cssPerPdf),
+          w: box.w / cssPerPdf,
+          h: box.h / cssPerPdf
+        };
+      }
+
+      headers.forEach(function (H) {
+        var top = H.bar.y;
+        var bottom = H.bar.y + H.bar.h;
+        if (!fullyOnPage(top, bottom)) return;
+        var bar = toPdfBox(H.bar);
+        var badge = toPdfBox(H.badge);
+        var label = toPdfBox(H.label);
+        doc.setFillColor(H.meta.bar[0], H.meta.bar[1], H.meta.bar[2]);
+        doc.rect(bar.x, bar.y, bar.w, bar.h, 'F');
+        doc.setFillColor(H.meta.badge[0], H.meta.badge[1], H.meta.badge[2]);
+        doc.roundedRect(badge.x, badge.y, badge.w, badge.h, 3.5, 3.5, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(Math.max(9, Math.min(12, badge.h * 0.55)));
+        doc.text(String(H.letter), badge.x + badge.w / 2, badge.y + badge.h / 2, {
+          align: 'center',
+          baseline: 'middle'
+        });
+        doc.setTextColor(H.meta.label[0], H.meta.label[1], H.meta.label[2]);
+        doc.setFontSize(Math.max(8, Math.min(11, badge.h * 0.42)));
+        doc.text(String(H.title).toUpperCase(), label.x, badge.y + badge.h / 2, {
+          baseline: 'middle'
+        });
+      });
+
+      pills.forEach(function (P) {
+        var top = P.y;
+        var bottom = P.y + P.h;
+        if (!fullyOnPage(top, bottom)) return;
+        var pdfX = margin + (P.x / cssPerPdf);
+        var pdfY = margin + ((top - yCss) / cssPerPdf);
+        var pdfW = P.w / cssPerPdf;
+        var pdfH = P.h / cssPerPdf;
+        var radius = pdfH / 2;
+        if (P.isBuy) doc.setFillColor(57, 178, 185);
+        else doc.setFillColor(225, 228, 231);
+        doc.roundedRect(pdfX, pdfY, pdfW, pdfH, radius, radius, 'F');
+        if (P.isBuy) doc.setTextColor(255, 255, 255);
+        else doc.setTextColor(109, 121, 123);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(Math.max(8, Math.min(11, pdfH * 0.45)));
+        doc.text(String(P.label), pdfX + pdfW / 2, pdfY + pdfH / 2, {
+          align: 'center',
+          baseline: 'middle'
+        });
+        if (P.url) doc.link(pdfX, pdfY, pdfW, pdfH, { url: P.url });
+      });
+    });
+  }
+
+  function tgaBuildPdfClone(table) {
+    var host = document.createElement('div');
+    host.id = 'tga-pdf-clone-host';
+    host.setAttribute('aria-hidden', 'true');
+    host.style.cssText = [
+      'position:fixed',
+      'left:-10000px',
+      'top:0',
+      'width:1180px',
+      'background:#ffffff',
+      'padding:0',
+      'margin:0',
+      'z-index:0',
+      'opacity:1',
+      'pointer-events:none',
+      'overflow:visible',
+      'font-family:Arial,Helvetica,sans-serif'
+    ].join(';');
+    var style = document.createElement('style');
+    style.textContent = [
+      '#tga-pdf-clone-host,#tga-pdf-clone-host *{font-family:Arial,Helvetica,sans-serif!important;}',
+      '#tga-pdf-clone-host .tga-ptable{overflow:visible!important;}',
+      '#tga-pdf-clone-host td,#tga-pdf-clone-host th{overflow:visible!important;}'
+    ].join('');
+    host.appendChild(style);
+    var clone = table.cloneNode(true);
+    clone.classList.add('tga-ptable');
+    clone.style.cssText = 'width:1180px;min-width:1180px;max-width:none;margin:0;border-collapse:collapse;background:#fff;table-layout:fixed;overflow:visible;font-family:Arial,Helvetica,sans-serif;';
+    host.appendChild(clone);
+    document.body.appendChild(host);
+    tgaPrepPdfButtons(host);
+    return host;
+  }
+
+  function tgaDownloadPricingPdf() {
+    var btn = document.getElementById('tga-pdf-download');
+    var table = document.querySelector('.tga-ptable');
+    if (!table) return;
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = 'Preparing…';
+    }
+
+    var host = null;
+    tgaLoadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js')
+      .then(function () {
+        return tgaLoadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+      })
+      .then(function () {
+        host = tgaBuildPdfClone(table);
+        return new Promise(function (resolve) {
+          requestAnimationFrame(function () { requestAnimationFrame(resolve); });
+        }).then(function () {
+          var captureEl = host.querySelector('.tga-ptable') || host;
+          var sourceW = Math.ceil(captureEl.getBoundingClientRect().width);
+          var sourceH = Math.ceil(captureEl.getBoundingClientRect().height);
+          var pills = tgaCollectPills(captureEl);
+          var headers = tgaCollectSeriesHeaders(captureEl);
+          var rows = tgaCollectRowEdges(captureEl);
+          return window.html2canvas(captureEl, {
+            backgroundColor: '#ffffff',
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            scrollX: 0,
+            scrollY: 0,
+            width: sourceW,
+            height: sourceH,
+            windowWidth: sourceW,
+            windowHeight: sourceH
+          }).then(function (canvas) {
+            return { canvas: canvas, pills: pills, headers: headers, rows: rows, sourceW: sourceW, sourceH: sourceH };
+          });
+        });
+      })
+      .then(function (result) {
+        var jsPDF = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
+        if (!jsPDF) throw new Error('jsPDF failed to load');
+        var doc = new jsPDF({ orientation: 'landscape', unit: 'pt', format: 'letter' });
+        tgaAddCanvasPages(doc, result.canvas, result.sourceW, result.sourceH, result.pills, result.headers, result.rows, 16);
+        doc.save('TEAMS-Series-Labs-Pricing.pdf');
+      })
+      .catch(function () {
+        alert('Unable to create the PDF right now. Please try again in a moment.');
+      })
+      .finally(function () {
+        if (host && host.parentNode) host.parentNode.removeChild(host);
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = '<span class="tga-pdf-download__icon" aria-hidden="true">↓</span> Download Now';
+        }
+      });
+  }
+
+  var pdfBtn = document.getElementById('tga-pdf-download');
+  if (pdfBtn) pdfBtn.addEventListener('click', tgaDownloadPricingPdf);
+})();
+})();
+// ]]></script>

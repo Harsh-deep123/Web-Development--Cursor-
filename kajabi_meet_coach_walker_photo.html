@@ -1,0 +1,86 @@
+<!-- Meet Coach Walker — photo block for Kajabi Custom Code / Text.
+     Permanent image URL (no X-Amz expiry). -->
+<style>
+.mcw-photo{
+  --mcw-teal:#39B2B9;
+  --mcw-deep:#1B878D;
+  --mcw-charcoal:#13151A;
+  position:relative;
+  max-width:420px;
+  margin:0 auto;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Archivo,"Open Sans",Arial,sans-serif;
+}
+.mcw-photo *,.mcw-photo *::before,.mcw-photo *::after{box-sizing:border-box;}
+.mcw-photo__glow{
+  position:absolute;
+  inset:-12% -8% auto;
+  height:55%;
+  background:radial-gradient(ellipse at 50% 40%,rgba(57,178,185,.28),transparent 70%);
+  pointer-events:none;
+  z-index:0;
+}
+.mcw-photo__card{
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+  border-radius:24px;
+  background:#E6F6F7;
+  box-shadow:0 16px 40px rgba(19,21,26,.18);
+  aspect-ratio:4/5;
+}
+.mcw-photo__card img{
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  object-position:center 14% !important;
+  display:block !important;
+  margin:0 !important;
+}
+.mcw-photo__caption{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  margin-top:18px;
+}
+.mcw-photo__name{
+  margin:0 0 4px !important;
+  font-size:22px;
+  font-weight:800;
+  color:var(--mcw-charcoal);
+}
+.mcw-photo__role{
+  margin:0 !important;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--mcw-deep);
+}
+
+/* Mobile only — space under Kajabi logo / navbar */
+@media (max-width:800px){
+  .mcw-photo{
+    padding-top:48px !important;
+    margin-top:0 !important;
+  }
+}
+</style>
+
+<div class="mcw-photo">
+  <div class="mcw-photo__glow" aria-hidden="true">&nbsp;</div>
+  <div class="mcw-photo__card">
+    <img
+      src="https://kajabi-storefronts-production.s3.amazonaws.com/file-uploads/sites/2148874776/images/c464e7-26cd-617-dfa2-e2a3b548a87_Gemini_Generated_Image_o0sxdao0sxdao0sx_1_.png"
+      alt="Coach Walker"
+      width="600"
+      height="750"
+    />
+  </div>
+  <div class="mcw-photo__caption">
+    <p class="mcw-photo__name">Coach Walker</p>
+    <p class="mcw-photo__role">Founder &amp; Lead Mentor · T.E.A.M.S. Coaching</p>
+  </div>
+</div>

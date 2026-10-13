@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Left Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Overpass:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#39B2B9;
+    --deep-teal:#1B878D;
+    --charcoal:#13151A;
+    --wash:#E6F6F7;
+    --slate:#4A4A4A;
+    --line:rgba(0,161,171,.18);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#f4fbfb;font-family:'Archivo',sans-serif;color:var(--charcoal);}
+
+  .tga-left{
+    max-width:560px;
+    margin:0 auto;
+    padding:48px 44px;
+  }
+
+  .tga-left .eyebrow{
+    display:inline-block;
+    font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--deep-teal);
+    background:var(--wash);
+    padding:7px 14px;border-radius:999px;
+    margin-bottom:20px;
+  }
+  .tga-left h1{
+    font-size:38px;line-height:1.12;font-weight:800;margin:0 0 16px;
+  }
+  .tga-left h1 .grad{
+    background:linear-gradient(135deg,var(--teal),#5fd7e2);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .tga-left .lead{
+    font-size:17px;line-height:1.6;color:var(--slate);margin:0 0 30px;
+  }
+
+  /* Benefit checklist */
+  .benefits{list-style:none;margin:0 0 32px;padding:0;}
+  .benefits li{
+    display:flex;align-items:flex-start;gap:12px;
+    font-size:16px;font-weight:600;margin-bottom:14px;
+  }
+  .benefits .ic{
+    flex-shrink:0;width:24px;height:24px;border-radius:50%;
+    background:var(--teal);display:flex;align-items:center;justify-content:center;margin-top:1px;
+  }
+  .benefits .ic svg{width:14px;height:14px;fill:#fff;}
+
+  /* Point system card */
+  .points{
+    background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:24px 26px;margin-bottom:20px;box-shadow:0 6px 24px rgba(0,161,171,.06);
+  }
+  .points h3{font-size:19px;font-weight:800;margin:0 0 6px;}
+  .points p{font-size:14px;color:var(--slate);margin:0 0 14px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;font-weight:600;color:var(--charcoal);
+    background:var(--wash);border:1px solid var(--line);
+    padding:6px 12px;border-radius:999px;
+  }
+  .chip svg{width:14px;height:14px;fill:var(--deep-teal);}
+
+  /* Rewards dark card */
+  .rewards{
+    background:var(--charcoal);border-radius:20px;padding:26px 28px;position:relative;overflow:hidden;
+    box-shadow:0 12px 34px rgba(0,0,0,.22);margin-bottom:28px;
+  }
+  .rewards::after{
+    content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;
+    background:radial-gradient(circle,rgba(57,178,185,.35),transparent 70%);
+  }
+  .rewards h4{
+    font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--teal);margin:0 0 18px;position:relative;z-index:1;
+  }
+  .rewards-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:1;}
+  .reward{display:flex;align-items:flex-start;gap:12px;}
+  .reward .rc{
+    flex-shrink:0;width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.1);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .reward .rc svg{width:20px;height:20px;fill:var(--teal);}
+  .reward span{color:#fff;font-size:14px;font-weight:600;line-height:1.35;padding-top:3px;}
+
+  /* Trust line */
+  .trust{
+    display:flex;align-items:center;gap:10px;
+    font-size:14px;font-weight:600;color:var(--slate);
+  }
+  .trust svg{width:18px;height:18px;fill:var(--deep-teal);}
+  .trust .dot{width:4px;height:4px;border-radius:50%;background:#c9d3d3;}
+
+  @media (max-width:900px){
+    .tga-left{padding:32px 22px;}
+    .tga-left h1{font-size:30px;}
+    .rewards-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="tga-left">
+
+  <span class="eyebrow">The Growth Academy Community</span>
+
+  <h1>Where character, confidence &amp; <span class="grad">leadership grow.</span></h1>
+
+  <p class="lead">Inside our community, growth is recognized and rewarded. Students earn points through challenges that build character and leadership — with coaches and peers cheering them on.</p>
+
+  <ul class="benefits">
+    <li>
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+      Weekly challenges that build real-life skills
+    </li>
+    <li>
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+      Earn points and climb the leaderboard
+    </li>
+    <li>
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+      A safe, moderated environment for students
+    </li>
+    <li>
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+      Guidance from Coach Walker &amp; peer support
+    </li>
+  </ul>
+
+  <div class="points">
+    <h3>The Point System</h3>
+    <p>Students earn points by completing challenges focused on:</p>
+    <div class="chips">
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .5-5.5 4.5L18 21l-6-3.8L6 21l1.5-7L2 9.5 9 9z"/></svg> Leadership</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5zm-1 15-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9z"/></svg> Responsibility</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3m-8 0c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3m0 2c-2.3 0-7 1.2-7 3.5V19h14v-2.5C15 14.2 10.3 13 8 13m8 0c-.3 0-.6 0-1 .1 1.2.9 2 2 2 2.9V19h6v-2.5c0-2.3-4.7-3.5-7-3.5"/></svg> Community Service</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 9 9c.8 0 1.5-.7 1.5-1.5 0-.4-.2-.8-.4-1-.2-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8m-5.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m3-4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m3 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/></svg> Self-Reflection</span>
+    </div>
+  </div>
+
+  <div class="rewards">
+    <h4>Exclusive Rewards</h4>
+    <div class="rewards-grid">
+      <div class="reward">
+        <span class="rc"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6"/></svg></span>
+        <span>Digital badges &amp; certificates</span>
+      </div>
+      <div class="reward">
+        <span class="rc"><svg viewBox="0 0 24 24"><path d="M18 2H6v2H2v4a4 4 0 0 0 4 4c.6 1.5 2 2.6 3.5 2.9V19H7v2h10v-2h-2.5v-4.1c1.6-.3 2.9-1.4 3.5-2.9a4 4 0 0 0 4-4V4h-4zM4 8V6h2v4a2 2 0 0 1-2-2m16 0a2 2 0 0 1-2 2V6h2z"/></svg></span>
+        <span>Top performer recognition</span>
+      </div>
+      <div class="reward">
+        <span class="rc"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m6.9 6h-2.9a15 15 0 0 0-1.3-3.4A8 8 0 0 1 18.9 8M12 4c.8 1.2 1.4 2.5 1.8 4h-3.6C10.6 6.5 11.2 5.2 12 4M4.3 14a8 8 0 0 1 0-4h3.3a16.5 16.5 0 0 0 0 4zm.8 2h2.9c.3 1.2.8 2.4 1.3 3.4A8 8 0 0 1 5.1 16m2.9-8H5.1a8 8 0 0 1 4.2-3.4C8.8 5.6 8.3 6.8 8 8m4 12c-.8-1.2-1.4-2.5-1.8-4h3.6c-.4 1.5-1 2.8-1.8 4m2.2-6H9.8a14 14 0 0 1 0-4h4.4a14 14 0 0 1 0 4m.7 5.4c.5-1 1-2.2 1.3-3.4h2.9a8 8 0 0 1-4.2 3.4M16.4 14a16.5 16.5 0 0 0 0-4h3.3a8 8 0 0 1 0 4z"/></svg></span>
+        <span>Features on website &amp; socials</span>
+      </div>
+      <div class="reward">
+        <span class="rc"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v3L12 20l7-3.8v-3L12 17z"/></svg></span>
+        <span>Eligibility for scholarships</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5zm0 10.9h7c-.5 4.1-3.3 7.8-7 8.9z"/></svg>
+    Secure checkout
+    <span class="dot"></span>
+    Cancel anytime
+    <span class="dot"></span>
+    Family plans available
+  </div>
+
+</div>
+
+</body>
+</html>

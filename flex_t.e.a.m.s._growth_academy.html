@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>T.E.A.M.S. Flex | $199/month Hybrid Coaching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&amp;family=Overpass:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        button:not(.nav-login), a.btn {
+            font-family: 'Overpass', sans-serif !important;
+        }
+        header nav.hidden {
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            column-gap: 1.15rem !important;
+        }
+        .nav-link {
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size:  15px !important;
+            letter-spacing: 0.02em !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            text-decoration: none !important;
+            border-bottom: 2px solid transparent;
+            padding: 6px 0 4px !important;
+            margin: 0 !important;
+            white-space: nowrap !important;
+            transition: color .2s ease, border-color .2s ease;
+        }
+        .nav-link:hover { color: #39B2B9 !important; }
+        .nav-link--active {
+            color: #39B2B9 !important;
+            border-bottom-color: #39B2B9 !important;
+            font-weight: 700 !important;
+        }
+        a.nav-login { text-decoration: none !important; display: inline-block; }
+        .nav-login, button.nav-login, a.nav-login {
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size: 13px !important;
+            letter-spacing: normal !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 10px 0 0;
+            transition: color .2s ease;
+        }
+        .nav-login:hover { color: #39B2B9 !important; }
+        .btn, button, input[type="submit"] { border-radius: 9999px !important; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+        .btn:hover, button:hover, input[type="submit"]:hover { transform: translateY(-3px) !important; }
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container,
+        input[type="submit"] { background-color: #39B2B9 !important; border-color: #39B2B9 !important; }
+        .btn.bg-primary:hover, .btn.bg-primary-container:hover,
+        button.bg-primary:hover, button.bg-primary-container:hover,
+        input[type="submit"]:hover { background-color: #1B878D !important; border-color: #1B878D !important; }
+
+.tga-flex{
+  --teal:#39B2B9;
+  --deep:#1B878D;
+  --charcoal:#13151A;
+  --wash:#E6F6F7;
+  --slate:#4A4A4A;
+  --line:rgba(0,161,171,.18);
+  --paper:#F8FAFB;
+  font-family:Archivo,"Open Sans",Arial,sans-serif;
+  color:var(--charcoal);
+  background:var(--paper);
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.tga-flex *,.tga-flex *::before,.tga-flex *::after{box-sizing:border-box;}
+.tga-flex img{max-width:100%;height:auto;display:block;}
+.tga-flex a{text-decoration:none;}
+.tga-flex__wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+.tga-flex__hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse 70% 80% at 88% 40%,rgba(57,178,185,.18),transparent 55%),
+    linear-gradient(165deg,#F4FBFC 0%,#E6F6F7 42%,#D4EFF1 100%);
+  color:var(--charcoal);
+  padding:40px 0 48px;
+  margin:0;
+}
+/* Local HTML only (not Kajabi) */
+body.tga-local .tga-flex__hero{padding-top:120px;}
+.tga-flex{margin:0;padding:0;}
+.tga-flex__hero::after{
+  content:"";
+  position:absolute;
+  left:-100px;bottom:-120px;
+  width:340px;height:340px;
+  background:radial-gradient(circle,rgba(27,135,141,.12),transparent 68%);
+  pointer-events:none;
+}
+.tga-flex__hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;
+}
+.tga-flex__hero-copy{padding-bottom:12px;}
+.tga-flex figure.tga-flex__portrait{
+  position:relative;
+  margin:0 auto;
+  width:min(100%,340px);
+  aspect-ratio:4/5;
+  align-self:center;
+  padding:0;
+}
+.tga-flex__portrait-frame{
+  position:absolute;
+  inset:0;
+  display:block;
+  overflow:hidden;
+  border-radius:28px;
+  border:0;
+  box-shadow:0 16px 36px rgba(19,21,26,.14);
+  background:#E6F6F7;
+}
+.tga-flex .tga-flex__portrait img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 14%;
+  display:block;
+  margin:0;
+}
+.tga-flex__eyebrow{
+  position:relative;z-index:1;
+  display:inline-block;
+  font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  background:transparent;color:var(--deep);
+  padding:0 0 0 14px;border-radius:0;margin:0 0 18px;
+  border-left:3px solid var(--teal);
+}
+.tga-flex h1{
+  position:relative;z-index:1;
+  margin:0 0 14px;font-size:44px;line-height:1.1;font-weight:800;color:var(--charcoal);letter-spacing:-.02em;
+}
+.tga-flex h1 em{font-style:normal;color:var(--deep);}
+.tga-flex__lead{
+  position:relative;z-index:1;
+  max-width:640px;margin:0 0 28px;
+  font-size:18px;line-height:1.6;font-weight:400;color:var(--slate);
+}
+.tga-flex__price-row{
+  position:relative;z-index:1;
+  display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;
+}
+.tga-flex__price-pill{
+  display:inline-flex;align-items:baseline;gap:6px;
+  background:#fff;color:var(--charcoal);
+  border:1px solid var(--line);
+  border-radius:16px;padding:12px 16px;margin:0;
+  box-shadow:0 8px 20px rgba(19,21,26,.06);
+}
+.tga-flex__price-name{
+  font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);
+}
+.tga-flex__price-pill b{font-size:28px;font-weight:800;letter-spacing:-.03em;color:var(--deep);}
+.tga-flex__price-pill span{font-size:13px;font-weight:700;color:var(--slate);}
+.tga-flex__price-pill--plus{background:var(--charcoal);border-color:var(--charcoal);color:#fff;}
+.tga-flex__price-pill--plus .tga-flex__price-name,
+.tga-flex__price-pill--plus span{color:#39B2B9;}
+.tga-flex__price-pill--plus b{color:#fff;}
+.tga-flex__actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+.tga-flex__btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:14px 26px;border-radius:999px;
+  font-family:Overpass,Archivo,sans-serif;font-size:16px;font-weight:800;line-height:1.2;
+  border:2px solid transparent;transition:transform .2s ease,background .2s ease,color .2s ease;
+}
+.tga-flex__btn:hover{transform:translateY(-1px);}
+.tga-flex__btn--primary{background:var(--deep);color:#fff;}
+.tga-flex__btn--primary:hover{background:var(--charcoal);}
+.tga-flex__btn--ghost{background:transparent;border-color:var(--deep);color:var(--deep);}
+.tga-flex__btn--ghost:hover{background:rgba(27,135,141,.08);}
+.tga-flex__btn--dark{background:var(--charcoal);color:#fff;}
+.tga-flex__btn--dark:hover{background:#1B878D;}
+.tga-flex__quotes{padding:64px 0 40px;}
+.tga-flex h2{
+  margin:0 0 14px;font-size:30px;line-height:1.2;font-weight:800;color:var(--charcoal);
+}
+.tga-flex__kicker{
+  margin:0 0 32px;font-size:16px;line-height:1.7;color:var(--slate);max-width:680px;
+}
+.tga-flex__quote-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;
+}
+.tga-flex__quote{
+  margin:0;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:16px;
+  font-size:16px;line-height:1.55;font-weight:600;color:var(--charcoal);
+  box-shadow:0 8px 24px rgba(19,21,26,.04);
+}
+.tga-flex__quote::before{
+  content:"“";display:block;color:var(--teal);font-size:28px;line-height:1;font-weight:800;margin-bottom:6px;
+}
+.tga-flex__empathy{
+  max-width:760px;margin:32px 0 8px;
+  font-size:17px;line-height:1.85;color:var(--slate);
+}
+.tga-flex__offer{padding:48px 0 64px;}
+.tga-flex__plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.tga-flex__card{
+  background:var(--charcoal);color:#fff;border-radius:24px;padding:32px 28px 28px;
+  position:relative;overflow:hidden;
+  box-shadow:0 16px 40px rgba(19,21,26,.22);
+  display:flex;flex-direction:column;
+}
+.tga-flex__card::after{
+  content:"";position:absolute;right:-50px;top:-50px;width:220px;height:220px;
+  background:radial-gradient(circle,rgba(57,178,185,.38),transparent 70%);
+  pointer-events:none;
+}
+.tga-flex__card--light{
+  background:#fff;color:var(--charcoal);
+  border:1px solid var(--line);
+  box-shadow:0 8px 24px rgba(19,21,26,.06);
+}
+.tga-flex__card--light::after{display:none;}
+.tga-flex__card-head{
+  position:relative;z-index:1;
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;
+  margin-bottom:22px;
+}
+.tga-flex__badge{
+  display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--teal);color:#fff;padding:5px 10px;border-radius:999px;margin:0 0 10px;
+}
+.tga-flex__card-title{margin:0 0 6px;font-size:28px;line-height:1.2;font-weight:800;color:#fff;}
+.tga-flex__card--light .tga-flex__card-title{color:var(--charcoal);}
+.tga-flex__card p{margin:0;color:rgba(255,255,255,.72);font-size:15px;}
+.tga-flex__card--light p{color:var(--slate);}
+.tga-flex__card-price{font-size:36px;font-weight:800;letter-spacing:-.03em;color:#fff;}
+.tga-flex__card--light .tga-flex__card-price{color:var(--charcoal);}
+.tga-flex__card-price span{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);}
+.tga-flex__includes{
+  position:relative;z-index:1;
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:1fr;gap:12px;
+  flex:1;
+}
+.tga-flex__includes li{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:15px;font-weight:600;line-height:1.4;color:#fff;
+}
+.tga-flex__card--light .tga-flex__includes li{color:var(--charcoal);}
+.tga-flex__card .tga-flex__btn{position:relative;z-index:1;width:100%;margin-top:22px;}
+.tga-flex__ic{
+  flex-shrink:0;width:24px;height:24px;border-radius:50%;margin-top:1px;
+  background:var(--teal);
+  display:flex;align-items:center;justify-content:center;
+}
+.tga-flex__ic svg{width:13px;height:13px;fill:#fff;}
+.tga-flex__how{padding:8px 0 64px;}
+.tga-flex__steps{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:8px;
+}
+.tga-flex__step{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;
+}
+.tga-flex__num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:10px;margin-bottom:14px;
+  background:var(--wash);color:var(--deep);font-weight:800;font-size:15px;
+}
+.tga-flex__step h3{margin:0 0 8px;font-size:18px;font-weight:800;}
+.tga-flex__step p{margin:0;font-size:15px;line-height:1.55;color:var(--slate);}
+.tga-flex__parent{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--wash);border:1px solid var(--line);border-radius:18px;
+  padding:22px 24px;margin:8px 0 0;
+}
+.tga-flex__parent-icon{
+  flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,161,171,.12);
+}
+.tga-flex__parent-icon svg{width:22px;height:22px;fill:var(--deep);}
+.tga-flex__parent h3{margin:0 0 6px;font-size:18px;font-weight:800;}
+.tga-flex__parent p{margin:0;font-size:15px;line-height:1.6;color:var(--slate);}
+.tga-flex__close{padding:8px 0 80px;text-align:center;}
+.tga-flex__close .tga-flex__kicker{margin-left:auto;margin-right:auto;}
+.tga-flex__close .tga-flex__actions{justify-content:center;margin-top:8px;}
+.tga-flex__sign{margin:0 0 22px;font-size:15px;color:var(--slate);font-style:italic;}
+.tga-flex__sign strong{display:inline;font-style:normal;font-weight:800;color:var(--charcoal);}
+.tga-flex__trust{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;
+  margin-top:22px;font-size:13px;font-weight:700;color:var(--slate);
+}
+.tga-flex__trust .dot{width:4px;height:4px;border-radius:50%;background:#c9d3d3;}
+@media (max-width:800px){
+  .tga-flex h1{font-size:34px;}
+  .tga-flex__quote-grid,
+  .tga-flex__includes,
+  .tga-flex__steps,
+  .tga-flex__hero-grid{grid-template-columns:1fr;}
+  .tga-flex__price-row{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8px !important;
+    align-items:stretch;
+  }
+  .tga-flex__price-pill,
+  .tga-flex__price-pill--plus{
+    width:100% !important;
+    height:100% !important;
+    min-height:72px !important;
+    max-width:none !important;
+    box-sizing:border-box !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    flex-wrap:nowrap !important;
+    padding:12px 8px !important;
+    gap:2px !important;
+  }
+  .tga-flex__price-name{font-size:10px;line-height:1.2;}
+  .tga-flex__price-pill b,
+  .tga-flex__price-pill--plus b{font-size:22px !important;line-height:1.1;}
+  .tga-flex__price-pill span,
+  .tga-flex__price-pill--plus span{font-size:11px;line-height:1.2;}
+  .tga-flex__plans{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+  .tga-flex__plans > *{min-width:0;width:100%;}
+  .tga-flex__card{padding:28px 22px;}
+  .tga-flex__card-title{font-size:26px;}
+  .tga-flex__card-price{font-size:34px;}
+  .tga-flex__includes li{font-size:15px;gap:12px;}
+  .tga-flex__card .tga-flex__btn{font-size:15px;padding:14px 20px;min-height:48px;}
+  .tga-flex__hero{padding:24px 0 36px;margin:0;}
+  body.tga-local .tga-flex__hero{padding-top:100px;}
+  .tga-flex__close{padding:8px 0 16px !important;margin:0 !important;}
+  .tga-flex__hero-copy{padding-bottom:8px;}
+  .tga-flex__hero .tga-flex__actions{
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+  }
+  .tga-flex figure.tga-flex__portrait{width:min(100%,260px);order:-1;margin-top:0;}
+}
+</style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "slate-gray": "#4A4A4A",
+                    "charcoal": "#13151A",
+                    "surface": "#F9FAFB",
+                    "primary-container": "#39B2B9",
+                    "primary": "#39B2B9",
+                    "deep-teal": "#1B878D",
+                    "on-surface": "#191c1d",
+                    "teal-wash": "#E6F6F7",
+                    "outline-variant": "#bcc9ca"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Archivo"],
+                    "body-md": ["Archivo"],
+                    "sans": ["Archivo", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="tga-local bg-surface text-on-surface font-sans antialiased selection:bg-primary-container selection:text-white">
+<header class="w-full fixed top-0 z-50 glass-card-light border-b border-white/20 transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-6 h-20">
+<a class="flex items-center gap-3 group" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-[72px] w-[72px] object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<nav class="hidden md:flex flex-1 items-center justify-center gap-0 flex-nowrap whitespace-nowrap">
+<a class="nav-link" href="Home.html">Home</a>
+<a class="nav-link" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="nav-link nav-link--active" href="flex_t.e.a.m.s._growth_academy.html">Flex</a>
+<a class="nav-link" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="nav-link" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="nav-link" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="nav-login hidden md:block" href="https://growthacademy.teamscoachingaz.com/login">Login</a>
+<a href="#tga-flex-start" class="btn inline-block bg-primary-container text-white hover:bg-deep-teal text-[12px] font-bold tracking-[0.04em] uppercase px-5 py-2.5 rounded-full transition-all shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:shadow-[0_6px_20px_rgba(0,161,171,0.23)] hover:-translate-y-0.5">Get Flex</a>
+</div>
+</div>
+</header>
+
+<div class="tga-flex">
+
+  <section class="tga-flex__hero">
+    <div class="tga-flex__wrap">
+      <div class="tga-flex__hero-grid">
+        <div class="tga-flex__hero-copy">
+          <span class="tga-flex__eyebrow">Two ways to do Flex · For busy families</span>
+          <h1>T.E.A.M.S. <em>Flex</em></h1>
+          <p class="tga-flex__lead">Full Digital Lab access on your schedule — or add monthly 1-on-1 with Coach Walker when your kid needs someone to walk them through it.</p>
+
+          <div class="tga-flex__price-row">
+            <a class="tga-flex__price-pill" href="#tga-flex">
+              <span class="tga-flex__price-name">Flex</span>
+              <b>$199</b>
+              <span>/ month</span>
+            </a>
+            <a class="tga-flex__price-pill tga-flex__price-pill--plus" href="#tga-flex-plus">
+              <span class="tga-flex__price-name">Flex+</span>
+              <b>$249</b>
+              <span>/ month</span>
+            </a>
+          </div>
+
+          <div class="tga-flex__actions">
+            <a class="tga-flex__btn tga-flex__btn--primary" href="#tga-flex-start">Compare plans</a>
+            <a class="tga-flex__btn tga-flex__btn--ghost" href="https://digitallabseries.teamscoachingaz.com/ContactUs">Have a question? Reach out</a>
+          </div>
+        </div>
+        <figure class="tga-flex__portrait">
+          <span class="tga-flex__portrait-frame">
+            <img src="images/flex-coach-portrait.jpg" alt="Coach Walker">
+          </span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="tga-flex__quotes">
+    <div class="tga-flex__wrap">
+      <h2>Why Flex exists</h2>
+      <p class="tga-flex__kicker">Families liked the Digital Lab Series. They also asked for a version that fits real life — and still keeps Coach Walker in the picture when they want him.</p>
+
+      <div class="tga-flex__quote-grid">
+        <p class="tga-flex__quote">The Labs are strong. We just wanted a way to keep them engaged.</p>
+        <p class="tga-flex__quote">Could you walk them through it — even once a month?</p>
+        <p class="tga-flex__quote">We still want the connection, on a schedule that actually works.</p>
+        <p class="tga-flex__quote">We’d love the content and someone to help them stay with it.</p>
+      </div>
+
+      <p class="tga-flex__empathy">That’s Flex. Full Digital Lab access on your family’s schedule. Flex+ if you want Coach Walker meeting with them monthly so it doesn’t become another thing you have to run at home.</p>
+    </div>
+  </section>
+
+  <section class="tga-flex__offer" id="tga-flex-start">
+    <div class="tga-flex__wrap">
+      <h2>Choose your Flex</h2>
+      <p class="tga-flex__kicker">Flex is full Digital Lab access. Flex+ adds monthly 1-on-1 coaching with Coach Walker.</p>
+
+      <div class="tga-flex__plans">
+        <div class="tga-flex__card tga-flex__card--light" id="tga-flex">
+          <div class="tga-flex__card-head">
+            <div>
+              <p class="tga-flex__card-title">Flex</p>
+              <p>All videos. Full Digital Lab Series — on your schedule.</p>
+            </div>
+            <div class="tga-flex__card-price">
+              <span>Monthly</span>
+              $199
+            </div>
+          </div>
+          <ul class="tga-flex__includes">
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Full access to the Digital Lab Series</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>All videos, workbooks, and Lab content</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Short, specific sections — not entire Labs all at once</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Parent resources and conversation starters</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Certificate of Completion</li>
+          </ul>
+          <a class="tga-flex__btn tga-flex__btn--dark" href="https://digitallabseries.teamscoachingaz.com/offers/Qyo3rniH/checkout">Get Flex — $199/month</a>
+        </div>
+
+        <div class="tga-flex__card" id="tga-flex-plus">
+          <div class="tga-flex__card-head">
+            <div>
+              <span class="tga-flex__badge">Adds 1-on-1</span>
+              <p class="tga-flex__card-title">Flex+</p>
+              <p>Everything in Flex, plus monthly coaching with Coach Walker.</p>
+            </div>
+            <div class="tga-flex__card-price">
+              <span>Monthly</span>
+              $249
+            </div>
+          </div>
+          <ul class="tga-flex__includes">
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Everything in Flex — all videos and Lab access</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>One monthly 1-on-1 session, virtual or in-person</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Brief virtual check-in between sessions</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Personalized Lab content based on what your kid is actually dealing with</li>
+            <li><span class="tga-flex__ic"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Student input, goals, action steps, and accountability</li>
+          </ul>
+          <a class="tga-flex__btn tga-flex__btn--primary" href="https://digitallabseries.teamscoachingaz.com/offers/GJFo6iPF/checkout">Get Flex+ — $249/month</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tga-flex__how">
+    <div class="tga-flex__wrap">
+      <h2>How Flex works</h2>
+      <p class="tga-flex__kicker">Start with the Labs. Add 1-on-1 coaching when your family wants Coach Walker in the mix.</p>
+
+      <div class="tga-flex__steps">
+        <div class="tga-flex__step">
+          <span class="tga-flex__num">1</span>
+          <h3>Get the Labs</h3>
+          <p>Flex unlocks the full Digital Lab Series — all the videos and content, in short sections you can actually use.</p>
+        </div>
+        <div class="tga-flex__step">
+          <span class="tga-flex__num">2</span>
+          <h3>Use the right pieces</h3>
+          <p>Pick Lab content that matches what your kid is dealing with — not a full Lab dumped on them all at once.</p>
+        </div>
+        <div class="tga-flex__step">
+          <span class="tga-flex__num">3</span>
+          <h3>Add coaching if you need it</h3>
+          <p>Flex+ adds a monthly 1-on-1 with Coach Walker, plus a check-in between sessions, so it doesn’t stall at home.</p>
+        </div>
+      </div>
+
+      <div class="tga-flex__parent">
+        <span class="tga-flex__parent-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3m-8 0c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3m0 2c-2.3 0-7 1.2-7 3.5V19h14v-2.5C15 14.2 10.3 13 8 13m8 0c-.3 0-.6 0-1 .1 1.2.9 2 2 2 2.9V19h6v-2.5c0-2.3-4.7-3.5-7-3.5"/></svg>
+        </span>
+        <div>
+          <h3>Parents stay involved — without running it</h3>
+          <p>You get resources and conversation starters. If you want Coach Walker to take the lead on engagement and follow-up, that’s Flex+.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tga-flex__close">
+    <div class="tga-flex__wrap">
+      <h2>Keep the connection. Use the right resource at the right time.</h2>
+      <p class="tga-flex__kicker">The goal is simple: make T.E.A.M.S. work better for busy families — and we’d love to have yours be part of Flex.</p>
+      <p class="tga-flex__sign">Respectfully, <strong>Coach Walker</strong></p>
+      <div class="tga-flex__actions">
+          <a class="tga-flex__btn tga-flex__btn--dark" href="https://digitallabseries.teamscoachingaz.com/offers/Qyo3rniH/checkout">Flex — $199/month</a>
+          <a class="tga-flex__btn tga-flex__btn--ghost" style="border-color:#1B878D;color:#1B878D;" href="https://digitallabseries.teamscoachingaz.com/offers/GJFo6iPF/checkout">Flex+ — $249/month</a>
+        </div>
+        <div class="tga-flex__trust">
+          Flex $199 <span class="dot"></span> Flex+ $249 <span class="dot"></span> Digital Lab access
+        </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="w-full bg-[#0a0b0d] border-t border-white/5 pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<div class="md:col-span-5">
+<a class="flex items-center gap-3 group mb-6 inline-block" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-12 w-auto object-contain invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<p class="font-body-md text-slate-400 max-w-sm leading-relaxed mb-6">Equipping the next generation with Series &amp; Labs for growth through reflection, intentional conversation, and accountability.</p>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Programs</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Home.html">Home</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="flex_t.e.a.m.s._growth_academy.html">T.E.A.M.S. Flex</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</div>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Legal &amp; Support</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-sm text-slate-500">© 2026 T.E.A.M.S. Coaching Growth Academy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

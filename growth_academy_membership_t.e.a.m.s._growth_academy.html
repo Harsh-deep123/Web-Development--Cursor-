@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>T.E.A.M.S. Academy | Community Membership</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&amp;family=Overpass:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-background": "#191c1d",
+                    "primary": "#39B2B9",
+                    "inverse-primary": "#5fd7e2",
+                    "on-primary-container": "#003033",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-container": "#636262",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "charcoal": "#13151A",
+                    "on-error-container": "#93000a",
+                    "deep-teal": "#1B878D",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed": "#c8e6ff",
+                    "surface": "#F9FAFB",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#256487",
+                    "surface-tint": "#39B2B9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#e2dfde",
+                    "outline-variant": "#bcc9ca",
+                    "primary-fixed-dim": "#5fd7e2",
+                    "teal-wash": "#E6F6F7",
+                    "tertiary-fixed-dim": "#94cdf5",
+                    "surface-dim": "#d9dadb",
+                    "surface-bright": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-container": "#39B2B9",
+                    "outline": "#6d797b",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed": "#7ef4fe",
+                    "on-primary-fixed-variant": "#004f54",
+                    "background": "#f8f9fa",
+                    "tertiary-container": "#5e98be",
+                    "surface-variant": "#e1e3e4",
+                    "slate-gray": "#4A4A4A",
+                    "on-primary-fixed": "#002022",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "on-surface-variant": "#3d494a",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#001e2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#002e44"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2.5rem",
+                    "stack-md": "1rem",
+                    "gutter": "1.5rem",
+                    "container-max": "1200px",
+                    "margin-page": "2rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Archivo"],
+                    "display-lg": ["Archivo"],
+                    "body-md": ["Archivo"],
+                    "body-lg": ["Archivo"],
+                    "label-lg": ["Archivo"],
+                    "headline-lg": ["Archivo"],
+                    "headline-lg-mobile": ["Archivo"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Second font: Overpass for buttons only (Archivo stays everywhere else) */
+        button:not(.nav-login), a.btn {
+            font-family: 'Overpass', sans-serif !important;
+        }
+        /* Header nav — match live Kajabi .link-list__link (Open Sans) */
+        header nav.hidden {
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            column-gap: 1.15rem !important;
+        }
+        .nav-link {
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size:  15px !important;
+            letter-spacing: 0.02em !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            text-decoration: none !important;
+            border-bottom: 2px solid transparent;
+            padding: 6px 0 4px !important;
+            margin: 0 !important;
+            white-space: nowrap !important;
+            transition: color .2s ease, border-color .2s ease;
+        }
+        .nav-link:hover { color: #39B2B9 !important; }
+        .nav-link--active {
+            color: #39B2B9 !important;
+            border-bottom-color: #39B2B9 !important;
+            font-weight: 700 !important;
+        }
+
+        a.nav-login { text-decoration: none !important; display: inline-block; }
+        .nav-login, button.nav-login, a.nav-login {
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size: 13px !important;
+            letter-spacing: normal !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 10px 0 0;
+            transition: color .2s ease;
+        }
+        .nav-login:hover { color: #39B2B9 !important; }
+
+        /* Home-style translucent header */
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .teal-gradient {
+            background: linear-gradient(135deg, #1B878D 0%, #39B2B9 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(to right, rgba(0, 161, 171, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 161, 171, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+            .price-was {
+            position: relative;
+            white-space: nowrap;
+        }
+        .price-was::after {
+            content: "";
+            position: absolute;
+            left: -3px;
+            right: -3px;
+            top: 48%;
+            height: 2px;
+            border-radius: 2px;
+            background: currentColor;
+            opacity: 0.7;
+            transform: rotate(-4deg);
+            pointer-events: none;
+        }
+        .bg-charcoal {
+            background-color: #13151A;
+            background-image:
+                radial-gradient(60% 55% at 100% 0%, rgba(0, 161, 171, 0.16), transparent 60%),
+                linear-gradient(to right, rgba(0, 161, 171, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 161, 171, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            background-repeat: no-repeat, repeat, repeat;
+        }
+            /* Branded buttons — match teamscoachingaz.com (pill + teal, darken on hover) */
+        .btn, button, input[type="submit"] { border-radius: 9999px !important; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+        .btn:hover, button:hover, input[type="submit"]:hover { transform: translateY(-3px) !important; }
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container,
+        input[type="submit"] { background-color: #39B2B9 !important; border-color: #39B2B9 !important; }
+        .btn.bg-primary:hover, .btn.bg-primary-container:hover,
+        button.bg-primary:hover, button.bg-primary-container:hover,
+        input[type="submit"]:hover { background-color: #1B878D !important; border-color: #1B878D !important; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 glass-card-light border-b border-white/20 transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-6 h-20">
+<!-- Logo -->
+<a class="flex items-center gap-3 group" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-[72px] w-[72px] object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex flex-1 items-center justify-center gap-0 flex-nowrap whitespace-nowrap">
+<a class="nav-link" href="Home.html">Home</a>
+<a class="nav-link" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="nav-link" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="nav-link" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="nav-link" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<a class="nav-login hidden md:block" href="https://growthacademy.teamscoachingaz.com/login">Login</a>
+<a href="Series and Labs.html#pricing" class="btn inline-block bg-primary-container text-white hover:bg-deep-teal text-[12px] font-bold tracking-[0.04em] uppercase px-5 py-2.5 rounded-full transition-all shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:shadow-[0_6px_20px_rgba(0,161,171,0.23)] hover:-translate-y-0.5">Enroll Now</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24">
+<div class="absolute inset-0 z-0 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-page relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block py-1 px-3 bg-teal-wash text-primary font-label-lg rounded-full mb-6">NOW ENROLLING FOUNDING FAMILIES</span>
+<h1 class="font-display-lg text-display-lg text-on-background mb-6 leading-tight">
+                        The T.E.A.M.S. Coaching <span class="text-primary">Growth Academy</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        A flexible digital learning experience that equips students with the character, confidence, and life strategies to thrive — with an engaged community that keeps them growing all year.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="btn px-8 py-4 bg-primary text-on-primary font-headline-md rounded-xl hover:bg-deep-teal transition-all flex items-center gap-2" href="#founding">
+                            Join as a Founding Family
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="mt-8 flex items-center gap-4 text-on-surface-variant">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a smiling teenage boy in a modern learning environment, high-quality photography, soft lighting, 4k resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUkNhovSGcQIOVlmjRkoqMAK7jxOiSWvnTAvmuI-QqHDY4uo1mGzL3CPmZcbG5iZNbJ3rRG8gtnbtq3kZjADZY8iUw34WfIsn74jh3pQC5UKTb_mi3ERhSjWk9pGlMJFJsGwc6S1-RmiSPBX_kEMxz889vDPuAoP39LZQR1UnBohvWXRoBz1p4smjjd7A39-CN9TEU_p4sLuS4TELswr_kqztflQgaF6pl3MgYzDJgBKoceQCN6U0fpme3j59V3n-QRbs3DiT946A9"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-400 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A focused teenage girl wearing headphones, working on a tablet with a bright, clean educational interface, cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLMWjz3sB8j2o91k2iXhAE-jkIevMJXhem76ivQUEJtel5mFf3LQT-6yU1Dis3ATJugaTrSdDu9diCxNlgAySWffODDj2est51Hv6rznfmY57Ef8sQkVcTO9t5FPUrqK4pXmyXPE3gM_7fITlQvXN6fLorhjAoqmlZXxOQ26x2Eb_1iiQ8CzQ_t6Elg-upap4LAk0wHbkmK6PuVFSZOeBEFgfEosdq7NKh977iV5jihzSnGTBbqUUmKVQ0szK6qI2neEJYX1Y_awcb"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-500 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A diverse group of middle school students laughing and talking in a modern, brightly lit classroom setting, warm corporate aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENBydcL6nSwpwB29Y6NvTIXtjBjJ4dC2i7TjckQZPCHuhuDJ9XGUOChILjisuVntyHUu_LEpWzY61x0e2YMjnwakTig4CzBIL37yW8XVrlXaDLLBH1hbd_Dr9i4CWDYM_d2aDXWGIgNHStUpqMbNObfWIEeFNOV5G1uXJ10FoZBayLCCxhauuJ3OaUHVyGIwQ316RjxEBrVnv3ikVWOPyw5iX8jROHfKEcdGzq0F5xI4h2hjeFsz9KgwAHUEMK5fvx62_0Vib-k7R"/>
+</div>
+</div>
+<p class="font-label-lg">Now welcoming our first founding families</p>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-2xl overflow-hidden border-8 border-white shadow-xl relative aspect-square">
+<img class="w-full h-full object-cover" data-alt="A professional, high-resolution portrait of Coach Walker, a smiling man with a black baseball cap featuring the TEAMS logo, wearing a charcoal grey polo shirt, set against a bright, modern office background. Professional lighting, crisp detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkHaEGoCrxXIjMgI78rFjdKGgElbjREL5yUBAR3GLkCGGoQpKEFpbH6JHZJiXm4r5LFmZ7zTcJ7AMT4XGvWFOuAeeXlTdEYDzSbCtv0tOmnc2aKJUWqy8l3A5atRRHjgZK_j4zn332Vx5Vv4Thyn1EV9q590wlWrTh1PeqKuySLAU_LxjgZn0xez3D6v79B8kNPY3qdZh4S_6xaaZeES4FZRHNkGtVtNkydkgmMicB7DyWacdhcghNB7TICpvNeUe9K_x7S417VqcC"/>
+</div>
+<!-- Floating Stat Cards -->
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-xl shadow-lg border border-outline-variant max-w-[200px]">
+<div class="text-primary font-bold text-headline-md">100%</div>
+<p class="text-label-lg text-on-surface-variant">System-Driven Growth Pathways</p>
+</div>
+<div class="absolute -top-6 -right-6 bg-charcoal text-white p-6 rounded-xl shadow-lg max-w-[200px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary-fixed">verified</span>
+<span class="font-bold">Expert Led</span>
+</div>
+<p class="text-label-lg opacity-80">Systems designed for long-term student success.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Founding Families Offer -->
+<section class="bg-charcoal py-24 relative overflow-hidden text-white" id="founding">
+<span id="membership"></span>
+<div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+<div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-primary-container/10 to-transparent pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-page relative z-10">
+<div class="text-center mb-12">
+<span class="text-primary-fixed font-bold text-xs tracking-widest uppercase mb-4 inline-block py-1 px-3 bg-white/5 border border-white/10 rounded-full">Limited Pre-Launch Offer</span>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-white">Founding Family Pricing</h2>
+<p class="text-body-lg text-slate-300 max-w-2xl mx-auto">Be one of the first to join. Lock in these founding rates now &mdash; pre-launch pricing is available for a limited time and rises to the standard rates (shown struck through) once we officially launch.</p>
+</div>
+<div class="flex items-center justify-center gap-3 max-w-2xl mx-auto mb-16 bg-white/5 backdrop-blur border border-white/10 rounded-xl p-4 text-center">
+<span class="material-symbols-outlined text-primary-fixed">schedule</span>
+<p class="font-body-md text-slate-200"><strong class="text-white">Founding rates end at launch.</strong> Join now to keep your lower price &mdash; after launch, everyone pays the standard rate.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 items-stretch">
+<!-- 1 Student -->
+<div class="bg-white rounded-2xl shadow-md border border-outline-variant overflow-hidden flex flex-col p-8 transition-transform hover:-translate-y-2 text-on-surface">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-2">1 Student</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Perfect for the solo focused learner.</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold text-primary">$24.99</span>
+<span class="text-on-surface-variant">/month</span>
+</div>
+<div class="text-label-lg text-primary font-bold mt-2">$249/year · 2 Months Free</div>
+<div class="mt-3 flex items-center gap-1.5 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-sm">schedule</span>After launch: <span class="price-was text-on-surface font-semibold">$29.99/month</span></div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow border-t border-surface-container pt-6">
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Full access for 1 student
+                            </li>
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                All Series &amp; Labs
+                            </li>
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Community, challenges &amp; rewards
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container text-on-surface font-bold rounded-xl hover:bg-outline-variant transition-all">Become a Founding Family</button>
+</div>
+<!-- 2 Siblings - Recommended -->
+<div class="bg-white rounded-2xl shadow-xl border-2 border-primary overflow-hidden flex flex-col p-8 relative transition-transform hover:-translate-y-2 z-10 scale-105 text-on-surface">
+<div class="absolute top-0 right-0 bg-primary text-white text-label-lg py-1 px-4 rounded-bl-xl font-bold">MOST POPULAR</div>
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-2">2 Siblings</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Grow together and support each other.</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold text-primary">$39.99</span>
+<span class="text-on-surface-variant">/month</span>
+</div>
+<div class="text-label-lg text-primary font-bold mt-2">$399/year · 2 Months Free</div>
+<div class="mt-3 flex items-center gap-1.5 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-sm">schedule</span>After launch: <span class="price-was text-on-surface font-semibold">$44.99/month</span></div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow border-t border-surface-container pt-6">
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Full access for 2 siblings
+                            </li>
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Everything in the 1 Student plan
+                            </li>
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Save vs. two individual plans
+                            </li>
+</ul>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl hover:bg-deep-teal transition-all">Become a Founding Family</button>
+</div>
+<!-- 3+ Siblings -->
+<div class="bg-white rounded-2xl shadow-md border border-outline-variant overflow-hidden flex flex-col p-8 transition-transform hover:-translate-y-2 text-on-surface">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-2">3+ Siblings</h3>
+<p class="text-on-surface-variant text-body-md mb-6">The best value for larger families.</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold text-primary">$54.99</span>
+<span class="text-on-surface-variant">/month</span>
+</div>
+<div class="text-label-lg text-primary font-bold mt-2">$549/year · 2 Months Free</div>
+<div class="mt-3 flex items-center gap-1.5 text-body-md text-on-surface-variant"><span class="material-symbols-outlined text-sm">schedule</span>After launch: <span class="price-was text-on-surface font-semibold">$59.99/month</span></div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow border-t border-surface-container pt-6">
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Full access for 3+ siblings
+                            </li>
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Everything in the smaller plans
+                            </li>
+<li class="flex gap-2 text-body-md">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+                                Best value for larger families
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container text-on-surface font-bold rounded-xl hover:bg-outline-variant transition-all">Become a Founding Family</button>
+</div>
+</div>
+<p class="text-center text-label-lg text-slate-400 mt-8">The price with a line through it is the standard rate that applies after launch. Founding Families keep the lower rate for as long as they stay subscribed.</p>
+</div>
+</section>
+<!-- Every Membership Includes -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Every Membership Includes</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">No matter which plan you choose, every T.E.A.M.S. Growth Academy membership comes with all of this.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Monthly Growth Challenges</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Points &amp; Rewards System</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Achievement Badges</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Leadership &amp; Character Recognition</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Goal Tracking &amp; Accountability</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Community Challenges</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Academy Spotlights (with parent permission)</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Eligibility for Prizes &amp; Giveaways</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Scholarship Opportunities</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Exclusive Member Content</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Ongoing Motivation Throughout the School Year</span>
+</div>
+<div class="flex items-start gap-3 bg-white border border-outline-variant/40 rounded-xl p-5">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-on-surface font-medium">Member Pricing — 10% off Series &amp; Labs</span>
+</div>
+</div>
+<div class="mt-8 bg-charcoal text-white rounded-2xl p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
+<div class="w-14 h-14 rounded-xl bg-primary-container/20 text-primary-fixed flex items-center justify-center shrink-0 border border-primary-container/30">
+<span class="material-symbols-outlined text-3xl">sell</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Exclusive Member Pricing</h3>
+<p class="text-slate-300 font-body-md">Members receive <strong class="text-primary-fixed">10% off</strong> all Series Labs — a compelling reason to keep growing with us all year.</p>
+</div>
+<a href="Series and Labs.html#pricing" class="shrink-0 md:ml-auto inline-flex items-center gap-2 px-6 py-3 bg-primary-fixed text-charcoal font-bold rounded-xl hover:bg-white transition-all whitespace-nowrap">View Series &amp; Labs Pricing <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- Growing With You Section -->
+<section class="py-24 bg-primary text-white text-center relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20">
+
+</div>
+<div class="max-w-3xl mx-auto px-margin-page relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-6">Growing With You</h2>
+<p class="text-body-lg mb-10">Members get access across all five T.E.A.M.S. Series — Transition, Empowerment, Athletic Mindset, Management, and Social (29 Labs total, sold individually with sibling discounts).</p>
+<a class="inline-block px-10 py-5 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-surface-bright transition-all" href="#founding">Secure Founding Rate Now</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#0a0b0d] border-t border-white/5 pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<div class="md:col-span-5">
+<a class="flex items-center gap-3 group mb-6 inline-block" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-12 w-auto object-contain invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<p class="font-body-md text-slate-400 max-w-sm leading-relaxed mb-6">Equipping the next generation with Series &amp; Labs for growth through reflection, intentional conversation, and accountability.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="contact_t.e.a.m.s._growth_academy.html">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Programs</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Home.html">Home</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</div>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Legal &amp; Support</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-sm text-slate-500">© 2024 T.E.A.M.S. Coaching Growth Academy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for pricing selection
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('main .group, main .glass-card').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>T.E.A.M.S. Academy | Systems &amp; Labs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&amp;family=Overpass:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-background": "#191c1d",
+                    "primary": "#39B2B9",
+                    "inverse-primary": "#5fd7e2",
+                    "on-primary-container": "#003033",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-container": "#636262",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "charcoal": "#13151A",
+                    "on-error-container": "#93000a",
+                    "deep-teal": "#1B878D",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed": "#c8e6ff",
+                    "surface": "#F9FAFB",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#256487",
+                    "surface-tint": "#39B2B9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "secondary-container": "#e2dfde",
+                    "outline-variant": "#bcc9ca",
+                    "primary-fixed-dim": "#5fd7e2",
+                    "teal-wash": "#E6F6F7",
+                    "tertiary-fixed-dim": "#94cdf5",
+                    "surface-dim": "#d9dadb",
+                    "surface-bright": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-container": "#39B2B9",
+                    "outline": "#6d797b",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed": "#7ef4fe",
+                    "on-primary-fixed-variant": "#004f54",
+                    "background": "#f8f9fa",
+                    "tertiary-container": "#5e98be",
+                    "surface-variant": "#e1e3e4",
+                    "slate-gray": "#4A4A4A",
+                    "on-primary-fixed": "#002022",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#004c6d",
+                    "on-surface-variant": "#3d494a",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#001e2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#002e44"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2.5rem",
+                    "stack-md": "1rem",
+                    "gutter": "1.5rem",
+                    "container-max": "1200px",
+                    "margin-page": "2rem",
+                    "stack-sm": "0.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Archivo"],
+                    "display-lg": ["Archivo"],
+                    "body-md": ["Archivo"],
+                    "body-lg": ["Archivo"],
+                    "label-lg": ["Archivo"],
+                    "headline-lg": ["Archivo"],
+                    "headline-lg-mobile": ["Archivo"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Second font: Overpass for buttons only (Archivo stays everywhere else) */
+        button:not(.nav-login), a.btn {
+            font-family: 'Overpass', sans-serif !important;
+        }
+        /* Header nav — match live Kajabi .link-list__link (Open Sans) */
+        header nav.hidden {
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            column-gap: 1.15rem !important;
+        }
+        .nav-link {
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size:  15px !important;
+            letter-spacing: 0.02em !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            text-decoration: none !important;
+            border-bottom: 2px solid transparent;
+            padding: 6px 0 4px !important;
+            margin: 0 !important;
+            white-space: nowrap !important;
+            transition: color .2s ease, border-color .2s ease;
+        }
+        .nav-link:hover { color: #39B2B9 !important; }
+        .nav-link--active {
+            color: #39B2B9 !important;
+            border-bottom-color: #39B2B9 !important;
+            font-weight: 700 !important;
+        }
+
+        a.nav-login { text-decoration: none !important; display: inline-block; }
+        .nav-login, button.nav-login, a.nav-login {
+            font-family: 'Open Sans', sans-serif !important;
+            font-weight: 400 !important;
+            font-size: 13px !important;
+            letter-spacing: normal !important;
+            line-height: 1.2 !important;
+            text-transform: uppercase !important;
+            color: #595959 !important;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 10px 0 0;
+            transition: color .2s ease;
+        }
+        .nav-login:hover { color: #39B2B9 !important; }
+
+        /* Home-style translucent header */
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .teal-gradient {
+            background: linear-gradient(135deg, #1B878D 0%, #39B2B9 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+            .bg-charcoal {
+            background-color: #13151A;
+            background-image:
+                radial-gradient(60% 55% at 100% 0%, rgba(0, 161, 171, 0.16), transparent 60%),
+                linear-gradient(to right, rgba(0, 161, 171, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 161, 171, 0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            background-repeat: no-repeat, repeat, repeat;
+        }
+            /* Branded buttons — match teamscoachingaz.com (pill + teal, darken on hover) */
+        .btn, button, input[type="submit"] { border-radius: 9999px !important; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+        .btn:hover, button:hover, input[type="submit"]:hover { transform: translateY(-3px) !important; }
+        .btn.bg-primary, .btn.bg-primary-container,
+        button.bg-primary, button.bg-primary-container,
+        input[type="submit"] { background-color: #39B2B9 !important; border-color: #39B2B9 !important; }
+        .btn.bg-primary:hover, .btn.bg-primary-container:hover,
+        button.bg-primary:hover, button.bg-primary-container:hover,
+        input[type="submit"]:hover { background-color: #1B878D !important; border-color: #1B878D !important; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="w-full sticky top-0 z-50 glass-card-light border-b border-white/20 transition-all duration-300">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-6 h-20">
+<!-- Logo -->
+<a class="flex items-center gap-3 group" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-[72px] w-[72px] object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex flex-1 items-center justify-center gap-0 flex-nowrap whitespace-nowrap">
+<a class="nav-link" href="Home.html">Home</a>
+<a class="nav-link nav-link--active" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="nav-link" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="nav-link" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="nav-link" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<a class="nav-login hidden md:block" href="https://growthacademy.teamscoachingaz.com/login">Login</a>
+<a href="Series and Labs.html#pricing" class="btn inline-block bg-primary-container text-white hover:bg-deep-teal text-[12px] font-bold tracking-[0.04em] uppercase px-5 py-2.5 rounded-full transition-all shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:shadow-[0_6px_20px_rgba(0,161,171,0.23)] hover:-translate-y-0.5">Enroll Now</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-gradient-to-br from-teal-wash via-background to-background">
+<div class="absolute -top-24 -right-24 w-[28rem] h-[28rem] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-24 w-[28rem] h-[28rem] bg-tertiary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-page relative z-10 py-24 grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="inline-flex items-center gap-2 py-1.5 px-4 bg-white/70 backdrop-blur text-primary font-label-lg rounded-full mb-6 border border-primary/20"><span class="material-symbols-outlined text-base">school</span> SYSTEMS &amp; LABS</span>
+<h1 class="font-display-lg text-display-lg text-on-background mb-6 leading-tight">Build real-world <span class="text-primary">growth</span>, one lab at a time</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">Choose a single lab or a complete Growth System. Every lab pairs engaging student video lessons with a parent companion video, an interactive workbook, assessments, and a Certificate of Completion.</p>
+<div class="flex flex-wrap gap-4 mb-8">
+<a class="btn inline-flex px-8 py-4 bg-primary text-on-primary font-headline-md rounded-xl hover:bg-deep-teal transition-all items-center gap-2 shadow-[0_4px_14px_0_rgba(0,161,171,0.39)] hover:-translate-y-0.5" href="#pricing">View Pricing <span class="material-symbols-outlined">arrow_forward</span></a>
+<a class="inline-flex px-8 py-4 bg-white text-primary border border-primary/30 font-headline-md rounded-xl hover:bg-teal-wash transition-all items-center gap-2" href="#systems">Explore the Systems</a>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">sell</span>
+<p class="font-label-lg">Growth Academy members save <strong class="text-primary">10%</strong> on every purchase.</p>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-2xl overflow-hidden border-8 border-white shadow-2xl aspect-[4/5]">
+<img class="w-full h-full object-cover" alt="Students learning together in a modern classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENBydcL6nSwpwB29Y6NvTIXtjBjJ4dC2i7TjckQZPCHuhuDJ9XGUOChILjisuVntyHUu_LEpWzY61x0e2YMjnwakTig4CzBIL37yW8XVrlXaDLLBH1hbd_Dr9i4CWDYM_d2aDXWGIgNHStUpqMbNObfWIEeFNOV5G1uXJ10FoZBayLCCxhauuJ3OaUHVyGIwQ316RjxEBrVnv3ikVWOPyw5iX8jROHfKEcdGzq0F5xI4h2hjeFsz9KgwAHUEMK5fvx62_0Vib-k7R"/>
+</div>
+<div class="absolute -top-5 -right-5 bg-charcoal text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">verified</span><span class="font-bold text-sm">Expert-led</span></div>
+<div class="absolute -bottom-6 -left-6 glass-card p-5 rounded-xl shadow-lg border border-outline-variant max-w-[220px]">
+<div class="text-primary font-bold text-headline-md">22</div>
+<p class="text-label-lg text-on-surface-variant">Labs across all 7 Growth Systems</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Growth Systems Section -->
+<section class="py-24" id="systems">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Growth Systems &amp; Labs</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">All 7 Growth Systems and every lab in one grid. Purchase one lab at a time or save with a complete system bundle.</p>
+</div>
+<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+<!-- Empowerment -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col">
+<div class="h-2.5 bg-primary"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit mb-6"><span class="material-symbols-outlined text-3xl">bolt</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">3 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">T.E.A.M.S. Empowerment System</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Discover identity, resist peer pressure, and lead with confidence.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Peer Pressure and Social Value</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Self Esteem and Knowing Your Worth</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Finding Your Voice</li>
+</ul>
+<div class="mb-4">
+<span class="block text-primary text-2xl font-extrabold">$249</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$297</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-primary text-on-primary font-bold rounded-full hover:bg-deep-teal transition-all">Buy</a>
+</div>
+</div>
+
+<!-- Readiness -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col">
+<div class="h-2.5 bg-tertiary"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-[#EAF1F6] p-3 rounded-xl text-tertiary w-fit mb-6"><span class="material-symbols-outlined text-3xl">rocket_launch</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-tertiary mb-2">3 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">T.E.A.M.S. Coaching Readiness System</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Communicate clearly, navigate new spaces, and build healthy relationships.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Effective Communication</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Navigating New Environments</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Healthy Relationships</li>
+</ul>
+<div class="mb-4">
+<span class="block text-tertiary text-2xl font-extrabold">$249</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$297</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-tertiary text-white font-bold rounded-full hover:bg-[#275371] transition-all">Buy</a>
+</div>
+</div>
+
+<!-- Athletic Leadership -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col">
+<div class="h-2.5 bg-charcoal"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-charcoal p-3 rounded-xl text-primary w-fit mb-6"><span class="material-symbols-outlined text-3xl">sports</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-charcoal mb-2">3 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">T.E.A.M.S. Coaching Athletic Leadership System</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Character, respect, and leadership for student-athletes.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-charcoal text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>How To Maximize Value as an Athlete</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-charcoal text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Sportsmanship and Respect</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-charcoal text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Athletic Leadership</li>
+</ul>
+<div class="mb-4">
+<span class="block text-charcoal text-2xl font-extrabold">$249</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$297</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-charcoal text-white font-bold rounded-full hover:bg-black transition-all">Buy</a>
+</div>
+</div>
+
+<!-- Responsibility (4 labs) -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col">
+<div class="h-2.5 bg-primary"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit mb-6"><span class="material-symbols-outlined text-3xl">work</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">4 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">T.E.A.M.S. Coaching Responsibility System</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Jobs, money, time, and earning your way with maturity.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Finding and Keeping a Job</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Earning Your Keep</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Time Management</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Managing Money / Financial Literacy</li>
+</ul>
+<div class="mb-4">
+<span class="block text-primary text-2xl font-extrabold">$332</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$396</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-primary text-on-primary font-bold rounded-full hover:bg-deep-teal transition-all">Buy</a>
+</div>
+</div>
+
+<!-- Social Development -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col">
+<div class="h-2.5 bg-tertiary"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-[#EAF1F6] p-3 rounded-xl text-tertiary w-fit mb-6"><span class="material-symbols-outlined text-3xl">groups</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-tertiary mb-2">3 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">T.E.A.M.S. Coaching Social Development System</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Read the room, filter wisely, and practice real-world manners.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Reading the Room</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Filter and Sensitivity</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-tertiary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Social Etiquette and Old Fashioned Manners</li>
+</ul>
+<div class="mb-4">
+<span class="block text-tertiary text-2xl font-extrabold">$249</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$297</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-tertiary text-white font-bold rounded-full hover:bg-[#275371] transition-all">Buy</a>
+</div>
+</div>
+
+<!-- VIP Discovery -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col">
+<div class="h-2.5 bg-charcoal"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-charcoal p-3 rounded-xl text-primary w-fit mb-6"><span class="material-symbols-outlined text-3xl">explore</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-charcoal mb-2">3 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">T.E.A.M.S. Coaching V.I.P. Discovery System</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Value. Identity. Purpose. — the foundation for intentional living.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-charcoal text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Value</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-charcoal text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Identity</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-charcoal text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Purpose</li>
+</ul>
+<div class="mb-4">
+<span class="block text-charcoal text-2xl font-extrabold">$249</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$297</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-charcoal text-white font-bold rounded-full hover:bg-black transition-all">Buy</a>
+</div>
+</div>
+
+<!-- Transition Stand-Alones (System 07) — centered on last row -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant bg-white transition-all hover:shadow-xl flex flex-col w-full max-w-md mx-auto md:col-span-2 xl:col-span-1 xl:col-start-2 xl:max-w-none" id="transitions">
+<div class="h-2.5 bg-primary"></div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="bg-white p-3 rounded-xl text-primary w-fit mb-6 border border-primary/25"><span class="material-symbols-outlined text-3xl">flag</span></div>
+<p class="text-xs font-bold tracking-widest uppercase text-primary mb-2">3 Labs · System Bundle</p>
+<h3 class="font-headline-md text-headline-md mb-3">Transition Stand-Alones</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Milestone prep for middle school, high school, and young adulthood.</p>
+<ul class="space-y-3 mb-6 flex-grow">
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Middle School Preparation and Survival</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>High School Preparation and Survival</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="material-symbols-outlined text-primary text-sm mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>Young Adulthood Preparation and Survival</li>
+</ul>
+<div class="mb-4">
+<span class="block text-primary text-2xl font-extrabold">$249</span>
+<span class="block text-slate-gray/60 text-sm line-through mt-1">$297</span>
+</div>
+<a href="#pricing" class="btn block text-center w-full py-3 bg-primary text-on-primary font-bold rounded-full hover:bg-deep-teal transition-all">Buy</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Lab Inclusion Section -->
+<section class="py-24 bg-charcoal text-white overflow-hidden relative">
+<div class="max-w-container-max mx-auto px-margin-page relative z-10">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary-fixed mb-4">Every Lab Includes</h2>
+<p class="text-body-lg text-secondary-fixed-dim max-w-xl">We provide all the tools necessary for both the student and the parent to succeed.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+<div class="text-center p-6 border border-on-secondary-fixed-variant rounded-2xl hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">play_circle</span>
+<h4 class="font-bold">Engaging Video</h4>
+<p class="text-label-lg opacity-60">High-quality student lessons</p>
+</div>
+<div class="text-center p-6 border border-on-secondary-fixed-variant rounded-2xl hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">family_restroom</span>
+<h4 class="font-bold">Parent Video</h4>
+<p class="text-label-lg opacity-60">Context &amp; guidance</p>
+</div>
+<div class="text-center p-6 border border-on-secondary-fixed-variant rounded-2xl hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">menu_book</span>
+<h4 class="font-bold">Workbook</h4>
+<p class="text-label-lg opacity-60">Digital &amp; printable PDFs</p>
+</div>
+<div class="text-center p-6 border border-on-secondary-fixed-variant rounded-2xl hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">quiz</span>
+<h4 class="font-bold">Assessments</h4>
+<p class="text-label-lg opacity-60">Track progress &amp; mastery</p>
+</div>
+<div class="text-center p-6 border border-on-secondary-fixed-variant rounded-2xl hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">workspace_premium</span>
+<h4 class="font-bold">Certificate</h4>
+<p class="text-label-lg opacity-60">Earned upon completion</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Process for the Lab -->
+<section class="py-24 bg-gradient-to-b from-teal-wash/40 to-background" id="process">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-16">
+<span class="inline-flex items-center gap-2 py-1.5 px-4 bg-white/70 backdrop-blur text-primary font-label-lg rounded-full mb-6 border border-primary/20"><span class="material-symbols-outlined text-base">route</span> HOW IT WORKS</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Process for the Lab</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">Six simple steps to get the most out of every lab — from download to upload.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<div class="relative bg-white border border-outline-variant rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
+<div class="flex items-center justify-between mb-5">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit"><span class="material-symbols-outlined text-3xl">download</span></div>
+<span class="text-5xl font-extrabold text-primary/15 leading-none">01</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Download Lab Workbook</h3>
+<p class="text-body-md text-on-surface-variant">Grab the workbook that goes with this lab.</p>
+</div>
+
+<div class="relative bg-white border border-outline-variant rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
+<div class="flex items-center justify-between mb-5">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit"><span class="material-symbols-outlined text-3xl">fact_check</span></div>
+<span class="text-5xl font-extrabold text-primary/15 leading-none">02</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Fill in the Pre-Assessment</h3>
+<p class="text-body-md text-on-surface-variant">Answer the starting questions before you begin.</p>
+</div>
+
+<div class="relative bg-white border border-outline-variant rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
+<div class="flex items-center justify-between mb-5">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit"><span class="material-symbols-outlined text-3xl">play_circle</span></div>
+<span class="text-5xl font-extrabold text-primary/15 leading-none">03</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Reference While Watching</h3>
+<p class="text-body-md text-on-surface-variant">Keep the workbook open as you watch the video.</p>
+</div>
+
+<div class="relative bg-white border border-outline-variant rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
+<div class="flex items-center justify-between mb-5">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit"><span class="material-symbols-outlined text-3xl">edit_note</span></div>
+<span class="text-5xl font-extrabold text-primary/15 leading-none">04</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Complete the Workbook</h3>
+<p class="text-body-md text-on-surface-variant">Work through every section and finish it fully.</p>
+</div>
+
+<div class="relative bg-white border border-outline-variant rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
+<div class="flex items-center justify-between mb-5">
+<div class="bg-teal-wash p-3 rounded-xl text-primary w-fit"><span class="material-symbols-outlined text-3xl">save</span></div>
+<span class="text-5xl font-extrabold text-primary/15 leading-none">05</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Save the Workbook</h3>
+<p class="text-body-md text-on-surface-variant">Save your completed file to your device.</p>
+</div>
+
+<div class="relative bg-charcoal text-white border border-primary/30 rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
+<div class="flex items-center justify-between mb-5">
+<div class="bg-primary/20 p-3 rounded-xl text-primary-fixed w-fit"><span class="material-symbols-outlined text-3xl">cloud_upload</span></div>
+<span class="text-5xl font-extrabold text-white/10 leading-none">06</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 text-white">Upload into Kajabi</h3>
+<p class="text-body-md text-secondary-fixed-dim">Submit your completed workbook back in Kajabi.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Lab Pricing Grid -->
+<section class="py-24 scroll-mt-24" id="pricing">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Systems &amp; Labs Pricing</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">Buy a complete system, a full lab (student + parent), or purchase Parent Alone / Student Alone for a single lab.</p>
+</div>
+<!-- TGA Lab Pricing — one-time · per-tier Buy buttons · Parent/Student Alone · available first -->
+<div class="tga-ptable-wrap">
+  <div class="tga-ptable-scroll">
+  <table class="tga-ptable">
+    <colgroup>
+      <col class="tga-col-offer">
+      <col class="tga-col-price">
+      <col class="tga-col-price">
+      <col class="tga-col-price">
+    </colgroup>
+<thead>
+      <tr>
+        <th class="tga-ptable__offering">Offering</th>
+        <th>1 Student</th>
+        <th>2 Siblings</th>
+        <th>3+ Siblings (Family)</th>
+</tr>
+</thead>
+    <tbody>
+      <tr class="tga-ptable__section"><td colspan="4">1. Empowerment System</td></tr>
+
+      <tr class="tga-ptable__featured">
+        <td class="tga-ptable__offering">Complete 3-Lab System Bundle<br><span class="tga-ptable__note">System bundle price</span></td>
+        <td><span class="tga-price tga-price--main">$249</span><span class="tga-price tga-price--was">$297</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/2zpGuQ9B/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--main">$349</span><span class="tga-price tga-price--was">$447</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/jCrxdLSL/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--main">$449</span><span class="tga-price tga-price--was">$567</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/dPBKabbm/checkout">Buy</a></td>
+</tr>
+      <tr>
+        <td class="tga-ptable__offering tga-ptable__lab">Peer Pressure and Social Value<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Helps students recognize peer pressure, protect their values, and make confident choices in social situations.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/E9zLFvbT/checkout">Buy</a></td>
+        <td><span class="tga-price">$149</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/8kXs2onM/checkout">Buy</a></td>
+        <td><span class="tga-price">$189</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/L8ATEmdQ/checkout">Buy</a></td>
+</tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/EnB7oT5t/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+</tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/MGGLCdto/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr>
+        <td class="tga-ptable__offering tga-ptable__lab">Self Esteem and Knowing Your Worth<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Builds healthy self-worth so students understand their value beyond likes, labels, and comparison.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/mcH2Wwju/checkout">Buy</a></td>
+        <td><span class="tga-price">$149</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/Mynvgtza/checkout">Buy</a></td>
+        <td><span class="tga-price">$189</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/tLM7Eckv/checkout">Buy</a></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/g6zeK8qf/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/7m6AzNHp/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr>
+        <td class="tga-ptable__offering tga-ptable__lab">Finding Your Voice<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Teaches students how to speak up, lead with confidence, and communicate who they are with clarity.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/Y5fcyAdM/checkout">Buy</a></td>
+        <td><span class="tga-price">$149</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/axMaYtDF/checkout">Buy</a></td>
+        <td><span class="tga-price">$189</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/RisbLgSH/checkout">Buy</a></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/Y2CB3e7P/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/NQ7Sp4fB/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+
+      <tr class="tga-ptable__section"><td colspan="4">2. Individual Transition Labs</td></tr>
+
+      <tr>
+        <td class="tga-ptable__offering tga-ptable__lab">Middle School Preparation and Survival<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Prepares students (and parents) for the social, academic, and emotional shifts of middle school.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/4irBnqcD/checkout">Buy</a></td>
+        <td><span class="tga-price">$149</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/FjYHFokt/checkout">Buy</a></td>
+        <td><span class="tga-price">$189</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/J93724Fz/checkout">Buy</a></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/T3b4afXS/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/NQ7Sp4fB/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr>
+        <td class="tga-ptable__offering tga-ptable__lab">High School Preparation and Survival<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Equips students for high school pressures—identity, relationships, responsibility, and decision-making.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/75WFT3A5/checkout">Buy</a></td>
+        <td><span class="tga-price">$149</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/8UEmSiad/checkout">Buy</a></td>
+        <td><span class="tga-price">$189</span><a class="tga-buy tga-buy--sm" href="https://growthacademy.teamscoachingaz.com/offers/zKQMgQ2t/checkout">Buy</a></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/2xqumhjW/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><a class="tga-buy tga-buy--sm tga-buy--alone" href="https://growthacademy.teamscoachingaz.com/offers/NCHuxqEs/checkout">Buy</a></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Young Adulthood Preparation and Survival<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Guides emerging adults through independence, purpose, relationships, and real-world readiness.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+
+      <tr class="tga-ptable__section"><td colspan="4">3. Readiness System</td></tr>
+
+      <tr class="tga-ptable__featured tga-ptable__soon">
+        <td class="tga-ptable__offering">Complete 3-Lab System Bundle<br><span class="tga-ptable__note">System bundle price</span></td>
+        <td><span class="tga-price tga-price--main">$249</span><span class="tga-price tga-price--was">$297</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$349</span><span class="tga-price tga-price--was">$447</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$449</span><span class="tga-price tga-price--was">$567</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Effective Communication<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Builds clear communication skills, healthy boundaries, and tools for harder conversations.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Navigating New Environments<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Helps students adapt to new schools, teams, groups, and social settings with confidence.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Healthy Relationships<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Strengthens family and peer relationships through respect, trust, and intentional connection.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+
+      <tr class="tga-ptable__section"><td colspan="4">4. Athletic Leadership System</td></tr>
+
+      <tr class="tga-ptable__featured tga-ptable__soon">
+        <td class="tga-ptable__offering">Complete 3-Lab System Bundle<br><span class="tga-ptable__note">System bundle price</span></td>
+        <td><span class="tga-price tga-price--main">$249</span><span class="tga-price tga-price--was">$297</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$349</span><span class="tga-price tga-price--was">$447</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$449</span><span class="tga-price tga-price--was">$567</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">How To Maximize Value as an Athlete<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Shows athletes how to bring leadership, character, and value beyond performance alone.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Sportsmanship and Respect<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Develops respect, humility, and sportsmanship on and off the field.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Athletic Leadership<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Trains athletes to lead teammates through example, accountability, and positive influence.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+
+      <tr class="tga-ptable__section"><td colspan="4">5. Responsibility System</td></tr>
+
+      <tr class="tga-ptable__featured tga-ptable__soon">
+        <td class="tga-ptable__offering">Complete 4-Lab System Bundle<br><span class="tga-ptable__note">System bundle price</span></td>
+        <td><span class="tga-price tga-price--main">$332</span><span class="tga-price tga-price--was">$396</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$465</span><span class="tga-price tga-price--was">$596</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$599</span><span class="tga-price tga-price--was">$756</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Finding and Keeping a Job<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Practical skills for applying, interviewing, showing up, and keeping a job with integrity.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Earning Your Keep<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Builds work ethic, ownership, and the mindset of contributing at home and in life.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Time Management<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Teaches students how to prioritize, plan, and manage time across school, sports, and life.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Managing Money / Financial Literacy<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Introduces money basics—earning, saving, spending wisely, and financial responsibility.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+
+      <tr class="tga-ptable__section"><td colspan="4">6. Social Development System</td></tr>
+
+      <tr class="tga-ptable__featured tga-ptable__soon">
+        <td class="tga-ptable__offering">Complete 3-Lab System Bundle<br><span class="tga-ptable__note">System bundle price</span></td>
+        <td><span class="tga-price tga-price--main">$249</span><span class="tga-price tga-price--was">$297</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$349</span><span class="tga-price tga-price--was">$447</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$449</span><span class="tga-price tga-price--was">$567</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Reading the Room<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Helps students notice social cues and adjust their presence in different group settings.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Filter and Sensitivity<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Builds awareness around words, tone, and timing so students communicate with care.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Social Etiquette and Old Fashioned Manners<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Practical manners and social etiquette for school, home, and public life.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+
+      <tr class="tga-ptable__section"><td colspan="4">7. V.I.P. Discovery System</td></tr>
+
+      <tr class="tga-ptable__featured tga-ptable__soon">
+        <td class="tga-ptable__offering">Complete 3-Lab System Bundle<br><span class="tga-ptable__note">System bundle price</span></td>
+        <td><span class="tga-price tga-price--main">$249</span><span class="tga-price tga-price--was">$297</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$349</span><span class="tga-price tga-price--was">$447</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--main">$449</span><span class="tga-price tga-price--was">$567</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Value<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Helps students discover what they value and why those values matter in daily choices.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Identity<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Guides students to understand who they are beyond roles, pressure, and outside opinions.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__lab">Purpose<br><span class="tga-ptable__note">Full Lab · Student + Parent</span>
+        <details class="tga-lab-more">
+          <summary class="tga-learn-more">Learn More</summary>
+          <p class="tga-lab-desc">Helps students connect strengths and values to purpose and meaningful direction.</p>
+        </details></td>
+        <td><span class="tga-price">$99</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$149</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price">$189</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Parent Alone</td>
+        <td><span class="tga-price tga-price--alone">$49</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+      </tr>
+      <tr class="tga-ptable__alone-row tga-ptable__soon">
+        <td class="tga-ptable__offering tga-ptable__alone">Student Alone</td>
+        <td><span class="tga-price tga-price--alone">$79</span><span class="tga-buy tga-buy--soon tga-buy--sm">Soon</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+        <td><span class="tga-price tga-price--na">—</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<style>
+.tga-ptable-wrap { max-width: 1040px; margin: 0 auto; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,.08); font-family: 'Archivo', 'Open Sans', sans-serif; overflow: hidden; background: #fff; }
+.tga-ptable-scroll { max-height: 640px; overflow: auto; }
+.tga-ptable { width: 100%; min-width: 760px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+
+/* Equal-width price columns so gaps match (long “3+ Siblings” header no longer stretches col 4) */
+.tga-ptable col.tga-col-offer { width: 40%; }
+.tga-ptable col.tga-col-price { width: 20%; }
+
+.tga-ptable thead th { position: sticky; top: 0; z-index: 2; background: #13151A; color: #fff !important; font-size: 14px; font-weight: 700; text-align: center; padding: 16px 12px; line-height: 1.25; white-space: normal; }
+.tga-ptable thead th.tga-ptable__offering { text-align: left; white-space: nowrap; }
+
+.tga-ptable__section td { background: #f3f5f7 !important; color: #39B2B9 !important; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; text-align: left !important; padding: 12px 18px !important; border-top: 1px solid #e8ecef; }
+
+.tga-ptable td { padding: 16px 18px; text-align: center; border-top: 1px solid #eef1f4; vertical-align: middle; }
+.tga-ptable__offering { text-align: left !important; font-weight: 600; color: #13151A !important; font-size: 15px; }
+.tga-ptable__lab { padding-left: 32px !important; font-weight: 500; font-size: 14px; color: #4A4A4A !important; }
+.tga-ptable__alone { padding-left: 52px !important; font-weight: 500; font-size: 13px; color: #6d797b !important; }
+.tga-ptable__alone-row td { padding-top: 12px; padding-bottom: 12px; background: #f7f8f9; }
+.tga-ptable__note { display: block; margin-top: 4px; font-size: 12px; font-weight: 500; color: #8a939b; }
+
+.tga-price { display: block; color: #4A4A4A; font-size: 17px; font-weight: 700; }
+.tga-price--main { color: #39B2B9 !important; font-size: 18px; font-weight: 800; }
+.tga-price--alone { color: #39B2B9 !important; font-size: 15px; font-weight: 700; }
+.tga-price--was { margin-top: 2px; color: #9aa4ad !important; font-size: 12px; font-weight: 600; text-decoration: line-through; }
+.tga-price--na { color: #c0c6cb !important; font-weight: 600; }
+
+.tga-ptable__featured td { background: #E6F6F7; }
+.tga-ptable__featured .tga-ptable__offering { color: #13151A !important; }
+
+.tga-ptable tbody tr:not(.tga-ptable__section) { transition: background .2s ease; }
+.tga-ptable tbody tr:not(.tga-ptable__section):not(.tga-ptable__soon):hover td { background: #d7f0f2; }
+.tga-ptable tbody tr.tga-ptable__alone-row:not(.tga-ptable__soon):hover td { background: #e8f6f7; }
+
+.tga-buy { display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; background: #39B2B9; color: #fff !important; font-weight: 700; font-size: 13px; border-radius: 9999px; text-decoration: none !important; white-space: nowrap; transition: background .2s ease, transform .2s ease; }
+.tga-buy:hover { background: #1B878D; transform: translateY(-2px); }
+.tga-buy--sm { margin-top: 8px; padding: 7px 20px; font-size: 12px; }
+.tga-buy--alone {
+  background: transparent;
+  color: #39B2B9 !important;
+  border: 1.5px solid #39B2B9;
+  border-radius: 10px;
+  padding: 6px 14px;
+}
+.tga-buy--alone:hover {
+  background: #E6F6F7;
+  transform: none;
+}
+
+/* Featured (system bundle) Buy button — elevated look */
+.tga-ptable__featured .tga-buy:not(.tga-buy--soon) {
+  margin-top: 10px;
+  padding: 9px 26px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .03em;
+  color: #fff !important;
+  background: linear-gradient(135deg, #39B2B9 0%, #1B878D 100%);
+  box-shadow: 0 6px 16px rgba(27,135,141,.35);
+  position: relative;
+  overflow: hidden;
+}
+.tga-ptable__featured .tga-buy:not(.tga-buy--soon)::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
+  transform: skewX(-20deg);
+  transition: left .5s ease;
+}
+.tga-ptable__featured .tga-buy:not(.tga-buy--soon):hover {
+  background: linear-gradient(135deg, #3ec1c8 0%, #1B878D 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(27,135,141,.45);
+}
+.tga-ptable__featured .tga-buy:not(.tga-buy--soon):hover::after { left: 130%; }
+
+.tga-ptable__soon td { background: #f6f7f8 !important; opacity: .55; }
+.tga-ptable__soon .tga-price--main { color: #9aa4ad !important; }
+.tga-buy--soon { display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; background: #e1e4e7; color: #9aa4ad !important; font-weight: 700; font-size: 13px; border-radius: 9999px; white-space: nowrap; cursor: not-allowed; pointer-events: none; }
+
+/* Learn More under each lab — text link style */
+.tga-lab-more { margin-top: 6px; }
+.tga-learn-more {
+  display: inline;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #39B2B9 !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color .15s ease;
+}
+.tga-learn-more::-webkit-details-marker { display: none; }
+.tga-learn-more::marker { content: ""; }
+.tga-learn-more:hover {
+  color: #1B878D !important;
+  text-decoration: underline;
+}
+.tga-lab-more[open] .tga-learn-more {
+  background: none;
+  color: #1B878D !important;
+}
+.tga-lab-desc {
+  margin: 6px 0 0 !important;
+  max-width: 320px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: #6d797b !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+}
+.tga-ptable__soon .tga-learn-more {
+  border: 0;
+  color: #8a939b !important;
+}
+.tga-ptable__soon .tga-lab-more[open] .tga-learn-more {
+  background: none;
+  color: #6d797b !important;
+}
+
+@media (max-width: 767px) {
+  .tga-price { font-size: 15px; }
+  .tga-price--main { font-size: 16px; }
+  .tga-buy, .tga-buy--soon { padding: 9px 14px; font-size: 12px; }
+  .tga-buy--sm { padding: 6px 14px; }
+  .tga-ptable__lab { padding-left: 22px !important; }
+  .tga-ptable__alone { padding-left: 36px !important; }
+}
+</style>
+
+<script>
+document.querySelectorAll('.tga-ptable a.tga-buy').forEach(function(a){
+  a.setAttribute('target','_blank');
+  a.setAttribute('rel','noopener');
+});
+</script>
+<div class="mt-6 flex items-start gap-3 bg-teal-wash border border-primary/20 rounded-xl p-5 max-w-3xl mx-auto">
+<span class="material-symbols-outlined text-primary">sell</span>
+<p class="font-body-md text-on-surface"><strong>Members save more:</strong> Growth Academy members receive <strong class="text-primary">10% off</strong> all Growth Systems, labs, and individual &amp; bundle videos.</p>
+</div>
+<div class="mt-8 text-center max-w-3xl mx-auto">
+<p class="font-body-lg text-on-surface-variant mb-5">Not a member yet? Join the Growth Academy community to unlock member pricing on every system and lab.</p>
+<a class="btn inline-flex items-center gap-2 px-8 py-4 bg-primary text-on-primary font-headline-md rounded-xl hover:bg-deep-teal transition-all" href="growth_academy_membership_t.e.a.m.s._growth_academy.html#founding">Become a Member &amp; Save <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</section>
+
+
+
+
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#0a0b0d] border-t border-white/5 pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+<div class="md:col-span-5">
+<a class="flex items-center gap-3 group mb-6 inline-block" href="Home.html">
+<img alt="T.E.A.M.S. Coaching Academy Logo" class="h-12 w-auto object-contain invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfITmoi7XKIel2eO-w94ZfNaxwe8wnChfMmTvzrR76l7SLgAnyltL8bgxHQRmC8P4OxEzgVRAuaCcWjfCWxQwTaqk-2EULndgHUBy_acO9cC8152PrvKxi35MbjhqQA1Lnn3v0hAe60N6p26qZT3N48jaOscl04GjOKUbPYliPrHter-mVfN-5EhksTK2C8IILGAQtyDqIsSU_nsjqOQw0Cx0rFi3z5cqvSocEWC_spmFTwvrXByvppu6TJPHJ4c37GkivLvgX-ks0"/>
+</a>
+<p class="font-body-md text-slate-400 max-w-sm leading-relaxed mb-6">Equipping the next generation with systems for growth through reflection, intentional conversation, and accountability.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary-container hover:text-white transition-colors" href="contact_t.e.a.m.s._growth_academy.html">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Programs</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Home.html">Home</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="Series and Labs.html">Series &amp; Labs</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="meet_coach_walker_t.e.a.m.s._growth_academy.html">Meet Coach Walker</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="about_t.e.a.m.s._growth_academy.html">About T.E.A.M.S.</a>
+</div>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm">Legal &amp; Support</h4>
+<div class="flex flex-col gap-4">
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-primary-fixed transition-colors text-sm font-medium" href="contact_t.e.a.m.s._growth_academy.html">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-sm text-slate-500">© 2024 T.E.A.M.S. Coaching Growth Academy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for pricing selection
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('main .group, main .glass-card').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

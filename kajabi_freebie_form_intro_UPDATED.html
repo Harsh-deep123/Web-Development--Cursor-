@@ -1,0 +1,227 @@
+<!-- =====================================================================
+   KAJABI — Free Parent Resource pack (5 PDFs) — grouped list layout
+   1) Paste CSS into Theme Custom CSS (replace old .tga-form-intro rules)
+   2) Paste HTML into Form block → Text → <> source
+   ===================================================================== -->
+
+<!-- ===== CSS ===== -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap');
+
+.tga-form-intro,
+.tga-form-intro * {
+  font-family: Archivo, "Open Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+.tga-form-intro {
+  text-align: center !important;
+  color: #13151A !important;
+  max-width: 640px;
+  margin: 0 auto 8px !important;
+}
+.tga-form-intro__badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 0 0 20px !important;
+  padding: 7px 16px !important;
+  background: #fff !important;
+  color: #39B2B9 !important;
+  border: 1px solid rgba(0, 161, 171, 0.18) !important;
+  border-radius: 9999px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  line-height: 1.3 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+}
+.tga-form-intro__badge::before {
+  content: "" !important;
+  display: block !important;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2339B2B9'%3E%3Cpath d='M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z'/%3E%3C/svg%3E") center / contain no-repeat !important;
+}
+.form .tga-form-intro h2.tga-form-intro__title,
+.tga-form-intro__title {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  color: #13151A !important;
+  text-align: center !important;
+  letter-spacing: -0.01em !important;
+}
+.form .tga-form-intro p.tga-form-intro__text,
+.tga-form-intro__text {
+  margin: 0 auto 28px !important;
+  padding: 0 !important;
+  max-width: 560px !important;
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  color: #4A4A4A !important;
+  text-align: center !important;
+}
+
+/* ===== Grouped pack grid ===== */
+.tga-form-intro__pack {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  max-width: 560px !important;
+  margin: 0 auto 12px !important;
+  text-align: left !important;
+}
+.tga-form-intro__group {
+  margin: 0 !important;
+  padding: 16px 16px 14px !important;
+  background: #E6F6F7 !important;
+  border: 1px solid rgba(0, 161, 171, 0.16) !important;
+  border-radius: 14px !important;
+}
+.tga-form-intro__group-label {
+  display: block !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #1B878D !important;
+  line-height: 1.2 !important;
+}
+.tga-form-intro__group-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+.tga-form-intro__group-list li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: #13151A !important;
+  background: none !important;
+}
+.tga-form-intro__group-list li::marker {
+  content: none !important;
+  display: none !important;
+}
+.tga-form-intro__group-list li::before {
+  content: "" !important;
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  flex-shrink: 0 !important;
+  border-radius: 50% !important;
+  background: #39B2B9 !important;
+  position: static !important;
+}
+
+/* Guide row — full width highlight */
+.tga-form-intro__guide {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  max-width: 560px !important;
+  margin: 0 auto 8px !important;
+  padding: 14px 16px !important;
+  text-align: left !important;
+  background: #fff !important;
+  border: 1.5px solid #39B2B9 !important;
+  border-radius: 14px !important;
+}
+.tga-form-intro__guide-icon {
+  flex-shrink: 0 !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 10px !important;
+  background: #39B2B9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center / 18px no-repeat !important;
+}
+.tga-form-intro__guide-copy {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+.tga-form-intro__guide-kicker {
+  display: block !important;
+  margin: 0 0 2px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #39B2B9 !important;
+  line-height: 1.2 !important;
+}
+.tga-form-intro__guide-title {
+  display: block !important;
+  margin: 0 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #13151A !important;
+  line-height: 1.35 !important;
+}
+.tga-form-intro__guide-sub {
+  display: block !important;
+  margin: 4px 0 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #4A4A4A !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 640px) {
+  .tga-form-intro__title { font-size: 28px !important; }
+  .tga-form-intro__text { font-size: 16px !important; }
+  .tga-form-intro__pack {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+<!-- ===== HTML ===== -->
+<div class="tga-form-intro">
+  <p class="tga-form-intro__badge">Free Parent Resource Pack</p>
+  <h2 class="tga-form-intro__title">Not sure which Lab to start with?</h2>
+  <p class="tga-form-intro__text">Get the full free Check-In pack—Middle School &amp; High School (student + parent versions) plus the Score-to-Lab Guide. Score readiness, compare answers, and see which Digital Labs match—before you buy.</p>
+
+  <div class="tga-form-intro__pack">
+    <div class="tga-form-intro__group">
+      <span class="tga-form-intro__group-label">Middle School</span>
+      <ul class="tga-form-intro__group-list">
+        <li>Student Check-In</li>
+        <li>Parent Check-In</li>
+      </ul>
+    </div>
+    <div class="tga-form-intro__group">
+      <span class="tga-form-intro__group-label">High School</span>
+      <ul class="tga-form-intro__group-list">
+        <li>Student Check-In</li>
+        <li>Parent Check-In</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tga-form-intro__guide">
+    <span class="tga-form-intro__guide-icon" aria-hidden="true"></span>
+    <p class="tga-form-intro__guide-copy">
+      <span class="tga-form-intro__guide-kicker">Included</span>
+      <span class="tga-form-intro__guide-title">Check-In Score-to-Lab Guide</span>
+      <span class="tga-form-intro__guide-sub">Match scores to the best Digital Labs for MS &amp; HS</span>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,358 @@
+<!-- =====================================================================
+   KAJABI CUSTOM CODE — Home: T.E.A.M.S. Series & Labs cards
+   Paste into ONE Custom Code block on the Home landing page.
+   All Explore / View Pricing / View All Series → Series & Labs pricing
+   ===================================================================== -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap');
+
+.tga-home-series {
+  --ink: #13151A;
+  --slate: #4A4A4A;
+  --teal: #39B2B9;
+  --deep: #1B878D;
+  --blue: #256487;
+  --soft: #5e98be;
+  --wash: #E6F6F7;
+  font-family: 'Archivo', 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+.tga-home-series *,
+.tga-home-series *::before,
+.tga-home-series *::after { box-sizing: border-box; }
+
+.tga-home-series__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.tga-home-series__eyebrow {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.tga-home-series__title {
+  margin: 0 0 12px;
+  color: var(--ink) !important;
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+.tga-home-series__sub {
+  margin: 0;
+  max-width: 560px;
+  color: var(--slate) !important;
+  font-size: 17px !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+}
+.tga-home-series__cta-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  background: var(--teal);
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  box-shadow: 0 8px 20px rgba(57,178,185,.28);
+  transition: transform .2s ease, background .2s ease;
+  white-space: nowrap;
+}
+.tga-home-series__cta-all:hover {
+  background: var(--deep);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+.tga-home-series__cta-all::after { content: " →"; }
+
+.tga-home-series__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.tga-hcard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.05);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.tga-hcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(27,135,141,.14);
+}
+.tga-hcard__bar { height: 10px; flex-shrink: 0; }
+.tga-hcard__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 22px 24px;
+  text-align: left;
+}
+.tga-hcard__letter {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+.tga-hcard__meta {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.tga-hcard__name {
+  margin: 0 0 14px;
+  color: var(--ink) !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+.tga-hcard__list {
+  list-style: none !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  flex: 1;
+}
+.tga-hcard__list li {
+  position: relative;
+  margin: 0 0 10px !important;
+  padding: 0 0 0 26px !important;
+  color: var(--slate) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+.tga-hcard__list li:last-child { margin-bottom: 0 !important; }
+.tga-hcard__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.tga-hcard__explore {
+  margin-top: auto;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+.tga-hcard__explore::after { content: " →"; }
+
+/* Theme colors */
+.tga-hcard--t .tga-hcard__bar,
+.tga-hcard--t .tga-hcard__letter { background: #39B2B9; }
+.tga-hcard--t .tga-hcard__meta,
+.tga-hcard--t .tga-hcard__list li::before,
+.tga-hcard--t .tga-hcard__explore { color: #39B2B9; }
+
+.tga-hcard--e .tga-hcard__bar,
+.tga-hcard--e .tga-hcard__letter { background: #1B878D; }
+.tga-hcard--e .tga-hcard__meta,
+.tga-hcard--e .tga-hcard__list li::before,
+.tga-hcard--e .tga-hcard__explore { color: #1B878D; }
+
+.tga-hcard--a .tga-hcard__bar,
+.tga-hcard--a .tga-hcard__letter { background: #13151A; }
+.tga-hcard--a .tga-hcard__meta,
+.tga-hcard--a .tga-hcard__list li::before,
+.tga-hcard--a .tga-hcard__explore { color: #13151A; }
+
+.tga-hcard--m .tga-hcard__bar,
+.tga-hcard--m .tga-hcard__letter { background: #256487; }
+.tga-hcard--m .tga-hcard__meta,
+.tga-hcard--m .tga-hcard__list li::before,
+.tga-hcard--m .tga-hcard__explore { color: #256487; }
+
+.tga-hcard--s .tga-hcard__bar,
+.tga-hcard--s .tga-hcard__letter { background: #5e98be; }
+.tga-hcard--s .tga-hcard__meta,
+.tga-hcard--s .tga-hcard__list li::before,
+.tga-hcard--s .tga-hcard__explore { color: #5e98be; }
+
+/* Pricing card */
+.tga-hcard--price {
+  background: var(--wash);
+  border: 2px solid rgba(57,178,185,.22);
+}
+.tga-hcard--price .tga-hcard__bar { background: #39B2B9; }
+.tga-hcard--price .tga-hcard__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  background: #fff;
+  border: 1px solid rgba(57,178,185,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #39B2B9;
+  font-size: 22px;
+  font-weight: 800;
+}
+.tga-hcard--price .tga-hcard__meta,
+.tga-hcard--price .tga-hcard__explore { color: #39B2B9; }
+.tga-hcard--price .tga-hcard__prices {
+  margin: 0 0 18px;
+  color: var(--slate) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .tga-home-series__grid { grid-template-columns: repeat(2, 1fr); }
+  .tga-home-series__title { font-size: 30px !important; }
+}
+@media (max-width: 640px) {
+  .tga-home-series { padding: 28px 16px 40px; }
+  .tga-home-series__grid { grid-template-columns: 1fr; }
+  .tga-home-series__head { flex-direction: column; align-items: flex-start; }
+}
+</style>
+
+<div class="tga-home-series">
+  <div class="tga-home-series__head">
+    <div>
+      <span class="tga-home-series__eyebrow">Curriculum</span>
+      <h2 class="tga-home-series__title">The T.E.A.M.S. Series &amp; Labs</h2>
+      <p class="tga-home-series__sub">Five Series · 29 Labs — Transition, Empowerment, Athletic Mindset, Management, and Social. Every Lab is sold individually, with sibling discounts for families.</p>
+    </div>
+    <a class="tga-home-series__cta-all" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">View All Series</a>
+  </div>
+
+  <div class="tga-home-series__grid">
+
+            <a class="tga-hcard tga-hcard--t" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">
+      <div class="tga-hcard__bar"></div>
+      <div class="tga-hcard__body">
+        <div class="tga-hcard__letter">T</div>
+        <p class="tga-hcard__meta">6 Labs · Sold Individually</p>
+        <h3 class="tga-hcard__name">Transition Series</h3>
+        <ul class="tga-hcard__list">
+          <li>Middle School Preparation and Survival</li>
+          <li>High School Preparation and Survival</li>
+          <li>Pathways After High School</li>
+          <li>Navigating New Environments <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Discipline & Responsibility in Adulthood <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Preparation for Independent Living <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+        </ul>
+        <span class="tga-hcard__explore">Explore</span>
+      </div>
+    </a>
+
+    <a class="tga-hcard tga-hcard--e" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">
+      <div class="tga-hcard__bar"></div>
+      <div class="tga-hcard__body">
+        <div class="tga-hcard__letter">E</div>
+        <p class="tga-hcard__meta">6 Labs · Sold Individually</p>
+        <h3 class="tga-hcard__name">Empowerment Series</h3>
+        <ul class="tga-hcard__list">
+          <li>Peer Pressure and Social Value</li>
+          <li>Self Esteem and Knowing Your Worth</li>
+          <li>Finding Your Voice</li>
+          <li>Your Value and Values <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Identity: Who Are You? <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>What is Your Purpose <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+        </ul>
+        <span class="tga-hcard__explore">Explore</span>
+      </div>
+    </a>
+
+    <a class="tga-hcard tga-hcard--a" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">
+      <div class="tga-hcard__bar"></div>
+      <div class="tga-hcard__body">
+        <div class="tga-hcard__letter">A</div>
+        <p class="tga-hcard__meta">5 Labs · Sold Individually</p>
+        <h3 class="tga-hcard__name">Athletic Mindset Series</h3>
+        <ul class="tga-hcard__list">
+          <li>How To Maximize Value as an Athlete <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Sportsmanship and Respect <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Athletic Leadership <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Managing Expectations in Athletics <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Identity Beyond Athletics <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+        </ul>
+        <span class="tga-hcard__explore">Explore</span>
+      </div>
+    </a>
+
+    <a class="tga-hcard tga-hcard--m" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">
+      <div class="tga-hcard__bar"></div>
+      <div class="tga-hcard__body">
+        <div class="tga-hcard__letter">M</div>
+        <p class="tga-hcard__meta">7 Labs · Sold Individually</p>
+        <h3 class="tga-hcard__name">Management Series</h3>
+        <ul class="tga-hcard__list">
+          <li>Financial Literacy <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Earning Your Keep <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Finding and Keeping a Job <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Time Management <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Building A Budget <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Importance of Hygiene <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Managing Stress and Dealing With Adversity <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+        </ul>
+        <span class="tga-hcard__explore">Explore</span>
+      </div>
+    </a>
+
+    <a class="tga-hcard tga-hcard--s" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">
+      <div class="tga-hcard__bar"></div>
+      <div class="tga-hcard__body">
+        <div class="tga-hcard__letter">S</div>
+        <p class="tga-hcard__meta">5 Labs · Sold Individually</p>
+        <h3 class="tga-hcard__name">Social Series</h3>
+        <ul class="tga-hcard__list">
+          <li>Healthy Relationships <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Effective Communication <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Reading the Room <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Filter and Sensitivity <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+          <li>Social Etiquette and old Fashioned Manners <span style="opacity:.65;font-size:11px;font-weight:700;">(Soon)</span></li>
+        </ul>
+        <span class="tga-hcard__explore">Explore</span>
+      </div>
+    </a>
+
+<a class="tga-hcard tga-hcard--price" href="https://digitallabseries.teamscoachingaz.com/Seriesandlabs#section-1783950212856">
+      <div class="tga-hcard__bar"></div>
+      <div class="tga-hcard__body">
+        <div class="tga-hcard__icon">$</div>
+        <p class="tga-hcard__meta">Sibling Discounts</p>
+        <h3 class="tga-hcard__name">Series &amp; Labs Pricing</h3>
+        <p class="tga-hcard__prices">1 Student $79 · 2 Siblings $148 · 3+ Family $199<br>Parent Alone $39 · Student Alone $59</p>
+        <span class="tga-hcard__explore">View Pricing</span>
+      </div>
+    </a>
+
+  </div>
+</div>
