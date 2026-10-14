@@ -122,10 +122,12 @@
     <div class="lg:col-span-7">
       <span class="inline-block py-1.5 px-4 rounded-full bg-teal-wash text-deep-teal font-bold text-xs tracking-widest uppercase mb-6 border border-primary/15">Digital Lab Series for parents and teens</span>
       <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">The conversations you want to have with your teen, <span class="text-gradient">made easier.</span></h1>
-      <p class="text-lg md:text-xl text-slate-gray max-w-2xl mb-10 leading-relaxed">Every Lab starts with you. Watch a short parent video, get the words to use, and leave with a plan for home. Your teen gets their own lesson on the same topic, so you are never left convincing them alone.</p>
-      <div class="flex flex-col sm:flex-row gap-4">
+      <p class="text-lg md:text-xl text-slate-gray max-w-2xl mb-4 leading-relaxed">Every Lab starts with you. Watch a short parent video, get the words to use, and leave with a plan for home. Your teen gets their own lesson on the same topic, so you are never left convincing them alone.</p>
+      <p class="text-base text-charcoal font-semibold max-w-2xl mb-10">One sitting, on your phone. Start with the first part. It stands on its own, and you leave with one thing to say tonight.</p>
+      <div class="flex flex-col sm:flex-row flex-wrap gap-4">
         <a href="#pricing" class="btn inline-flex items-center justify-center bg-primary text-white font-bold text-sm tracking-wide uppercase px-8 py-4 shadow-[0_4px_14px_0_rgba(0,161,171,0.39)]">Start with the Parent Lab</a>
         <a href="#labs" class="btn inline-flex items-center justify-center bg-white border border-slate-300 text-charcoal hover:border-primary hover:text-deep-teal font-bold text-sm tracking-wide uppercase px-8 py-4">See all Series &amp; Labs</a>
+        <button type="button" class="open-free-lab btn inline-flex items-center justify-center bg-transparent text-deep-teal font-bold text-sm tracking-wide uppercase px-2 py-4">Get Part 1 free</button>
       </div>
     </div>
     <div class="lg:col-span-5">
@@ -299,7 +301,7 @@
       <div class="max-w-2xl">
         <span class="text-deep-teal font-bold text-xs tracking-widest uppercase mb-3 block">Pick the Lab that fits your family right now</span>
         <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Six Labs ready today. More on the way.</h2>
-        <p class="text-lg text-slate-gray">Each Lab takes on one challenge your family is facing. Choose the one that matches this season, and start with the parent lesson.</p>
+        <p class="text-lg text-slate-gray">Each Lab takes on one challenge your family is facing. Choose the one that matches this season, and start with the parent lesson. The first part is enough for one conversation that night.</p>
       </div>
       <a href="Series and Labs.html" class="btn inline-flex items-center gap-2 bg-primary text-white font-bold text-sm tracking-wide uppercase px-6 py-3 whitespace-nowrap">View all Series &amp; Labs <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
     </div>
@@ -366,7 +368,7 @@
   <div class="max-w-page mx-auto px-6">
     <div class="max-w-2xl mb-12">
       <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Start with yourself. Add your teen when they're ready.</h2>
-      <p class="text-lg text-slate-300">Every Lab is sold on its own. No subscription.</p>
+      <p class="text-lg text-slate-300">Every Lab is sold on its own. No subscription. One sitting for you, on your phone, before you add your teen.</p>
     </div>
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
       <article class="md:col-span-2 xl:col-span-1 bg-primary text-white rounded-3xl p-8 shadow-[0_12px_40px_rgba(57,178,185,0.35)] flex flex-col">
@@ -374,7 +376,7 @@
         <h3 class="text-2xl font-bold mb-2">Parent Lab only</h3>
         <p class="text-5xl font-extrabold mb-1">$39</p>
         <p class="text-sm uppercase tracking-wide text-white/80 mb-6">per Lab</p>
-        <p class="text-white/95 leading-relaxed mb-8 flex-grow">Your lesson and your plan for home. No buy-in from your teen required.</p>
+        <p class="text-white/95 leading-relaxed mb-8 flex-grow">Your lesson and your plan for home. One sitting. No buy-in from your teen required.</p>
         <a href="Series and Labs.html#pricing" class="btn inline-flex justify-center bg-white text-deep-teal font-bold text-sm uppercase tracking-wide px-6 py-4">Start with the Parent Lab</a>
       </article>
       <article class="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col">
@@ -506,12 +508,12 @@
       <span class="material-symbols-outlined">close</span>
     </button>
     <p class="text-xs font-bold tracking-widest uppercase text-deep-teal mb-3">Free for parents</p>
-    <h2 id="popup-title" class="text-2xl font-extrabold mb-3">Free for parents: a first step you can take tonight</h2>
-    <p class="text-slate-gray leading-relaxed mb-6">Get a free resource from Coach Walker and see how the Parent Lab works. No commitment.</p>
+    <h2 id="popup-title" class="text-2xl font-extrabold mb-3">Free Parent Lab: a first step you can take tonight</h2>
+    <p class="text-slate-gray leading-relaxed mb-6">Get Part 1 of a Parent Lab. It stands on its own, so you leave with one thing to say tonight. No commitment.</p>
     <form class="space-y-3" action="contact_t.e.a.m.s._growth_academy.html">
       <label class="block text-sm font-semibold" for="popup-email">Email</label>
       <input id="popup-email" type="email" required placeholder="you@email.com" class="w-full rounded-2xl border border-slate-200 px-4 py-3"/>
-      <button type="submit" class="btn w-full bg-primary text-white font-bold uppercase tracking-wide py-4">Send me the free resource</button>
+      <button type="submit" class="btn w-full bg-primary text-white font-bold uppercase tracking-wide py-4">Send me the free Parent Lab</button>
     </form>
   </div>
 </div>
@@ -524,6 +526,9 @@
     setTimeout(show, 700);
     close.addEventListener('click', hide);
     popup.addEventListener('click', function (e) { if (e.target === popup) hide(); });
+    document.querySelectorAll('.open-free-lab').forEach(function (btn) {
+      btn.addEventListener('click', show);
+    });
   })();
 </script>
 </body>
